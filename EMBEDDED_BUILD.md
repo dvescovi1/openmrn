@@ -88,7 +88,124 @@ set(CPU_FLAGS "-mcpu=cortex-m33 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16")
 
 ### Option 1: Using FetchContent (Recommended)
 
-Automatically download and build OpenMRN as part of your firmware project:
+The easiest way to integrate OpenMRN is using CMake's `FetchContent` module. This automatically downloads and makes the library available without manual cloning.
+
+#### Complete Example
+
+Create a `CMakeLists.txt` for your firmware project:
+
+```cmake
+cmake_minimum_required(VERSION 3.14)
+
+# IMPORTANT: Set toolchain BEFORE project() command
+set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/cmake/arm-m33.toolchain.cmake)
+
+project(MyFirmware C CXX ASM)
+
+# Enable FetchContent
+include(FetchContent)
+
+# Declare OpenMRN dependency
+FetchContent_Declare(
+    openmrn
+    GIT_REPOSITORY https://github.com/yourusername/openmrn.git
+    GIT_TAG        main           # Use 'main', a tag like 'v1.0', or specific commit SHA
+    GIT_SHALLOW    TRUE           # Optional: faster clone
+    SOURCE_DIR     ${CMAKE_BINARY_DIR}/_deps/openmrn-src  # Optional: control location
+)
+
+# Make OpenMRN available (downloads if needed)
+FetchContent_MakeAvailable(openmrn)
+
+# Your firmware executable
+add_executable(firmware.elf
+    src/main.cpp
+    src/hardware_init.c
+    src/application.cpp
+    # ... your other sources
+)
+
+# Link with OpenMRN - this gives you all headers and compile settings
+target_link_libraries(firmware.elf 
+    PRIVATE 
+        OpenMRN::openmrn
+)
+
+# Optional: Add your own compile definitions
+target_compile_definitions(firmware.elf PRIVATE
+    MY_BOARD_VERSION=3
+    USE_FREERTOS=1
+)
+
+# Link script for your MCU
+set_target_properties(firmware.elf PROPERTIES
+    LINK_FLAGS "-T${CMAKE_SOURCE_DIR}/linker/STM32F767ZI.ld -Wl,-Map=firmware.map"
+)
+
+# Generate hex and bin files for flashing
+add_custom_command(TARGET firmware.elf POST_BUILD
+    COMMAND ${CMAKE_OBJCOPY} -O ihex $<TARGET_FILE:firmware.elf> firmware.hex
+    COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:firmware.elf> firmware.bin
+    COMMAND ${CMAKE_SIZE} $<TARGET_FILE:firmware.elf>
+    COMMENT "Generating flash images and showing size"
+    VERBATIM
+)
+```
+
+#### Project Structure with FetchContent
+
+```
+your-firmware/
+├── CMakeLists.txt          # Your main build file (shown above)
+├── cmake/
+│   └── arm-m33.toolchain.cmake  # Your toolchain file
+├── src/
+│   ├── main.cpp
+│   ├── hardware_init.c
+│   └── application.cpp
+├── linker/
+│   └── STM32F767ZI.ld
+└── build/                  # Created when you run cmake
+    └── _deps/
+        └── openmrn-src/    # OpenMRN downloaded here automatically
+```
+
+#### Building Your Project
+
+```bash
+# Create build directory
+mkdir build && cd build
+
+# Configure (downloads OpenMRN automatically)
+cmake ..
+
+# Build
+cmake --build .
+
+# Flash files are ready
+ls firmware.hex firmware.bin
+```
+
+#### Benefits of FetchContent
+
+- ✅ **No manual cloning** - CMake downloads OpenMRN automatically
+- ✅ **Version pinning** - Use specific tags or commits via `GIT_TAG`
+- ✅ **Offline builds** - Downloaded once, cached in `_deps/`
+- ✅ **Clean separation** - Your project stays independent
+- ✅ **Easy updates** - Change `GIT_TAG` and rebuild
+
+### Option 2: As Git Submodule
+
+If you prefer manual control:
+
+```bash
+# Add OpenMRN as submodule
+cd your-firmware
+git submodule add https://github.com/yourusername/openmrn.git libs/openmrn
+git submodule update --init --recursive
+```
+
+Then in your `CMakeLists.txt`:
 
 ```cmake
 cmake_minimum_required(VERSION 3.14)
@@ -98,22 +215,13 @@ set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/cmake/arm-m33.toolchain.cmake)
 
 project(MyFirmware C CXX ASM)
 
-# Fetch OpenMRN from Git repository
-include(FetchContent)
-
-FetchContent_Declare(
-    openmrn
-    GIT_REPOSITORY https://github.com/bakerstu/openmrn.git
-    GIT_TAG        master  # or specific commit/tag
-)
-
-FetchContent_MakeAvailable(openmrn)
+# Add OpenMRN as subdirectory
+add_subdirectory(libs/openmrn)
 
 # Your firmware executable
 add_executable(firmware.elf
     src/main.cpp
     src/hardware_init.c
-    # ... your sources
 )
 
 # Link with OpenMRN
@@ -124,24 +232,72 @@ set_target_properties(firmware.elf PROPERTIES
     LINK_FLAGS "-T${CMAKE_SOURCE_DIR}/linker/device.ld"
 )
 
-# Generate hex and bin files
+# Generate flash files
 add_custom_command(TARGET firmware.elf POST_BUILD
-    COMMAND arm-none-eabi-objcopy -O ihex firmware.elf firmware.hex
-    COMMAND arm-none-eabi-objcopy -O binary firmware.elf firmware.bin
-    COMMENT "Generating hex and bin files"
+    COMMAND ${CMAKE_OBJCOPY} -O ihex $<TARGET_FILE:firmware.elf> firmware.hex
+    COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:firmware.elf> firmware.bin
 )
 ```
 
-### Option 2: As Subdirectory
+### Option 3: Local Directory
 
-If you have OpenMRN checked out locally:
+If OpenMRN is already checked out separately:
+
+### Option 3: Local Directory
+
+If OpenMRN is already checked out separately:
 
 ```cmake
 cmake_minimum_required(VERSION 3.14)
 project(MyFirmware C CXX ASM)
 
-# Add OpenMRN as subdirectory
-add_subdirectory(libs/openmrn)
+# Add OpenMRN from a local path
+add_subdirectory(/path/to/openmrn ${CMAKE_BINARY_DIR}/openmrn-build)
+
+# Link with OpenMRN
+target_link_libraries(firmware.elf PRIVATE OpenMRN::openmrn)
+```
+
+---
+
+## Quick Start Examples
+
+### Minimal FetchContent Example
+
+The absolute minimum to get started:
+
+```cmake
+cmake_minimum_required(VERSION 3.14)
+set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/cmake/arm.toolchain.cmake)
+project(MinimalFirmware C CXX ASM)
+
+include(FetchContent)
+FetchContent_Declare(openmrn GIT_REPOSITORY https://github.com/yourusername/openmrn.git GIT_TAG main)
+FetchContent_MakeAvailable(openmrn)
+
+add_executable(app.elf src/main.cpp)
+target_link_libraries(app.elf PRIVATE OpenMRN::openmrn)
+```
+
+### Using a Specific Version
+
+```cmake
+FetchContent_Declare(
+    openmrn
+    GIT_REPOSITORY https://github.com/yourusername/openmrn.git
+    GIT_TAG        v2.1.0        # Use a specific release tag
+    GIT_SHALLOW    TRUE          # Only download that version
+)
+```
+
+### Offline Development
+
+After the first build, CMake caches OpenMRN in `build/_deps/`. To force re-download:
+
+```bash
+rm -rf build/_deps/openmrn-*
+cmake ..
+```
 
 # Your firmware executable
 add_executable(firmware.elf
