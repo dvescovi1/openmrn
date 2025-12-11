@@ -1,1 +1,0 @@
-../../../../boards/esp-bracz-deadrail-huzzah/bootloader.ld

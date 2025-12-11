@@ -1,1 +1,0 @@
-../../../../boards/bracz-railcom/target.ld

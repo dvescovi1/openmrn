@@ -26,57 +26,43 @@ source OpenMRN libraries without having to be open source themselves.
 
 # Getting Started
 
-Most of the documentation for OpenMRN is in
-[doxygen](http://www.stack.nl/~dimitri/doxygen/) format.
+OpenMRN now uses **CMake** and is configured as a **header-only library** for embedded ARM Cortex-M targets.
 
-OpenMRN now uses **CMake** as its build system and is configured to build
-**only the embedded ARM library** (static library for ARM Cortex-M targets).
+## Quick Start for ARM Embedded Projects
 
-## Quick Build for ARM Embedded Targets
+```cmake
+# In your firmware's CMakeLists.txt
+include(FetchContent)
 
-```bash
-# Install ARM toolchain
-sudo apt-get install gcc-arm-none-eabi  # Ubuntu/Debian
-brew install --cask gcc-arm-embedded    # macOS
+FetchContent_Declare(
+    openmrn
+    GIT_REPOSITORY https://github.com/bakerstu/openmrn.git
+    GIT_TAG        master
+)
 
-# Build the library
-mkdir build-arm && cd build-arm
-cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/arm-none-eabi.toolchain.cmake.example ..
-cmake --build .
+FetchContent_MakeAvailable(openmrn)
+
+# Link with your firmware
+target_link_libraries(your_firmware.elf PRIVATE OpenMRN::openmrn)
 ```
 
-Result: `libopenmrn.a` static library for ARM embedded targets.
+That's it! No separate build step needed - the headers are included directly in your project.
 
 For detailed instructions, see [EMBEDDED_BUILD.md](EMBEDDED_BUILD.md).
 
 ## What's Included
 
-This build produces **only**:
-- ✅ Static library (`libopenmrn.a`) for ARM Cortex-M targets
-- ✅ Core OpenLCB protocol implementation
-- ✅ FreeRTOS driver support
-- ✅ DCC, executor, and utility modules
+This is a **header-only library** containing:
+- ✅ All OpenMRN headers (OpenLCB, DCC, executor, utils)
+- ✅ FreeRTOS driver headers
+- ✅ Core protocol implementations
+- ✅ Ready for ARM Cortex-M targets
 
 **Not included:**
 - ❌ Applications (hub, bootloader_client, etc.)
 - ❌ Tests
 - ❌ Documentation generation
 - ❌ Linux/POSIX host tools
-
-## Installing ARM Toolchain
-
-### Linux (Ubuntu/Debian)
-```bash
-sudo apt-get install gcc-arm-none-eabi
-```
-
-### macOS
-```bash
-brew install --cask gcc-arm-embedded
-```
-
-### Windows
-Download from [ARM Developer](https://developer.arm.com/downloads/-/gnu-rm)
 
 ## Using in Your Firmware Project
 

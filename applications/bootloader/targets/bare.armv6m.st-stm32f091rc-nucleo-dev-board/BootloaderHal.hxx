@@ -1,1 +1,0 @@
-../../../../boards/st-stm32f0x1_x2_x8-generic/BootloaderHal.hxx

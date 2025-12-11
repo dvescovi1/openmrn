@@ -1,1 +1,0 @@
-../bare.armv7m.ek-tm4c123gxl/target.ld

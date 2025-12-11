@@ -1,6 +1,6 @@
 # Building OpenMRN for Embedded ARM Targets
 
-OpenMRN is now configured as a static library for embedded ARM targets only.
+OpenMRN is now configured as a **header-only library** for embedded ARM targets.
 
 ## Quick Start
 
@@ -19,20 +19,17 @@ brew install --cask gcc-arm-embedded
 **Windows:**
 Download from [ARM Developer](https://developer.arm.com/downloads/-/gnu-rm)
 
-### 2. Configure and Build
+### 2. Use in Your Project
+
+**No separate build needed!** Simply include OpenMRN in your firmware project and the headers will be available.
 
 ```bash
-# Create build directory
-mkdir build-arm && cd build-arm
+# Option 1: Clone as subdirectory
+cd your-firmware-project
+git submodule add https://github.com/bakerstu/openmrn.git libs/openmrn
 
-# Configure with ARM toolchain
-cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/arm-none-eabi.toolchain.cmake.example ..
-
-# Build
-cmake --build .
+# Option 2: Use FetchContent (see below)
 ```
-
-The result will be `libopenmrn.a` in `build-arm/src/`.
 
 ## Customizing for Your Target
 
@@ -171,29 +168,24 @@ add_custom_command(TARGET firmware.elf POST_BUILD
 
 ## Library Configuration
 
-The library is built with:
-- **No exceptions** (`-fno-exceptions`)
-- **No RTTI** (`-fno-rtti`)
-- **Static linking**
+The library is configured as **header-only** with:
+- **No compilation required** - headers are included directly in your project
+- **No exceptions** (`-fno-exceptions` when used)
+- **No RTTI** (`-fno-rtti` when used)
+- **All code inline** or in headers
 - **FreeRTOS driver support included**
-- **Optimized for size** (Release build)
+- **Zero build time for the library itself**
 
 ## Build Options
 
-### Debug Build
-```bash
-cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=../cmake/arm.toolchain.cmake ..
-```
+Since this is a header-only library, there are no build options. The library is configured via:
+- Compiler definitions (set via `target_compile_definitions`)
+- Toolchain selection
+- Your project's build configuration
 
-### Release Build (Size Optimized)
-```bash
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=../cmake/arm.toolchain.cmake ..
-```
+### Debug vs Release
 
-### MinSizeRel (Minimum Size)
-```bash
-cmake -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_TOOLCHAIN_FILE=../cmake/arm.toolchain.cmake ..
-```
+The library headers adapt to your project's build type automatically through compiler flags.
 
 ## Excluded Components
 
@@ -205,29 +197,27 @@ The following are **NOT** built:
 
 Only the core embedded library is built.
 
-## Verifying the Build
+## Verifying the Setup
 
 ```bash
-# Check library was created
-ls -lh src/libopenmrn.a
+# Check headers are available
+ls libs/openmrn/src/openlcb/*.hxx
+ls libs/openmrn/inc/*.h
 
-# Check symbols
-arm-none-eabi-nm src/libopenmrn.a | grep -i "openlcb"
-
-# Check architecture
-arm-none-eabi-readelf -h src/libopenmrn.a
+# Build your project - OpenMRN headers will be included automatically
+cmake --build .
 ```
 
 ## Memory Footprint
 
-Approximate flash usage (varies by configuration):
-- **Core library**: ~200-300 KB
-- **With FreeRTOS drivers**: ~250-350 KB
-- **Full OpenLCB stack**: ~300-400 KB
+As a header-only library, memory footprint depends entirely on which headers and features you use:
+- **Unused code is eliminated** by the linker automatically
+- **Only what you include is compiled** into your firmware
+- **Typical usage**: 200-400 KB flash (varies greatly by features used)
 
 RAM usage depends on:
-- Buffer pool sizes
-- Number of nodes
+- Buffer pool sizes you configure
+- Number of nodes you instantiate
 - Stack configuration
 
 ## Troubleshooting
@@ -263,4 +253,4 @@ For embedded-specific questions:
 **Supported:** ARM Cortex-M series (M0/M0+/M3/M4/M7/M33)  
 **Toolchain:** arm-none-eabi-gcc  
 **RTOS:** FreeRTOS (optional)  
-**Library Type:** Static (.a)
+**Library Type:** Header-only (INTERFACE)

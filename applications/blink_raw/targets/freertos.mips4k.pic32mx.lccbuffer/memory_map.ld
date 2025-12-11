@@ -1,1 +1,0 @@
-../../../../boards/microchip-pic32mx-lccbuffer/memory_map.ld

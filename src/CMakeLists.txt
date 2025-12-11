@@ -1,60 +1,56 @@
-# OpenMRN Embedded ARM Library
+# OpenMRN Embedded ARM Library - Header Only
 
-# Collect all source files
-file(GLOB_RECURSE OPENMRN_SOURCES
-    ble/*.cxx
-    console/*.cxx
-    dcc/*.cxx
-    executor/*.cxx
-    openlcb/*.cxx
-    os/*.cxx
-    os/*.c
-    traction_modem/*.cxx
-    utils/*.cxx
-    utils/*.c
-    freertos_drivers/common/*.cxx
+# Collect all header files
+file(GLOB_RECURSE OPENMRN_HEADERS
+    ble/*.h
+    ble/*.hxx
+    console/*.h
+    console/*.hxx
+    dcc/*.h
+    dcc/*.hxx
+    executor/*.h
+    executor/*.hxx
+    openlcb/*.h
+    openlcb/*.hxx
+    os/*.h
+    os/*.hxx
+    traction_modem/*.h
+    traction_modem/*.hxx
+    utils/*.h
+    utils/*.hxx
+    freertos_drivers/**/*.h
+    freertos_drivers/**/*.hxx
 )
 
-# Exclude test files and platform-specific files not needed for ARM
-list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*\\.cxxtest$")
-list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*test.*\\.cxx$")
-list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*OSSelectWakeup.*")
-list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*MDNS.*")
-list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*socket_listener.*")
-list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*SocketClient.*")
-list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*SocketCan.*")
+# Exclude test files
+list(FILTER OPENMRN_HEADERS EXCLUDE REGEX ".*test.*")
 
-# Create static library for embedded targets
-add_library(openmrn STATIC ${OPENMRN_SOURCES})
+# Create INTERFACE library (header-only)
+add_library(openmrn INTERFACE)
 add_library(OpenMRN::openmrn ALIAS openmrn)
 
 # Set include directories
 target_include_directories(openmrn
-    PUBLIC
+    INTERFACE
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../inc>
         $<INSTALL_INTERFACE:inc/openmrn>
 )
 
-# Embedded ARM specific settings
-target_compile_definitions(openmrn PUBLIC
+# Embedded ARM specific definitions
+target_compile_definitions(openmrn INTERFACE
     TARGET_IS_CC3200
     PART_TM4C1294NCPDT
 )
 
 # Compiler flags for ARM embedded targets
-target_compile_options(openmrn PRIVATE
+target_compile_options(openmrn INTERFACE
     $<$<CXX_COMPILER_ID:GNU>:-Wall -Wextra -Wno-unused-parameter -fno-exceptions -fno-rtti>
     $<$<CXX_COMPILER_ID:ARMClang>:-Wall -Wextra -Wno-unused-parameter -fno-exceptions -fno-rtti>
 )
 
-# Set properties for embedded use
-set_target_properties(openmrn PROPERTIES
-    VERSION ${PROJECT_VERSION}
-    POSITION_INDEPENDENT_CODE OFF
-    C_STANDARD 11
-    CXX_STANDARD 14
-)
+# Add headers as sources for IDE visibility
+target_sources(openmrn INTERFACE ${OPENMRN_HEADERS})
 
 # No installation targets for embedded library
-message(STATUS "OpenMRN library configured for embedded ARM targets")
+message(STATUS "OpenMRN configured as INTERFACE (header-only) library for embedded ARM targets")

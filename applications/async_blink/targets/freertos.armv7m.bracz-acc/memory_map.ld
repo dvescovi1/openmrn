@@ -1,1 +1,0 @@
-../../../../boards/ti-bracz-acc/memory_map.ld
