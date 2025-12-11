@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.14)
 
 project(OpenMRN VERSION 1.0.0 LANGUAGES C CXX ASM)
 
@@ -15,6 +15,12 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Set OPENMRNPATH for compatibility
 set(OPENMRNPATH ${CMAKE_CURRENT_SOURCE_DIR})
+
+# Add cmake modules directory
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+# Embedded ARM library build - no applications, tests, or docs
+# For cross-compilation, use: cmake -DCMAKE_TOOLCHAIN_FILE=<toolchain.cmake> ..
 
 # Include subdirectories
 add_subdirectory(src)

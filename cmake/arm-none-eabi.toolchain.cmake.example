@@ -1,0 +1,48 @@
+# Example ARM Cortex-M33 Toolchain File for OpenMRN
+# Copy this file and customize for your specific ARM target
+# Usage: cmake -DCMAKE_TOOLCHAIN_FILE=cmake/arm-none-eabi.toolchain.cmake ..
+
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+
+# Specify the cross compiler
+set(CMAKE_C_COMPILER arm-none-eabi-gcc)
+set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
+set(CMAKE_ASM_COMPILER arm-none-eabi-gcc)
+
+# Specify the target processor - Cortex-M33
+set(CPU_FLAGS "-mcpu=cortex-m33 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16")
+
+set(CMAKE_C_FLAGS_INIT "${CPU_FLAGS}")
+set(CMAKE_CXX_FLAGS_INIT "${CPU_FLAGS}")
+set(CMAKE_ASM_FLAGS_INIT "${CPU_FLAGS}")
+
+# Linker flags
+set(CMAKE_EXE_LINKER_FLAGS_INIT "-specs=nosys.specs -specs=nano.specs")
+
+# Optimize for size
+set(CMAKE_CXX_FLAGS_RELEASE "-Os -DNDEBUG")
+set(CMAKE_C_FLAGS_RELEASE "-Os -DNDEBUG")
+
+# Search for programs in the build host directories
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+# Search for libraries and headers in the target directories
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+
+# Additional flags for embedded targets
+add_compile_definitions(
+    __STARTUP_CLEAR_BSS
+    __START=main
+)
+
+# Common embedded optimizations
+add_compile_options(
+    -ffunction-sections
+    -fdata-sections
+    -fno-common
+)
+
+add_link_options(
+    -Wl,--gc-sections
+)
