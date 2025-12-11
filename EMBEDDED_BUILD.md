@@ -89,14 +89,28 @@ set(CPU_FLAGS "-mcpu=cortex-m33 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16")
 
 ## Using the Library in Your Firmware
 
-### CMakeLists.txt Example
+### Option 1: Using FetchContent (Recommended)
+
+Automatically download and build OpenMRN as part of your firmware project:
 
 ```cmake
 cmake_minimum_required(VERSION 3.14)
+
+# Set toolchain before project()
+set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/cmake/arm-m33.toolchain.cmake)
+
 project(MyFirmware C CXX ASM)
 
-# Add OpenMRN as subdirectory
-add_subdirectory(openmrn)
+# Fetch OpenMRN from Git repository
+include(FetchContent)
+
+FetchContent_Declare(
+    openmrn
+    GIT_REPOSITORY https://github.com/bakerstu/openmrn.git
+    GIT_TAG        master  # or specific commit/tag
+)
+
+FetchContent_MakeAvailable(openmrn)
 
 # Your firmware executable
 add_executable(firmware.elf
@@ -110,7 +124,41 @@ target_link_libraries(firmware.elf PRIVATE OpenMRN::openmrn)
 
 # Link script
 set_target_properties(firmware.elf PROPERTIES
-    LINK_FLAGS "-T${CMAKE_SOURCE_DIR}/linker/STM32F4.ld"
+    LINK_FLAGS "-T${CMAKE_SOURCE_DIR}/linker/device.ld"
+)
+
+# Generate hex and bin files
+add_custom_command(TARGET firmware.elf POST_BUILD
+    COMMAND arm-none-eabi-objcopy -O ihex firmware.elf firmware.hex
+    COMMAND arm-none-eabi-objcopy -O binary firmware.elf firmware.bin
+    COMMENT "Generating hex and bin files"
+)
+```
+
+### Option 2: As Subdirectory
+
+If you have OpenMRN checked out locally:
+
+```cmake
+cmake_minimum_required(VERSION 3.14)
+project(MyFirmware C CXX ASM)
+
+# Add OpenMRN as subdirectory
+add_subdirectory(libs/openmrn)
+
+# Your firmware executable
+add_executable(firmware.elf
+    src/main.cpp
+    src/hardware_init.c
+    # ... your sources
+)
+
+# Link with OpenMRN
+target_link_libraries(firmware.elf PRIVATE OpenMRN::openmrn)
+
+# Link script
+set_target_properties(firmware.elf PROPERTIES
+    LINK_FLAGS "-T${CMAKE_SOURCE_DIR}/linker/device.ld"
 )
 
 # Generate hex and bin files
