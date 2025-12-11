@@ -1,30 +1,33 @@
-# OpenMRN CMake Build Script for Windows
-# PowerShell script to build OpenMRN
+# OpenMRN Embedded ARM Library Build Script for Windows
+# PowerShell script to build OpenMRN embedded library
 
 param(
     [switch]$Debug,
     [switch]$Clean,
-    [switch]$Test,
-    [switch]$Docs,
+    [string]$Toolchain = "",
     [switch]$Help
 )
 
 if ($Help) {
-    Write-Host "OpenMRN CMake Build Script"
+    Write-Host "OpenMRN Embedded ARM Library Build Script"
     Write-Host ""
     Write-Host "Usage: .\build.ps1 [options]"
     Write-Host ""
     Write-Host "Options:"
-    Write-Host "  -Debug      Build in Debug mode (default: Release)"
-    Write-Host "  -Clean      Clean build directory before building"
-    Write-Host "  -Test       Run tests after building"
-    Write-Host "  -Docs       Build documentation"
-    Write-Host "  -Help       Show this help message"
+    Write-Host "  -Debug               Build in Debug mode (default: Release)"
+    Write-Host "  -Clean               Clean build directory before building"
+    Write-Host "  -Toolchain <file>    Use specific CMake toolchain file"
+    Write-Host "  -Help                Show this help message"
+    Write-Host ""
+    Write-Host "Examples:"
+    Write-Host "  .\build.ps1"
+    Write-Host "  .\build.ps1 -Debug -Clean"
+    Write-Host "  .\build.ps1 -Toolchain cmake/arm-none-eabi.toolchain.cmake.example"
     exit 0
 }
 
 $BuildType = if ($Debug) { "Debug" } else { "Release" }
-$BuildDir = "build"
+$BuildDir = "build-arm"
 
 # Clean build if requested
 if ($Clean) {
@@ -42,8 +45,13 @@ if (-not (Test-Path $BuildDir)) {
 Set-Location $BuildDir
 
 # Configure
-Write-Host "Configuring CMake (BUILD_TYPE=$BuildType)..."
-cmake .. -DCMAKE_BUILD_TYPE="$BuildType"
+Write-Host "Configuring CMake for Embedded ARM Library (BUILD_TYPE=$BuildType)..."
+if ($Toolchain -ne "") {
+    Write-Host "Using toolchain: $Toolchain"
+    cmake .. -DCMAKE_BUILD_TYPE="$BuildType" -DCMAKE_TOOLCHAIN_FILE="../$Toolchain"
+} else {
+    cmake .. -DCMAKE_BUILD_TYPE="$BuildType"
+}
 
 if ($LASTEXITCODE -ne 0) {
     Write-Error "CMake configuration failed"
@@ -51,7 +59,7 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 # Build
-Write-Host "Building..."
+Write-Host "Building embedded library..."
 cmake --build . --config $BuildType
 
 if ($LASTEXITCODE -ne 0) {
@@ -59,26 +67,13 @@ if ($LASTEXITCODE -ne 0) {
     exit 1
 }
 
-# Run tests if requested
-if ($Test) {
-    Write-Host "Running tests..."
-    ctest -C $BuildType --output-on-failure
-    
-    if ($LASTEXITCODE -ne 0) {
-        Write-Warning "Some tests failed"
-    }
-}
-
-# Build documentation if requested
-if ($Docs) {
-    Write-Host "Building documentation..."
-    cmake --build . --target docs
-    Write-Host "Documentation built in $BuildDir\doc\html\"
-}
-
 Write-Host ""
 Write-Host "Build completed successfully!" -ForegroundColor Green
 Write-Host "Build directory: $BuildDir"
 Write-Host "Build type: $BuildType"
+Write-Host "Library: $BuildDir\src\libopenmrn.a (or .lib on Windows)"
+Write-Host ""
+Write-Host "To use in your firmware project:"
+Write-Host "  target_link_libraries(your_target PRIVATE OpenMRN::openmrn)"
 
 Set-Location ..

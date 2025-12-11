@@ -1,14 +1,13 @@
 #!/bin/bash
-# Quick build script for OpenMRN using CMake
+# Quick build script for OpenMRN Embedded ARM Library
 
 set -e
 
 # Default values
 BUILD_TYPE="Release"
-BUILD_DIR="build"
+BUILD_DIR="build-arm"
 CLEAN_BUILD=false
-RUN_TESTS=false
-BUILD_DOCS=false
+TOOLCHAIN=""
 
 # Parse arguments
 while [[ $# -gt 0 ]]; do
@@ -21,25 +20,25 @@ while [[ $# -gt 0 ]]; do
             CLEAN_BUILD=true
             shift
             ;;
-        --test)
-            RUN_TESTS=true
-            shift
-            ;;
-        --docs)
-            BUILD_DOCS=true
-            shift
+        --toolchain)
+            TOOLCHAIN="$2"
+            shift 2
             ;;
         --help)
-            echo "OpenMRN CMake Build Script"
+            echo "OpenMRN Embedded ARM Library Build Script"
             echo ""
             echo "Usage: $0 [options]"
             echo ""
             echo "Options:"
-            echo "  --debug       Build in Debug mode (default: Release)"
-            echo "  --clean       Clean build directory before building"
-            echo "  --test        Run tests after building"
-            echo "  --docs        Build documentation"
-            echo "  --help        Show this help message"
+            echo "  --debug                Build in Debug mode (default: Release)"
+            echo "  --clean                Clean build directory before building"
+            echo "  --toolchain <file>     Use specific CMake toolchain file"
+            echo "  --help                 Show this help message"
+            echo ""
+            echo "Examples:"
+            echo "  $0"
+            echo "  $0 --debug --clean"
+            echo "  $0 --toolchain cmake/arm-none-eabi.toolchain.cmake.example"
             exit 0
             ;;
         *)
@@ -61,27 +60,23 @@ mkdir -p "$BUILD_DIR"
 cd "$BUILD_DIR"
 
 # Configure
-echo "Configuring CMake (BUILD_TYPE=$BUILD_TYPE)..."
-cmake .. -DCMAKE_BUILD_TYPE="$BUILD_TYPE"
+echo "Configuring CMake for Embedded ARM Library (BUILD_TYPE=$BUILD_TYPE)..."
+if [ -n "$TOOLCHAIN" ]; then
+    echo "Using toolchain: $TOOLCHAIN"
+    cmake .. -DCMAKE_BUILD_TYPE="$BUILD_TYPE" -DCMAKE_TOOLCHAIN_FILE="../$TOOLCHAIN"
+else
+    cmake .. -DCMAKE_BUILD_TYPE="$BUILD_TYPE"
+fi
 
 # Build
-echo "Building..."
+echo "Building embedded library..."
 cmake --build . -j$(nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 4)
-
-# Run tests if requested
-if [ "$RUN_TESTS" = true ]; then
-    echo "Running tests..."
-    ctest --output-on-failure
-fi
-
-# Build documentation if requested
-if [ "$BUILD_DOCS" = true ]; then
-    echo "Building documentation..."
-    cmake --build . --target docs
-    echo "Documentation built in $BUILD_DIR/doc/html/"
-fi
 
 echo ""
 echo "Build completed successfully!"
 echo "Build directory: $BUILD_DIR"
 echo "Build type: $BUILD_TYPE"
+echo "Library: $BUILD_DIR/src/libopenmrn.a"
+echo ""
+echo "To use in your firmware project:"
+echo "  target_link_libraries(your_target PRIVATE OpenMRN::openmrn)"

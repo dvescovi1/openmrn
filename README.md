@@ -27,56 +27,58 @@ source OpenMRN libraries without having to be open source themselves.
 # Getting Started
 
 Most of the documentation for OpenMRN is in
-[doxygen](http://www.stack.nl/~dimitri/doxygen/) format. The best way to view
-the documents is to build the HTML files (instructions below).
+[doxygen](http://www.stack.nl/~dimitri/doxygen/) format.
 
-OpenMRN now uses **CMake** as its build system, which provides excellent
-cross-platform support and IDE integration. See [CMAKE_BUILD.md](CMAKE_BUILD.md) 
-for detailed build instructions.
+OpenMRN now uses **CMake** as its build system and is configured to build
+**only the embedded ARM library** (static library for ARM Cortex-M targets).
 
-## Quick Build Instructions
-
-The easiest way to get started is:
+## Quick Build for ARM Embedded Targets
 
 ```bash
-mkdir build
-cd build
-cmake ..
+# Install ARM toolchain
+sudo apt-get install gcc-arm-none-eabi  # Ubuntu/Debian
+brew install --cask gcc-arm-embedded    # macOS
+
+# Build the library
+mkdir build-arm && cd build-arm
+cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/arm-none-eabi.toolchain.cmake.example ..
 cmake --build .
 ```
 
-For detailed instructions and build options, see [CMAKE_BUILD.md](CMAKE_BUILD.md).
+Result: `libopenmrn.a` static library for ARM embedded targets.
 
-## Installing Required Software (Linux or Mac)
+For detailed instructions, see [EMBEDDED_BUILD.md](EMBEDDED_BUILD.md).
 
-Building OpenMRN requires CMake and a C++14 compatible compiler. Most modern
-Linux distributions and macOS already include the necessary compilers.
+## What's Included
 
-Open a terminal window and enter the following commands:
+This build produces **only**:
+- ✅ Static library (`libopenmrn.a`) for ARM Cortex-M targets
+- ✅ Core OpenLCB protocol implementation
+- ✅ FreeRTOS driver support
+- ✅ DCC, executor, and utility modules
 
+**Not included:**
+- ❌ Applications (hub, bootloader_client, etc.)
+- ❌ Tests
+- ❌ Documentation generation
+- ❌ Linux/POSIX host tools
+
+## Installing ARM Toolchain
+
+### Linux (Ubuntu/Debian)
 ```bash
-# Ubuntu/Debian
-sudo apt-get install git cmake build-essential doxygen
-
-# macOS (requires Homebrew)
-brew install git cmake doxygen
-
-# Clone the repository
-cd ~
-git clone https://github.com/bakerstu/openmrn/
+sudo apt-get install gcc-arm-none-eabi
 ```
 
-## Building and Viewing the Documentation
-
-Build the documentation with CMake:
-
+### macOS
 ```bash
-cd ~/openmrn
-mkdir build
-cd build
-cmake ..
-cmake --build . --target docs
+brew install --cask gcc-arm-embedded
 ```
 
-The HTML documentation will be generated in `build/doc/html/`. Open
-`build/doc/html/index.html` in your web browser to view it.
+### Windows
+Download from [ARM Developer](https://developer.arm.com/downloads/-/gnu-rm)
+
+## Using in Your Firmware Project
+
+See [EMBEDDED_BUILD.md](EMBEDDED_BUILD.md) for complete examples of how to integrate
+the OpenMRN library into your embedded firmware project.

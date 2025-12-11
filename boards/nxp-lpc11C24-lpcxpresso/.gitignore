@@ -1,6 +1,0 @@
-*.elf
-*.bin
-*.lst
-*.map
-.cproject
-.project

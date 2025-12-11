@@ -1,1 +1,0 @@
-../st-stm32f76x_77x-generic/startup.c

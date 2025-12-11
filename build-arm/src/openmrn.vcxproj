@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6404384B-069A-34CF-B28B-0BB964791829}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>openmrn</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\GitHub\dv\openmrn\build-arm\src\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">openmrn.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">openmrn</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\GitHub\dv\openmrn\build-arm\src\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">openmrn.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">openmrn</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\GitHub\dv\openmrn\build-arm\src\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">openmrn.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">openmrn</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\GitHub\dv\openmrn\build-arm\src\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">openmrn.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">openmrn</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\GitHub\dv\openmrn\src;C:\GitHub\dv\openmrn\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;TARGET_IS_CC3200;PART_TM4C1294NCPDT;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;TARGET_IS_CC3200;PART_TM4C1294NCPDT;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\GitHub\dv\openmrn\src;C:\GitHub\dv\openmrn\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\GitHub\dv\openmrn\src;C:\GitHub\dv\openmrn\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\GitHub\dv\openmrn\src;C:\GitHub\dv\openmrn\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TARGET_IS_CC3200;PART_TM4C1294NCPDT;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TARGET_IS_CC3200;PART_TM4C1294NCPDT;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\GitHub\dv\openmrn\src;C:\GitHub\dv\openmrn\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\GitHub\dv\openmrn\src;C:\GitHub\dv\openmrn\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\GitHub\dv\openmrn\src;C:\GitHub\dv\openmrn\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TARGET_IS_CC3200;PART_TM4C1294NCPDT;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TARGET_IS_CC3200;PART_TM4C1294NCPDT;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\GitHub\dv\openmrn\src;C:\GitHub\dv\openmrn\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\GitHub\dv\openmrn\src;C:\GitHub\dv\openmrn\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\GitHub\dv\openmrn\src;C:\GitHub\dv\openmrn\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TARGET_IS_CC3200;PART_TM4C1294NCPDT;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TARGET_IS_CC3200;PART_TM4C1294NCPDT;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\GitHub\dv\openmrn\src;C:\GitHub\dv\openmrn\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\GitHub\dv\openmrn\src;C:\GitHub\dv\openmrn\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\GitHub\dv\openmrn\src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/GitHub/dv/openmrn/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe -SC:/GitHub/dv/openmrn -BC:/GitHub/dv/openmrn/build-arm --check-stamp-file C:/GitHub/dv/openmrn/build-arm/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\GitHub\dv\openmrn\build-arm\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/GitHub/dv/openmrn/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe -SC:/GitHub/dv/openmrn -BC:/GitHub/dv/openmrn/build-arm --check-stamp-file C:/GitHub/dv/openmrn/build-arm/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\GitHub\dv\openmrn\build-arm\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/GitHub/dv/openmrn/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe -SC:/GitHub/dv/openmrn -BC:/GitHub/dv/openmrn/build-arm --check-stamp-file C:/GitHub/dv/openmrn/build-arm/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\GitHub\dv\openmrn\build-arm\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/GitHub/dv/openmrn/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe -SC:/GitHub/dv/openmrn -BC:/GitHub/dv/openmrn/build-arm --check-stamp-file C:/GitHub/dv/openmrn/build-arm/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\GitHub\dv\openmrn\build-arm\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\ble\Advertisement.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\ble\Defs.cxx">
+      <ObjectFileName>$(IntDir)/ble/Defs.cxx.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\console\Console.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\dcc\DccDebug.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\dcc\Defs.cxx">
+      <ObjectFileName>$(IntDir)/dcc/Defs.cxx.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\dcc\LocalTrackIf.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\dcc\Loco.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\dcc\Packet.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\dcc\RailCom.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\dcc\RailcomBroadcastDecoder.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\dcc\RailcomDebug.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\dcc\SimpleUpdateLoop.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\dcc\UpdateLoop.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\dcc\dcc_constants.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\executor\AsyncNotifiableBlock.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\executor\Executor.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\executor\Notifiable.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\executor\Service.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\executor\StateFlow.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\executor\Timer.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\Can.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\CpuLoad.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\Device.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\DeviceBuffer.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\DeviceFile.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\EEPROM.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\EEPROMEmulation.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\EEPROMEmulation_weak.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\FileSystem.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\Fileio.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\FileioWeak.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\I2C.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\MCAN.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\MCP2515Can.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\Node.cxx">
+      <ObjectFileName>$(IntDir)/freertos_drivers/common/Node.cxx.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\Null.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\PCA9685PWM.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\Pipe.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\SN74HC595GPO.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\SPI.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\SPIFlash.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\Select.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\Serial.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\Socket.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\TCAN4550Can.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\WifiDefs.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\freertos_drivers\common\c++_operators.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\AliasAllocator.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\AliasCache.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\BLEAdvertisement.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\BLEService.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\BroadcastTime.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\BroadcastTimeClient.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\BroadcastTimeDefs.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\BroadcastTimeServer.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\BulkAliasAllocator.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\CanDefs.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\CompileCdiMain.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\ConfigEntry.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\ConfigUpdateFlow.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\Datagram.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\DatagramCan.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\DatagramTcp.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\DccAccyProducer.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\DefaultCdi.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\DefaultNode.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\EventHandler.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\EventHandlerContainer.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\EventHandlerTemplates.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\EventService.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\If.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\IfCan.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\IfImpl.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\IfTcp.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\MemoryConfig.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\Node.cxx">
+      <ObjectFileName>$(IntDir)/openlcb/Node.cxx.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\NodeBrowser.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\NodeInitializeFlow.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\NonAuthoritativeEventProducer.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\PIPClient.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\RoutingLogic.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\SimpleNodeInfo.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\SimpleNodeInfoMockUserFile.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\SimpleNodeInfoResponse.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\SimpleStack.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\Stream.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\StreamReceiver.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\StreamTransport.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\TcpDefs.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\TractionCvSpace.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\TractionDefs.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\TractionProxy.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\TractionTestTrain.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\TractionThrottle.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\TractionTrain.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\Velocity.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\WriteHelper.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\openlcb\nmranet_constants.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\os\FakeClock.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\os\OSImpl.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\os\TempFile.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\os\logging_malloc.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\os\os.c" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\os\stack_malloc.c" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\os\watchdog.c" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\traction_modem\Output.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\Base64.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\Blinker.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\Buffer.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\CanIf.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\ClientConnection.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\ConfigUpdateListener.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\Crc.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\DirectHub.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\DirectHubGc.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\DirectHubLegacy.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\FdUtils.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\FileUtils.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\ForwardAllocator.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\GcStreamParser.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\GcTcpHub.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\GridConnect.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\GridConnectHub.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\HubDevice.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\HubDeviceSelect.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\JSHubPort.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\Queue.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\ReflashBootloader.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\ServiceLocator.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\SimpleQueue.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\Stats.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\StringPrintf.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\constants.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\errno_exit.c" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\format_utils.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\gc_format.cxx" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\ieeehalfprecision.c" />
+    <ClCompile Include="C:\GitHub\dv\openmrn\src\utils\logging.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\GitHub\dv\openmrn\build-arm\ZERO_CHECK.vcxproj">
+      <Project>{AC05D347-F9B8-3F74-8C3F-B1D82980AC6A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
