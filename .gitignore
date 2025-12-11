@@ -84,3 +84,16 @@ package-lock.json
 # VSCode Generated artifacts
 .vscode
 *.code-workspace
+
+# CMake build artifacts
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.cmake
+!CMakeLists.txt
+!cmake/
+Makefile
+Testing/
+CTestTestfile.cmake
+_deps/

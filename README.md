@@ -30,59 +30,53 @@ Most of the documentation for OpenMRN is in
 [doxygen](http://www.stack.nl/~dimitri/doxygen/) format. The best way to view
 the documents is to build the HTML files (instructions below).
 
-The existing OpenMRN stack makes heavy use of Linux build tools. As a result,
-the best way to get up and running, and to build the documentation, is within
-Linux or Mac OS X. If you have a Windows, we recommend that you create a Linux
-virtual machine. Below are some high-level instructions on getting started.
+OpenMRN now uses **CMake** as its build system, which provides excellent
+cross-platform support and IDE integration. See [CMAKE_BUILD.md](CMAKE_BUILD.md) 
+for detailed build instructions.
 
-## Create a Linux Virtual Machine
+## Quick Build Instructions
 
-* Install Oracle [VirtualBox](https://www.virtualbox.org/) which is available for
-free.
-* Create a virtual machine
-    * Ideally, this should be a 64-bit virtual machine
-    * Assign it at least 4GB of RAM
-    * Assign it multiple cores (improves build speed)
-    * Create a _dynamically allocated_ virtual disk that is larger than the
-      default. The default is 10GB, and we recommend at least 30GB. More is
-      better because the virtual machine file itself will expand, but the
-      maximum size is hard to change in the future
-* Download a copy of Ubuntu desktop. At the time of this writing, 16.04 LTS is a
-  good machine. Download this as an ISO disk image
-* Start the virtual machine. It will ask you to select a startup disk. Select
-  the ISO file that you downloaded for Ubuntu desktop
+The easiest way to get started is:
 
-Once you've done this, you'll need to do a few more things before you can get
-the source code and build the documentation.
+```bash
+mkdir build
+cd build
+cmake ..
+cmake --build .
+```
+
+For detailed instructions and build options, see [CMAKE_BUILD.md](CMAKE_BUILD.md).
 
 ## Installing Required Software (Linux or Mac)
 
-All software installation will be done through the command line, known as a
-_terminal_ in Ubuntu Linux. Most of these commands will start with **sudo** in
-order to run them with administrator privileges. Building the documentation
-requires the gcc/g++ or LLVM compiler to be installed. Ubuntu LTS comes with the
-compilers already installed.
+Building OpenMRN requires CMake and a C++14 compatible compiler. Most modern
+Linux distributions and macOS already include the necessary compilers.
 
-Open a terminal window (for Ubuntu, right click anywhere on the desktop and
-click **Open Terminal**) and enter the following commands (these all require
-access to the internet):
+Open a terminal window and enter the following commands:
 
-```
-sudo apt-get install git
-sudo apt-get install doxygen
+```bash
+# Ubuntu/Debian
+sudo apt-get install git cmake build-essential doxygen
+
+# macOS (requires Homebrew)
+brew install git cmake doxygen
+
+# Clone the repository
 cd ~
 git clone https://github.com/bakerstu/openmrn/
 ```
+
 ## Building and Viewing the Documentation
 
-At this point you can build, and then view the documentation. Here are the steps
-to build the documentation:
+Build the documentation with CMake:
 
-```
-cd ~/openmrn/doc
-make html
+```bash
+cd ~/openmrn
+mkdir build
+cd build
+cmake ..
+cmake --build . --target docs
 ```
 
-That should create the HTML files. Now open the **Files** application, navigate
-to Home/openmrn/doc and double-click **index.html**. This will open the OpenMRN
-documentation in your browser (which is Firefox by default).
+The HTML documentation will be generated in `build/doc/html/`. Open
+`build/doc/html/index.html` in your web browser to view it.
