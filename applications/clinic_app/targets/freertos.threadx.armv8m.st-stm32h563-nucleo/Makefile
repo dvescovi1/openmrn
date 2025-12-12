@@ -1,0 +1,1 @@
+../../../../boards/st-stm32h563-nucleo/Makefile

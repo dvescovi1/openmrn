@@ -159,6 +159,14 @@ STM32CUBEG0PATH:=$(TRYPATH)
 endif
 endif #STM32CUBEG0PATH
 
+################ STM32Cube_H5 ##################
+ifndef STM32CUBEH5PATH
+TRYPATH := $(firstword \
+  /opt/st/STM32Cube_FW_H5/default \
+  $(HOME)/STM32Cube/Repository/STM32Cube_FW_H5_V1.0.0)
+STM32CUBEH5PATH:=$(TRYPATH)
+endif #STM32CUBEH5PATH
+
 ################ lpcopen_18xx_43xx ##################
 ifndef LPCOPENPATH_18XX_43XX
 SEARCHPATH := \
