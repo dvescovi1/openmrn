@@ -1,5 +1,10 @@
 cmake_minimum_required(VERSION 3.14)
 
+# For bare-metal cross-compilation, skip executable linking during compiler checks
+if(CMAKE_CROSSCOMPILING OR CMAKE_C_COMPILER MATCHES "arm-none-eabi")
+    set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+endif()
+
 project(OpenMRN VERSION 1.0.0 LANGUAGES C CXX ASM)
 
 # Set C++ standard

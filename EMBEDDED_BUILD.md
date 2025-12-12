@@ -39,16 +39,28 @@ cp cmake/arm-none-eabi.toolchain.cmake.example cmake/my-board.toolchain.cmake
 ```
 
 2. Edit `cmake/my-board.toolchain.cmake` to match your target:
-   - CPU flags (Cortex-M0/M3/M4/M7/M33, etc.)
-   - FPU settings
-   - Memory layout
-   - Custom definitions
+   - **CPU flags** (Cortex-M0/M3/M4/M7/M33, etc.)
+   - **FPU settings**
+   - Custom compiler/linker flags
+   - Target-specific definitions
 
-3. Build with your toolchain:
+3. **Important:** The toolchain file must include these critical settings:
+```cmake
+set(CMAKE_SYSTEM_NAME Generic)              # Bare-metal target
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)  # Skip executable tests
+```
+
+4. Use your toolchain when configuring:
 ```bash
 cmake -DCMAKE_TOOLCHAIN_FILE=cmake/my-board.toolchain.cmake ..
 cmake --build .
 ```
+
+### Common Issues
+
+**CMake tries to link with Windows/Linux libraries:** Make sure your toolchain file sets `CMAKE_SYSTEM_NAME` to `Generic` and `CMAKE_TRY_COMPILE_TARGET_TYPE` to `STATIC_LIBRARY`.
+
+**Compiler check fails:** This is normal for bare-metal targets. The `CMAKE_TRY_COMPILE_TARGET_TYPE` setting bypasses executable linking tests.
 
 ## Target-Specific Customization
 
