@@ -8,12 +8,29 @@ CMSIS-RTOS2 is a common API for real-time operating systems provided by ARM for 
 
 ## Configuration
 
-To enable CMSIS-RTOS2 support, define `__CMSIS_RTOS2` before including OpenMRN headers:
+To enable CMSIS-RTOS2 support in your CMakeLists.txt or build system:
 
-```c
-#define __CMSIS_RTOS2
-#include "os/OS.hxx"
+### CMake Configuration
+
+Add these definitions and include path to your CMakeLists.txt:
+
+```cmake
+# Define CMSIS-RTOS2 platform
+add_definitions(-D__CMSIS_RTOS2)
+
+# Add CMSIS-OS2 include directory to the include path
+include_directories(${OPENMRN_DIR}/inc/cmsis_os2)
 ```
+
+### Compiler Flags
+
+Or pass these flags directly to your compiler:
+
+```bash
+-D__CMSIS_RTOS2 -I${OPENMRN_DIR}/inc/cmsis_os2
+```
+
+This ensures the proper headers are found and the correct feature flags are enabled.
 
 ## Features Enabled
 
