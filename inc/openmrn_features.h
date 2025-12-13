@@ -76,7 +76,7 @@
 
 /// @todo this should probably be a whitelist: __linux__ || __MACH__.
 #if !defined(__FreeRTOS__) && !defined(__WINNT__) && !defined(ESP_PLATFORM) && \
-    !defined(ARDUINO) && !defined(ESP_NONOS)
+    !defined(ARDUINO) && !defined(ESP_NONOS) && !defined(__CMSIS_RTOS2)
 /// Uses ::pselect in the Executor for sleep and pkill for waking up.
 #define OPENMRN_HAVE_PSELECT 1
 #endif
