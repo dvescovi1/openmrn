@@ -1,0 +1,5 @@
+{
+  "device": "STM32H563ZIT6",
+  "tz": "TZ-disabled",
+  "toolchain": "CLANG"
+}

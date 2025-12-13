@@ -35,6 +35,7 @@
 #ifndef _OS_OS_H_
 #define _OS_OS_H_
 
+#include <endian.h>
 #include <sys/time.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -49,6 +50,10 @@
 #endif
 #if OPENMRN_FEATURE_DEVICE_SELECT
 #include <event_groups.h>
+#endif
+
+#if OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+#include "cmsis_os2_includes.h"
 #endif
 
 #if OPENMRN_FEATURE_MUTEX_PTHREAD
@@ -111,6 +116,20 @@ typedef struct
     unsigned char state; /**< keep track if already executed */
 } os_thread_once_t; /**< one time initialization type */
 typedef xSemaphoreHandle os_sem_t; /**< semaphore handle */
+#endif
+#if OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+typedef osThreadId_t os_thread_t; /**< thread handle */
+typedef struct
+{
+    osMutexId_t mutex; /**< CMSIS-RTOS2 mutex handle */
+    char recursive; /**< recursive mutex if set */
+} os_mutex_t; /**< mutex handle */
+typedef osMessageQueueId_t os_mq_t; /**< message queue handle */
+typedef struct
+{
+    unsigned char state; /**< keep track if already executed */
+} os_thread_once_t; /**< one time initialization type */
+typedef osSemaphoreId_t os_sem_t; /**< semaphore handle */
 #endif
 #if OPENMRN_FEATURE_MUTEX_FAKE
 typedef struct {
@@ -371,6 +390,8 @@ OS_INLINE os_thread_t os_thread_self(void)
 {
 #if OPENMRN_FEATURE_MUTEX_FREERTOS
     return xTaskGetCurrentTaskHandle();
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    return osThreadGetId();
 #elif OPENMRN_FEATURE_SINGLE_THREADED
     return 0xdeadbeef;
 #elif OPENMRN_FEATURE_MUTEX_PTHREAD
@@ -386,6 +407,8 @@ OS_INLINE int os_thread_get_priority(os_thread_t thread)
 {
 #if OPENMRN_FEATURE_MUTEX_FREERTOS
     return uxTaskPriorityGet(thread);
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    return (int)osThreadGetPriority(thread);
 #elif OPENMRN_FEATURE_SINGLE_THREADED
     return 2;
 #elif OPENMRN_FEATURE_MUTEX_PTHREAD
@@ -403,6 +426,8 @@ OS_INLINE int os_thread_get_priority_min(void)
 {
 #if OPENMRN_FEATURE_MUTEX_FREERTOS
     return 1;
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    return (int)osPriorityLow;
 #elif OPENMRN_FEATURE_SINGLE_THREADED
     return 2;
 #elif OPENMRN_FEATURE_MUTEX_PTHREAD
@@ -417,6 +442,8 @@ OS_INLINE int os_thread_get_priority_max(void)
 {
 #if OPENMRN_FEATURE_MUTEX_FREERTOS
     return configMAX_PRIORITIES - 1;
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    return (int)osPriorityISR;
 #elif OPENMRN_FEATURE_SINGLE_THREADED
     return 2;
 #elif OPENMRN_FEATURE_MUTEX_PTHREAD
@@ -425,6 +452,11 @@ OS_INLINE int os_thread_get_priority_max(void)
 }
 
 #if OPENMRN_FEATURE_MUTEX_FREERTOS
+/** Static initializer for mutexes */
+#define OS_MUTEX_INITIALIZER {NULL, 0}
+/** Static initializer for recursive mutexes */
+#define OS_RECURSIVE_MUTEX_INITIALIZER {NULL, 1}
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
 /** Static initializer for mutexes */
 #define OS_MUTEX_INITIALIZER {NULL, 0}
 /** Static initializer for recursive mutexes */
@@ -464,6 +496,11 @@ OS_INLINE int os_mutex_init(os_mutex_t *mutex)
     mutex->sem = xSemaphoreCreateMutex();
 
     return 0;
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    mutex->recursive = 0;
+    osMutexAttr_t attr = {0};
+    mutex->mutex = osMutexNew(&attr);
+    return (mutex->mutex != NULL) ? 0 : -1;
 #elif OPENMRN_FEATURE_MUTEX_FAKE
     mutex->locked = 0;
     mutex->recursive = 0;
@@ -484,6 +521,12 @@ OS_INLINE int os_recursive_mutex_init(os_mutex_t *mutex)
     mutex->sem = xSemaphoreCreateRecursiveMutex();
 
     return 0;
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    mutex->recursive = 1;
+    osMutexAttr_t attr = {0};
+    attr.attr_bits = osMutexRecursive;
+    mutex->mutex = osMutexNew(&attr);
+    return (mutex->mutex != NULL) ? 0 : -1;
 #elif OPENMRN_FEATURE_MUTEX_FAKE
     mutex->locked = 0;
     mutex->recursive = 1;
@@ -517,6 +560,13 @@ OS_INLINE int os_mutex_destroy(os_mutex_t *mutex)
 #if OPENMRN_FEATURE_MUTEX_FREERTOS
     vSemaphoreDelete(mutex->sem);
 
+    return 0;
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    if (mutex->mutex != NULL)
+    {
+        osMutexDelete(mutex->mutex);
+        mutex->mutex = NULL;
+    }
     return 0;
 #elif OPENMRN_FEATURE_MUTEX_FAKE
     mutex->locked = 0;
@@ -567,6 +617,18 @@ OS_INLINE int os_mutex_lock(os_mutex_t *mutex)
         xSemaphoreTake(mutex->sem, portMAX_DELAY);
     }
     return 0;
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    if (mutex->mutex == NULL)
+    {
+        osMutexAttr_t attr = {0};
+        if (mutex->recursive)
+        {
+            attr.attr_bits = osMutexRecursive;
+        }
+        mutex->mutex = osMutexNew(&attr);
+    }
+    osStatus_t status = osMutexAcquire(mutex->mutex, osWaitForever);
+    return (status == osOK) ? 0 : -1;
 #elif OPENMRN_FEATURE_MUTEX_FAKE
     if (mutex->locked && !mutex->recursive)
     {
@@ -595,6 +657,9 @@ OS_INLINE int os_mutex_unlock(os_mutex_t *mutex)
         xSemaphoreGive(mutex->sem);
     }
     return 0;
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    osStatus_t status = osMutexRelease(mutex->mutex);
+    return (status == osOK) ? 0 : -1;
 #elif OPENMRN_FEATURE_MUTEX_FAKE
     if (mutex->locked <= 0)
     {
@@ -620,6 +685,9 @@ OS_INLINE int os_sem_init(os_sem_t *sem, unsigned int value)
       abort();
     }
     return 0;
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    *sem = osSemaphoreNew(UINT32_MAX, value, NULL);
+    return (*sem != NULL) ? 0 : -1;
 #elif OPENMRN_FEATURE_MUTEX_FAKE
     sem->counter = value;
     return 0;
@@ -640,6 +708,13 @@ OS_INLINE int os_sem_destroy(os_sem_t *sem)
 #if OPENMRN_FEATURE_MUTEX_FREERTOS
     vSemaphoreDelete(*sem);
     return 0;
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    if (*sem != NULL)
+    {
+        osSemaphoreDelete(*sem);
+        *sem = NULL;
+    }
+    return 0;
 #elif OPENMRN_FEATURE_MUTEX_FAKE
     return 0;
 #elif OPENMRN_FEATURE_MUTEX_PTHREAD
@@ -658,6 +733,9 @@ OS_INLINE int os_sem_post(os_sem_t *sem)
 #if OPENMRN_FEATURE_MUTEX_FREERTOS
     xSemaphoreGive(*sem);
     return 0;
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    osStatus_t status = osSemaphoreRelease(*sem);
+    return (status == osOK) ? 0 : -1;
 #elif OPENMRN_FEATURE_MUTEX_FAKE
     sem->counter++;
     return 0;
@@ -678,10 +756,17 @@ OS_INLINE int os_sem_post(os_sem_t *sem)
  */
 OS_INLINE int os_sem_post_from_isr(os_sem_t *sem, int *woken)
 {
+#if OPENMRN_FEATURE_MUTEX_FREERTOS
     portBASE_TYPE local_woken = 0;
     xSemaphoreGiveFromISR(*sem, &local_woken);
     *woken |= local_woken;
     return 0;
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    osStatus_t status = osSemaphoreRelease(*sem);
+    // CMSIS-RTOS2 handles wakeup internally, no need to track
+    *woken = (status == osOK) ? 1 : 0;
+    return (status == osOK) ? 0 : -1;
+#endif
 }
 #endif // OPENMRN_FEATURE_RTOS_FROM_ISR
 
@@ -694,6 +779,9 @@ OS_INLINE int os_sem_wait(os_sem_t *sem)
 #if OPENMRN_FEATURE_MUTEX_FREERTOS
     xSemaphoreTake(*sem, portMAX_DELAY);
     return 0;
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    osStatus_t status = osSemaphoreAcquire(*sem, osWaitForever);
+    return (status == osOK) ? 0 : -1;
 #elif defined(__EMSCRIPTEN__)
     while (!sem->counter)
     {
@@ -733,6 +821,18 @@ OS_INLINE int os_sem_timedwait(os_sem_t *sem, long long timeout)
     }
 #if OPENMRN_FEATURE_MUTEX_FREERTOS
     if (xSemaphoreTake(*sem, NSEC_TO_TICK(timeout)) == pdTRUE)
+    {
+        return 0;
+    }
+    else
+    {
+        errno = ETIMEDOUT;
+        return -1;
+    }
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    uint32_t ticks = (uint32_t)(NSEC_TO_MSEC(timeout));
+    osStatus_t status = osSemaphoreAcquire(*sem, ticks);
+    if (status == osOK)
     {
         return 0;
     }
@@ -787,7 +887,7 @@ OS_INLINE int os_sem_timedwait(os_sem_t *sem, long long timeout)
 #endif // OPENMRN_FEATURE_SEM_TIMEDWAIT
 
 
-#if !defined (OPENMRN_FEATURE_MUTEX_FREERTOS)
+#if !defined (OPENMRN_FEATURE_MUTEX_FREERTOS) && !defined (OPENMRN_FEATURE_MUTEX_CMSIS_OS2)
 /** Private data structure for a queue, do not use directly
  */
 typedef struct queue_priv
@@ -812,6 +912,9 @@ OS_INLINE os_mq_t os_mq_create(size_t length, size_t item_size)
 {
 #if OPENMRN_FEATURE_MUTEX_FREERTOS
     return xQueueCreate(length, item_size);
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    osMessageQueueAttr_t attr = {0};
+    return osMessageQueueNew(length, item_size, &attr);
 #else
     QueuePriv *q = (QueuePriv*)malloc(sizeof(QueuePriv));
     if (!q)
@@ -840,6 +943,8 @@ OS_INLINE void os_mq_send(os_mq_t queue, const void *data)
 {
 #if OPENMRN_FEATURE_MUTEX_FREERTOS
     xQueueSend(queue, data, portMAX_DELAY);
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    osMessageQueuePut(queue, data, 0, osWaitForever);
 #else
     QueuePriv *q = (QueuePriv*)queue;
     
@@ -872,6 +977,14 @@ OS_INLINE int os_mq_timedsend(os_mq_t queue, const void *data, long long timeout
     {
         return OS_MQ_TIMEDOUT;
     }
+    return OS_MQ_NONE;
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    uint32_t ticks = (uint32_t)(NSEC_TO_MSEC(timeout));
+    osStatus_t status = osMessageQueuePut(queue, data, 0, ticks);
+    if (status != osOK)
+    {
+        return OS_MQ_TIMEDOUT;
+    }
 #else
     DIE("unimplemented.");
 #endif
@@ -887,6 +1000,8 @@ OS_INLINE void os_mq_receive(os_mq_t queue, void *data)
 {
 #if OPENMRN_FEATURE_MUTEX_FREERTOS
     xQueueReceive(queue, data, portMAX_DELAY);
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    osMessageQueueGet(queue, data, NULL, osWaitForever);
 #else
     QueuePriv *q = (QueuePriv*)queue;
     
@@ -919,6 +1034,13 @@ OS_INLINE int os_mq_timedreceive(os_mq_t queue, void *data, long long timeout)
     {
         return OS_MQ_TIMEDOUT;
     }
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    uint32_t ticks = (uint32_t)(NSEC_TO_MSEC(timeout));
+    osStatus_t status = osMessageQueueGet(queue, data, NULL, ticks);
+    if (status != osOK)
+    {
+        return OS_MQ_TIMEDOUT;
+    }
 #else
     DIE("unimplemented.");
 #endif
@@ -940,6 +1062,13 @@ OS_INLINE int os_mq_send_from_isr(os_mq_t queue, const void *data, int *woken)
         return OS_MQ_FULL;
     }
     *woken |= local_woken;
+#elif OPENMRN_FEATURE_MUTEX_CMSIS_OS2
+    osStatus_t status = osMessageQueuePut(queue, data, 0, 0);
+    if (status != osOK)
+    {
+        return OS_MQ_FULL;
+    }
+    *woken = (status == osOK) ? 1 : 0;
 #else
     DIE("unimplemented.");
 #endif

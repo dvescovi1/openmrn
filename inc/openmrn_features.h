@@ -103,6 +103,12 @@
 
 /// Enables use of Notifiable::notify_from_isr and OSSem::post_from_isr.
 #define OPENMRN_FEATURE_RTOS_FROM_ISR 1
+#elif defined(__CMSIS_RTOS2)
+/// Use os_mutex_... implementation based on CMSIS-RTOS2 mutex and semaphores.
+#define OPENMRN_FEATURE_MUTEX_CMSIS_OS2 1
+
+/// Enables use of Notifiable::notify_from_isr and OSSem::post_from_isr.
+#define OPENMRN_FEATURE_RTOS_FROM_ISR 1
 #elif OPENMRN_FEATURE_SINGLE_THREADED
 /// Add a fake implementation for os_mutex_lock that crashes if there is a
 /// conflict.
@@ -112,8 +118,8 @@
 #define OPENMRN_FEATURE_MUTEX_PTHREAD 1
 #endif
 
-#if OPENMRN_FEATURE_MUTEX_FREERTOS || OPENMRN_FEATURE_MUTEX_PTHREAD ||         \
-    defined(__EMSCRIPTEN__)
+#if OPENMRN_FEATURE_MUTEX_FREERTOS || OPENMRN_FEATURE_MUTEX_CMSIS_OS2 ||      \
+    OPENMRN_FEATURE_MUTEX_PTHREAD || defined(__EMSCRIPTEN__)
 /// Compile os_sem_timedwait functions.
 #define OPENMRN_FEATURE_SEM_TIMEDWAIT 1
 #endif
@@ -122,6 +128,10 @@
 /// Use FreeRTOS implementation for os_thread_create and keeping a list of live
 /// threads.
 #define OPENMRN_FEATURE_THREAD_FREERTOS 1
+#elif defined(__CMSIS_RTOS2)
+/// Use CMSIS-RTOS2 implementation for os_thread_create and keeping a list of live
+/// threads.
+#define OPENMRN_FEATURE_THREAD_CMSIS_OS2 1
 #elif OPENMRN_FEATURE_SINGLE_THREADED
 #else
 /// Use pthread for os_thread_create.
