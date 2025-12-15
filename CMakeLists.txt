@@ -24,11 +24,18 @@ set(OPENMRNPATH ${CMAKE_CURRENT_SOURCE_DIR})
 # Add cmake modules directory
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-# Embedded ARM library build - no applications, tests, or docs
+# Embedded ARM library build
 # For cross-compilation, use: cmake -DCMAKE_TOOLCHAIN_FILE=<toolchain.cmake> ..
+
+# Option to build applications
+option(BUILD_APPLICATIONS "Build OpenMRN application examples" ON)
 
 # Include subdirectories
 add_subdirectory(src)
+
+if(BUILD_APPLICATIONS)
+    add_subdirectory(applications)
+endif()
 
 # Print configuration summary
 message(STATUS "")

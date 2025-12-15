@@ -56,15 +56,27 @@ This is a **header-only library** containing:
 - ✅ All OpenMRN headers (OpenLCB, DCC, executor, utils)
 - ✅ FreeRTOS driver headers
 - ✅ Core protocol implementations
-- ✅ Ready for ARM Cortex-M targets
+- ✅ CMSIS RTOS v2 support for STM32H563
 
-**Not included:**
-- ❌ Applications (hub, bootloader_client, etc.)
-- ❌ Tests
-- ❌ Documentation generation
-- ❌ Linux/POSIX host tools
+**Application Examples (STM32H563 + CMSIS RTOS v2):**
+- ✅ blink_raw - Simple LED blinking
+- ✅ async_blink - Asynchronous LED with OpenLCB events
+- ✅ clinic_app - Full OpenLCB node with configuration
+- ✅ empty_app - Minimal application template
+- ✅ hub - CAN/OpenLCB hub
+- ✅ io_board - General purpose I/O board
+- ✅ ping - Network ping responder
+- ✅ simple_client - Basic OpenLCB client
 
-## Using in Your Firmware Project
+**Target Platform:**
+- 🎯 **STM32H563** (ARM Cortex-M33) with CMSIS RTOS v2
+- All other platforms and build systems have been removed for simplicity
 
-See [EMBEDDED_BUILD.md](EMBEDDED_BUILD.md) for complete examples of how to integrate
-the OpenMRN library into your embedded firmware project.
+## Building Applications
+
+See [applications/BUILD_GUIDE.md](applications/BUILD_GUIDE.md) for complete build instructions for STM32H563 applications.
+
+## Using as a Library in Your Firmware Project
+
+See [EMBEDDED_BUILD.md](EMBEDDED_BUILD.md) for examples of how to integrate
+the OpenMRN library into your embedded firmware project via CMake FetchContent.
