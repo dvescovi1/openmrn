@@ -492,12 +492,16 @@ protected:
         /** Default constructor.
          */
         SelectInfo()
+#if defined(__FreeRTOS__) && !defined(__CMSIS_RTOS2)
             : event(0)
+#endif
         {
         }
 
+#if defined(__FreeRTOS__) && !defined(__CMSIS_RTOS2)
         /** bit mask of clients that need woken */
         OSEventType event;
+#endif
     };
 
     /** Get the mode of the device.

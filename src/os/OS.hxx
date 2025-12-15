@@ -589,9 +589,13 @@ private:
     ~OSTime();
 };
 
-#if defined (__FreeRTOS__)
+#if defined (__FreeRTOS__) || defined(__CMSIS_RTOS2)
 /** Event bit mask type */
+#if defined(__FreeRTOS__)
 typedef EventBits_t OSEventType;
+#else
+typedef uint32_t OSEventType;
+#endif
 /** Abstraction to a group of event bits that can support a masked pend.
  */
 class OSEvent
