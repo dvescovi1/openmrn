@@ -66,5 +66,6 @@ target_compile_options(openmrn PUBLIC
 )
 
 # No installation targets for embedded library
-message(STATUS "OpenMRN configured as STATIC library for embedded ARM targets (${CMAKE_CURRENT_SOURCE_DIR})")
-message(STATUS "Found ${list(LENGTH OPENMRN_SOURCES)} source files")
+list(LENGTH OPENMRN_SOURCES SOURCE_COUNT)
+message(STATUS "OpenMRN configured as STATIC library for embedded ARM targets")
+message(STATUS "  Found ${SOURCE_COUNT} source files to compile")
