@@ -92,12 +92,29 @@ The `os_thread_create()` function declaration is provided but requires a platfor
 - `inc/cmsis_os2_includes.h` - New header for CMSIS-RTOS2 includes and macros
 - `src/os/os.h` - Added CMSIS-RTOS2 implementations for all OS abstractions
 
+## Dual RTOS Support
+
+OpenMRN now supports **both FreeRTOS and CMSIS RTOS v2**:
+
+### FreeRTOS (Traditional)
+- Full feature support with event groups
+- `EventBits_t` for OSEventType
+- Mature, widely-deployed platform
+- Define `__FreeRTOS__` to use
+
+### CMSIS RTOS v2 (ARM Standard)
+- ARM-standard RTOS API
+- Supports RTX5, ThreadX wrappers, and other CMSIS-compliant RTOS
+- Basic OSEvent stub implementation
+- Define `__CMSIS_RTOS2` to use
+
 ## Platform Requirements
 
 To use CMSIS-RTOS2 with OpenMRN, your platform must provide:
 
-1. CMSIS-RTOS2 compliant RTOS (e.g., RTX5, FreeRTOS with CMSIS-RTOS2 wrapper, Zephyr)
+1. CMSIS-RTOS2 compliant RTOS (e.g., RTX5, ThreadX wrapper, FreeRTOS with CMSIS wrapper)
 2. Standard CMSIS-RTOS2 header (`cmsis_os2.h`)
+3. Include path to `inc/freertos` for POSIX-like stubs (`stropts.h`, `dirent.h`)
 3. Platform-specific implementation of `os_thread_create()` that calls `osThreadNew()`
 
 ## Example Platform Integration

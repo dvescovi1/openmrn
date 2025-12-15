@@ -1,5 +1,9 @@
 # OpenMRN Embedded ARM Library
 
+# RTOS selection option
+set(OPENMRN_RTOS "CMSIS_RTOS2" CACHE STRING "RTOS to use: CMSIS_RTOS2 or FREERTOS")
+set_property(CACHE OPENMRN_RTOS PROPERTY STRINGS "CMSIS_RTOS2" "FREERTOS")
+
 # Collect all source files
 file(GLOB_RECURSE OPENMRN_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/executor/*.cxx
@@ -19,17 +23,8 @@ list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*/windows/.*")
 list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*gtest.*")
 list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*gmock.*")
 
-# Debug: show what sources were found
-list(LENGTH OPENMRN_SOURCES SOURCE_COUNT)
-if(SOURCE_COUNT EQUAL 0)
-    message(WARNING "No source files found in ${CMAKE_CURRENT_SOURCE_DIR}")
-    message(WARNING "This will cause a build error. Check that .cxx files exist.")
-endif()
-
 # Collect all header files
 file(GLOB_RECURSE OPENMRN_HEADERS
-    ble/*.h
-    ble/*.hxx
     console/*.h
     console/*.hxx
     dcc/*.h
@@ -51,67 +46,43 @@ file(GLOB_RECURSE OPENMRN_HEADERS
 # Exclude test files
 list(FILTER OPENMRN_HEADERS EXCLUDE REGEX ".*test.*")
 
-# Create static library (ensure we have sources)
-if(SOURCE_COUNT GREATER 0)
-    add_library(openmrn STATIC ${OPENMRN_SOURCES} ${OPENMRN_HEADERS})
-else()
-    # Fallback: create INTERFACE library if no sources found
-    message(WARNING "Creating INTERFACE library - add source files to user's build manually")
-    add_library(openmrn INTERFACE)
-    target_sources(openmrn INTERFACE ${OPENMRN_HEADERS})
-endif()
+# Create static library
+add_library(openmrn STATIC ${OPENMRN_SOURCES} ${OPENMRN_HEADERS})
 add_library(OpenMRN::openmrn ALIAS openmrn)
 
-# Set include directories (works for both STATIC and INTERFACE)
-if(SOURCE_COUNT GREATER 0)
-    target_include_directories(openmrn
-        PUBLIC
-            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
-            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../inc>
-            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../inc/freertos>
-            $<INSTALL_INTERFACE:inc/openmrn>
-    )
-    
-    # Embedded ARM specific definitions for STM32H563
-    target_compile_definitions(openmrn PUBLIC
-        STM32H563xx
-        USE_HAL_DRIVER
-        __CMSIS_RTOS2
-    )
-    
-    # Compiler flags for ARM embedded targets
-    target_compile_options(openmrn PUBLIC
-        $<$<CXX_COMPILER_ID:GNU>:-Wall -Wextra -Wno-unused-parameter -fno-exceptions -fno-rtti>
-        $<$<CXX_COMPILER_ID:ARMClang>:-Wall -Wextra -Wno-unused-parameter -fno-exceptions -fno-rtti>
-    )
+# Set include directories
+target_include_directories(openmrn
+    PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../inc>
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../inc/freertos>
+        $<INSTALL_INTERFACE:inc/openmrn>
+)
+
+# Embedded ARM specific definitions for STM32H563
+target_compile_definitions(openmrn PUBLIC
+    STM32H563xx
+    USE_HAL_DRIVER
+)
+
+# Add RTOS-specific definition
+if(OPENMRN_RTOS STREQUAL "FREERTOS")
+    target_compile_definitions(openmrn PUBLIC __FreeRTOS__)
+    message(STATUS "  RTOS: FreeRTOS")
+elseif(OPENMRN_RTOS STREQUAL "CMSIS_RTOS2")
+    target_compile_definitions(openmrn PUBLIC __CMSIS_RTOS2)
+    message(STATUS "  RTOS: CMSIS RTOS v2")
 else()
-    target_include_directories(openmrn
-        INTERFACE
-            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
-            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../inc>
-            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../inc/freertos>
-            $<INSTALL_INTERFACE:inc/openmrn>
-    )
-    
-    # Embedded ARM specific definitions for STM32H563
-    target_compile_definitions(openmrn INTERFACE
-        STM32H563xx
-        USE_HAL_DRIVER
-        __CMSIS_RTOS2
-    )
-    
-    # Compiler flags for ARM embedded targets
-    target_compile_options(openmrn INTERFACE
-        $<$<CXX_COMPILER_ID:GNU>:-Wall -Wextra -Wno-unused-parameter -fno-exceptions -fno-rtti>
-        $<$<CXX_COMPILER_ID:ARMClang>:-Wall -Wextra -Wno-unused-parameter -fno-exceptions -fno-rtti>
-    )
+    message(FATAL_ERROR "Invalid OPENMRN_RTOS value: ${OPENMRN_RTOS}. Must be CMSIS_RTOS2 or FREERTOS")
 endif()
 
-# No installation targets for embedded library
-if(SOURCE_COUNT GREATER 0)
-    message(STATUS "OpenMRN configured as STATIC library for embedded ARM targets")
-    message(STATUS "  Found ${SOURCE_COUNT} source files to compile")
-else()
-    message(STATUS "OpenMRN configured as INTERFACE (header-only) library")
-    message(STATUS "  No source files found - headers only")
-endif()
+# Compiler flags for ARM embedded targets
+target_compile_options(openmrn PUBLIC
+    $<$<CXX_COMPILER_ID:GNU>:-Wall -Wextra -Wno-unused-parameter -fno-exceptions -fno-rtti>
+    $<$<CXX_COMPILER_ID:ARMClang>:-Wall -Wextra -Wno-unused-parameter -fno-exceptions -fno-rtti>
+)
+
+# Summary
+list(LENGTH OPENMRN_SOURCES SOURCE_COUNT)
+message(STATUS "OpenMRN configured as STATIC library for STM32H563")
+message(STATUS "  Found ${SOURCE_COUNT} source files to compile")

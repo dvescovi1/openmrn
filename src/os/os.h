@@ -470,10 +470,7 @@ OS_INLINE int os_thread_get_priority_max(void)
 /** Static initializer for mutexes */
 #define OS_MUTEX_INITIALIZER PTHREAD_MUTEX_INITIALIZER
 
-#if defined (__nuttx__)
-/** Static initializer for recursive mutexes */
-#define OS_RECURSIVE_MUTEX_INITIALIZER {0, SEM_INITIALIZER(1), PTHREAD_MUTEX_RECURSIVE, 0}
-#elif defined (__MACH__)
+#if defined (__MACH__)
 #define OS_RECURSIVE_MUTEX_INITIALIZER PTHREAD_RECURSIVE_MUTEX_INITIALIZER
 #else
 /** Static initializer for recursive mutexes */
@@ -1164,11 +1161,6 @@ OS_INLINE int os_mq_num_spaces(os_mq_t queue)
     }
 #endif
 
-#ifdef TARGET_PIC32MX
-
-void __attribute__((nomips16)) os_isr_exit_yield_test(int woken);
-
-#else
 /** Test if we have woken up a higher priority task as the end of an interrupt.
  * @param _woken test value
  */
@@ -1178,7 +1170,6 @@ do                                     \
     portEND_SWITCHING_ISR(_woken);     \
 } while(0);
 
-#endif // PIC32 or general
 #endif
 
 /** Get the monotonic time since the system started.

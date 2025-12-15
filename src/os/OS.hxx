@@ -589,13 +589,9 @@ private:
     ~OSTime();
 };
 
-#if defined (__FreeRTOS__) || defined(__CMSIS_RTOS2)
+#if defined (__FreeRTOS__)
 /** Event bit mask type */
-#if defined(__FreeRTOS__)
 typedef EventBits_t OSEventType;
-#else
-typedef uint32_t OSEventType;
-#endif
 /** Abstraction to a group of event bits that can support a masked pend.
  */
 class OSEvent
@@ -736,6 +732,127 @@ private:
 
     /** handle to event object */
     EventGroupHandle_t event;
+};
+#elif defined(__CMSIS_RTOS2)
+/** Event bit mask type */
+typedef uint32_t OSEventType;
+/** Abstraction to a group of event bits that can support a masked pend.
+ */
+class OSEvent
+{
+public:
+    /** types of wait test
+     */
+    enum Test
+    {
+        WAIT_ANY = 0, /**< wait for any of the bits in the mask to be set */
+        WAIT_ALL, /**< wait for all of the bits in the mask to be set */
+    };
+
+    /** Constructor.
+     */
+    OSEvent()
+        : event(0)
+    {
+    }
+
+    /** Destructor.
+     */
+    ~OSEvent()
+    {
+    }
+
+    /** Get the number of event bits in an event group.
+     * @return number of event bits in an event group
+     */
+    static int number_of_bits()
+    {
+        return 32;
+    }
+
+    /** Wait on (decrement) an event condition.
+     * @param mask bitwise mask of interesting bits
+     * @param value NULL if unused, else returns with the value of the event
+                    buts at the time the condition held true.  On a timout,
+                    value remains untouched.
+     * @param clear true if upon return the bits called out in mask are to be
+     *              cleared.  If a timeout occurs, no bits will be cleared.
+     * @param test type of test on the mask bits
+     * @return 0 upon success, else -1 with errno set to indicate error
+     */
+    int wait(OSEventType mask, OSEventType *value, bool clear, Test test)
+    {
+        return timedwait(mask, value, clear, test, OPENMRN_OS_WAIT_FOREVER);
+    }
+
+    /** Wait on (decrement) an event with timeout condition.
+     * @param mask bitwise mask of interesting bits
+     * @param value NULL if unused, else returns with the value of the event
+                    buts at the time the condition held true.  On a timout,
+                    value remains unchanged.
+     * @param clear true if upon return the bits caled out in mask are to be
+     *              cleared.  If a timeout occurs, no bits will be cleared.
+     * @param test type of test on the mask bits
+     * @param timeout timeout in nanoseconds, else OPENMRN_OS_WAIT_FOREVER to wait forever
+     * @return 0 upon success, else -1 with errno set to indicate error
+     */
+    int timedwait(OSEventType mask, OSEventType *value, bool clear, Test test, long long timeout)
+    {
+        // Minimal stub implementation for CMSIS RTOS v2
+        // This needs proper implementation using CMSIS RTOS v2 event flags APIs
+        if (value)
+        {
+            *value = event;
+        }
+        return 0;
+    }
+
+    /** Set event bits.
+     * @param mask bitwise mask of interesting bits
+     */
+    void set(OSEventType mask)
+    {
+        event |= mask;
+    }
+
+    /** Set event bits from ISR context.
+     * @param mask bitwise mask of interesting bits
+     * @param woken is the task woken up
+     */
+    void set_from_isr(OSEventType mask, int *woken)
+    {
+        event |= mask;
+    }
+
+    /** clear event bits.
+     * @param mask bitwise mask of interesting bits
+     */
+    void clear(OSEventType mask)
+    {
+        event &= ~mask;
+    }
+
+    /** clear event bits from ISR context.
+     * @param mask bitwise mask of interesting bits
+     */
+    void clear_from_isr(OSEventType mask)
+    {
+        event &= ~mask;
+    }
+
+    /** Get the current value of the event bits
+     * @return current value of the event bits
+     */
+    OSEventType peek()
+    {
+        return event;
+    }
+
+private:
+    DISALLOW_COPY_AND_ASSIGN(OSEvent);
+
+    /** handle to event object */
+    OSEventType event;
 };
 #elif defined(ARDUINO) && !defined(ESP_PLATFORM)
 

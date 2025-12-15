@@ -80,7 +80,7 @@
                 uint8_t  can_dlc : 4; /**< 4-bit DLC */
                 uint8_t  can_rtr : 1; /**< RTR indication */
                 uint8_t  can_eff : 1; /**< Extended ID indication */
-                uint8_t  can_err : 1; /**< @todo not supported by nuttx */
+                uint8_t  can_err : 1; /**< error frame flag */
                 uint8_t  can_res : 1; /**< Unused */
 
                 uint8_t  pad;  /**< padding */

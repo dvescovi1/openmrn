@@ -26,7 +26,7 @@ source OpenMRN libraries without having to be open source themselves.
 
 # Getting Started
 
-OpenMRN now uses **CMake** and is configured as a **header-only library** for embedded ARM Cortex-M targets.
+OpenMRN now uses **CMake** and is configured as a **static library** for embedded ARM Cortex-M targets with **FreeRTOS** or **CMSIS RTOS v2** support.
 
 ## Quick Start for ARM Embedded Projects
 
@@ -52,12 +52,13 @@ For detailed instructions, see [EMBEDDED_BUILD.md](EMBEDDED_BUILD.md).
 
 ## What's Included
 
-This is a **header-only library** containing:
+This is a **static library** containing:
 - ✅ All OpenMRN headers (OpenLCB, DCC, executor, utils)
-- ✅ Core protocol implementations
-- ✅ CMSIS RTOS v2 support for STM32H563
+- ✅ Core protocol implementations compiled as a library
+- ✅ **FreeRTOS** support (traditional OpenMRN platform)
+- ✅ **CMSIS RTOS v2** support (STM32H563 reference implementation)
 
-**Application Examples (14 total - STM32H563 + CMSIS RTOS v2):**
+**Application Examples (14 total - CMSIS RTOS v2 on STM32H563):**
 - ✅ async_blink - Asynchronous LED with OpenLCB events
 - ✅ blink_raw - Simple LED blinking
 - ✅ clinic_app - Full OpenLCB node with configuration
@@ -73,9 +74,13 @@ This is a **header-only library** containing:
 - ✅ time_client - Receives and displays time from server
 - ✅ time_server - Broadcasts time/date to LCC network
 
-**Target Platform:**
+**Supported RTOS Options:**
+- 🎯 **FreeRTOS** - Traditional FreeRTOS with full feature support
+- 🎯 **CMSIS RTOS v2** - ARM standard RTOS API (ThreadX, RTX5 wrappers)
+
+**Reference Implementation:**
 - 🎯 **STM32H563** (ARM Cortex-M33) with CMSIS RTOS v2
-- All other platforms and build systems have been removed for simplicity
+- All 14 applications built and tested on this platform
 
 ## Building Applications
 

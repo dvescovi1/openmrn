@@ -1,6 +1,6 @@
-# Building OpenMRN Applications for STM32H563 with CMSIS RTOS v2
+# Building OpenMRN Applications (FreeRTOS / CMSIS RTOS v2)
 
-This guide explains how to build OpenMRN application examples targeting the STM32H563 microcontroller with CMSIS RTOS v2.
+This guide explains how to build OpenMRN application examples with **FreeRTOS** or **CMSIS RTOS v2** support. The reference implementation uses STM32H563 with CMSIS RTOS v2.
 
 ## Prerequisites
 
