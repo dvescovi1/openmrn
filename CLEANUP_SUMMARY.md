@@ -8,14 +8,15 @@
 - ❌ **targets/ directory** - Removed all target-specific build configurations (freertos.armv7m, freertos.armv6m, linux.x86, etc.)
 
 ### Removed Application Examples
-Deleted 24 application directories that don't support STM32H563:
+Deleted 22 application directories that don't support STM32H563:
 - bootloader, bootloader_client, can_eth, dcc_cs_login, dcc_decoder
-- direct_hub, dmx_controller, freq_tune, hub_test
-- js_cdi_server, js_client, js_hub, load_test
+- dmx_controller, freq_tune
+- js_cdi_server, js_client, js_hub
 - memconfig_utils, modbus_controller, nucleo_io
 - reflash_bootloader, send_datagram
-- tcp_blink_client, time_client, time_server
-- tractionproxy, train, usb_can
+- tcp_blink_client, tractionproxy, train, usb_can
+
+Note: time_client and time_server were initially removed but have been restored with CMSIS RTOS v2 support.
 
 ### Removed Board Support
 Eliminated all board configurations except:
@@ -34,16 +35,21 @@ All other boards removed:
 - ✅ **inc/** - Include files and CMSIS RTOS v2 headers
 - ✅ **cmake/** - CMake modules and toolchain files
 
-### Applications (8 total - CMake only, STM32H563 + CMSIS RTOS v2)
+### Applications (14 total - CMake only, STM32H563 + CMSIS RTOS v2)
 1. **async_blink** - Asynchronous LED with OpenLCB events
 2. **blink_raw** - Simple LED blinking
 3. **clinic_app** - Full OpenLCB node with configuration
 4. **cmsis_os2_example** - Example CMSIS RTOS v2 usage
-5. **empty_app** - Minimal application template
-6. **hub** - CAN/OpenLCB hub
-7. **io_board** - General purpose I/O board
-8. **ping** - Network ping responder
-9. **simple_client** - Basic OpenLCB client
+5. **direct_hub** - High-performance hub using DirectHub infrastructure
+6. **empty_app** - Minimal application template
+7. **hub** - CAN/OpenLCB hub
+8. **hub_test** - Hub performance testing and throughput measurement
+9. **io_board** - General purpose I/O board
+10. **load_test** - Network load generator for performance testing
+11. **ping** - Network ping responder
+12. **simple_client** - Basic OpenLCB client
+13. **time_client** - Receives and displays time from time server
+14. **time_server** - Broadcasts time/date to LCC network
 
 Each application has:
 - `CMakeLists.txt` - CMake build configuration
@@ -88,18 +94,23 @@ Each application has:
 
 ```
 openmrn/
-├── applications/           # 9 example apps (CMake only)
+├── applications/           # 14 example apps (CMake only)
 │   ├── CMakeLists.txt
 │   ├── BUILD_GUIDE.md
 │   ├── async_blink/
 │   ├── blink_raw/
 │   ├── clinic_app/
 │   ├── cmsis_os2_example/
+│   ├── direct_hub/
 │   ├── empty_app/
 │   ├── hub/
+│   ├── hub_test/
 │   ├── io_board/
+│   ├── load_test/
 │   ├── ping/
-│   └── simple_client/
+│   ├── simple_client/
+│   ├── time_client/
+│   └── time_server/
 ├── boards/
 │   └── st-stm32h563-nucleo/  # Only board support
 ├── cmake/

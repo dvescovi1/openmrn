@@ -76,11 +76,16 @@ All applications have been converted to use CMSIS RTOS v2 APIs and target STM32H
 - **blink_raw**: Simple LED blinking without OpenLCB stack
 - **async_blink**: Asynchronous LED control with OpenLCB events
 - **clinic_app**: Full OpenLCB node with configuration
+- **direct_hub**: High-performance hub using DirectHub infrastructure
 - **empty_app**: Minimal application template
 - **hub**: CAN/OpenLCB hub application
+- **hub_test**: Hub performance testing and throughput measurement
 - **io_board**: General purpose I/O board with OpenLCB
+- **load_test**: Network load generator for performance testing
 - **ping**: Network ping responder
 - **simple_client**: Basic OpenLCB client
+- **time_server**: Broadcasts time/date information to all nodes on LCC network
+- **time_client**: Receives and displays time from time server nodes
 
 ## Project Structure
 

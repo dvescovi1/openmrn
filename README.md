@@ -58,15 +58,21 @@ This is a **header-only library** containing:
 - ✅ Core protocol implementations
 - ✅ CMSIS RTOS v2 support for STM32H563
 
-**Application Examples (STM32H563 + CMSIS RTOS v2):**
-- ✅ blink_raw - Simple LED blinking
+**Application Examples (14 total - STM32H563 + CMSIS RTOS v2):**
 - ✅ async_blink - Asynchronous LED with OpenLCB events
+- ✅ blink_raw - Simple LED blinking
 - ✅ clinic_app - Full OpenLCB node with configuration
+- ✅ cmsis_os2_example - CMSIS RTOS v2 API examples
+- ✅ direct_hub - High-performance hub using DirectHub infrastructure
 - ✅ empty_app - Minimal application template
 - ✅ hub - CAN/OpenLCB hub
+- ✅ hub_test - Hub performance and throughput testing
 - ✅ io_board - General purpose I/O board
+- ✅ load_test - Network load generator for performance testing
 - ✅ ping - Network ping responder
 - ✅ simple_client - Basic OpenLCB client
+- ✅ time_client - Receives and displays time from server
+- ✅ time_server - Broadcasts time/date to LCC network
 
 **Target Platform:**
 - 🎯 **STM32H563** (ARM Cortex-M33) with CMSIS RTOS v2
