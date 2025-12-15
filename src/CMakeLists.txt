@@ -46,6 +46,17 @@ file(GLOB_RECURSE OPENMRN_HEADERS
 # Exclude test files
 list(FILTER OPENMRN_HEADERS EXCLUDE REGEX ".*test.*")
 
+# Check that we have sources
+list(LENGTH OPENMRN_SOURCES SOURCE_COUNT)
+if(SOURCE_COUNT EQUAL 0)
+    message(FATAL_ERROR "No source files found! Check that .cxx files exist in:\n"
+                        "  - ${CMAKE_CURRENT_SOURCE_DIR}/executor/\n"
+                        "  - ${CMAKE_CURRENT_SOURCE_DIR}/openlcb/\n"
+                        "  - ${CMAKE_CURRENT_SOURCE_DIR}/os/\n"
+                        "  - ${CMAKE_CURRENT_SOURCE_DIR}/utils/\n"
+                        "  - ${CMAKE_CURRENT_SOURCE_DIR}/dcc/")
+endif()
+
 # Create static library
 add_library(openmrn STATIC ${OPENMRN_SOURCES} ${OPENMRN_HEADERS})
 add_library(OpenMRN::openmrn ALIAS openmrn)
