@@ -21,7 +21,7 @@ Download from [ARM Developer](https://developer.arm.com/downloads/-/gnu-rm)
 
 ### 2. Use in Your Project
 
-**OpenMRN compiles .cxx source files into a static library** that you link with your firmware. The library adapts to **FreeRTOS** or **CMSIS RTOS v2** based on your defines.
+**OpenMRN compiles .cxx source files into a static library** that you link with your firmware. The library supports **FreeRTOS** or **CMSIS RTOS v2**.
 
 ```bash
 # Option 1: Clone as subdirectory
@@ -30,6 +30,28 @@ git submodule add https://github.com/bakerstu/openmrn.git libs/openmrn
 
 # Option 2: Use FetchContent (see below)
 ```
+
+### 3. Select Your RTOS
+
+OpenMRN supports two RTOS options:
+
+**Option A: CMSIS RTOS v2 (default)**
+```bash
+cmake -DOPENMRN_RTOS=CMSIS_RTOS2 ...
+```
+- ARM standard RTOS API
+- Supports RTX5, ThreadX wrappers, FreeRTOS with CMSIS wrapper
+- Defines `__CMSIS_RTOS2`
+
+**Option B: FreeRTOS**
+```bash
+cmake -DOPENMRN_RTOS=FREERTOS ...
+```
+- Traditional FreeRTOS with full feature support
+- Event groups and full SelectInfo support
+- Defines `__FreeRTOS__`
+
+Both options work with STM32H563.
 
 ## Customizing for Your Target
 
@@ -62,38 +84,12 @@ cmake --build .
 
 **Compiler check fails:** This is normal for bare-metal targets. The `CMAKE_TRY_COMPILE_TARGET_TYPE` setting bypasses executable linking tests.
 
-## Target-Specific Customization
+## Target Configuration
 
-The default toolchain is configured for **Cortex-M33**. You can customize for other targets:
+The toolchain is configured for **ARM Cortex-M33** (STM32H563):
 
-### Cortex-M0/M0+
 ```cmake
-set(CPU_FLAGS "-mcpu=cortex-m0 -mthumb")
-```
-
-### Cortex-M3
-```cmake
-set(CPU_FLAGS "-mcpu=cortex-m3 -mthumb")
-```
-
-### Cortex-M4 (no FPU)
-```cmake
-set(CPU_FLAGS "-mcpu=cortex-m4 -mthumb")
-```
-
-### Cortex-M4 (with FPU)
-```cmake
-set(CPU_FLAGS "-mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16")
-```
-
-### Cortex-M7 (with FPU)
-```cmake
-set(CPU_FLAGS "-mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16")
-```
-
-### Cortex-M33 (with FPU) - Default
-```cmake
-set(CPU_FLAGS "-mcpu=cortex-m33 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16")
+set(CPU_FLAGS "-mcpu=cortex-m33 -mthumb -mfloat-abi=soft")
 ```
 
 ## Using the Library in Your Firmware
@@ -116,6 +112,9 @@ project(MyFirmware C CXX ASM)
 
 # Enable FetchContent
 include(FetchContent)
+
+# Select RTOS (CMSIS_RTOS2 or FREERTOS)
+set(OPENMRN_RTOS "CMSIS_RTOS2" CACHE STRING "RTOS to use")
 
 # Declare OpenMRN dependency
 FetchContent_Declare(
@@ -146,8 +145,8 @@ target_link_libraries(firmware.elf
 # Optional: Add your own compile definitions
 target_compile_definitions(firmware.elf PRIVATE
     MY_BOARD_VERSION=3
-    USE_FREERTOS=1
 )
+# Note: __FreeRTOS__ or __CMSIS_RTOS2 is automatically defined by OpenMRN based on OPENMRN_RTOS
 
 # Link script for your MCU
 set_target_properties(firmware.elf PROPERTIES
@@ -188,8 +187,11 @@ your-firmware/
 # Create build directory
 mkdir build && cd build
 
-# Configure (downloads OpenMRN automatically)
+# Configure with CMSIS RTOS v2 (default)
 cmake ..
+
+# Or configure with FreeRTOS
+cmake -DOPENMRN_RTOS=FREERTOS ..
 
 # Build
 cmake --build .
@@ -227,6 +229,9 @@ set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/cmake/arm-m33.toolchain.cmake)
 
 project(MyFirmware C CXX ASM)
 
+# Select RTOS
+set(OPENMRN_RTOS "CMSIS_RTOS2" CACHE STRING "RTOS to use")
+
 # Add OpenMRN as subdirectory
 add_subdirectory(libs/openmrn)
 
@@ -262,6 +267,9 @@ If OpenMRN is already checked out separately:
 ```cmake
 cmake_minimum_required(VERSION 3.14)
 project(MyFirmware C CXX ASM)
+
+# Select RTOS (optional - defaults to CMSIS_RTOS2)
+set(OPENMRN_RTOS "FREERTOS" CACHE STRING "RTOS to use")
 
 # Add OpenMRN from a local path
 add_subdirectory(/path/to/openmrn ${CMAKE_BINARY_DIR}/openmrn-build)
