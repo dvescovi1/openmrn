@@ -112,7 +112,7 @@ openmrn/
 
 ## CMSIS RTOS v2 Integration
 
-Applications use CMSIS RTOS v2 API instead of native FreeRTOS:
+Applications use CMSIS RTOS v2 API:
 
 ### Delay Example
 ```cpp
@@ -199,7 +199,6 @@ cmake --build . --verbose
 ## Next Steps
 
 - Add FDCAN driver integration for CAN bus communication
-- Implement ThreadX-based FreeRTOS compatibility layer
 - Add STM32H5 HAL peripheral drivers (UART, SPI, I2C)
 - Create application-specific hardware configurations
 

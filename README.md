@@ -54,7 +54,6 @@ For detailed instructions, see [EMBEDDED_BUILD.md](EMBEDDED_BUILD.md).
 
 This is a **header-only library** containing:
 - ✅ All OpenMRN headers (OpenLCB, DCC, executor, utils)
-- ✅ FreeRTOS driver headers
 - ✅ Core protocol implementations
 - ✅ CMSIS RTOS v2 support for STM32H563
 

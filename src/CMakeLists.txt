@@ -37,10 +37,11 @@ target_include_directories(openmrn
         $<INSTALL_INTERFACE:inc/openmrn>
 )
 
-# Embedded ARM specific definitions
+# Embedded ARM specific definitions for STM32H563
 target_compile_definitions(openmrn INTERFACE
-    TARGET_IS_CC3200
-    PART_TM4C1294NCPDT
+    STM32H563xx
+    USE_HAL_DRIVER
+    __CMSIS_RTOS2
 )
 
 # Compiler flags for ARM embedded targets

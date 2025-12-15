@@ -38,7 +38,6 @@
 #include "openlcb/SimpleStack.hxx"
 #include "openlcb/SimpleNodeInfoMockUserFile.hxx"
 #include "openlcb/EventHandlerTemplates.hxx"
-#include "freertos_drivers/common/GpioWrapper.hxx"
 
 // Changes the default behavior by adding a newline after each gridconnect
 // packet. Makes it easier for debugging the raw device.

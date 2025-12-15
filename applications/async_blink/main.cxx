@@ -50,9 +50,6 @@ extern "C" {
 #include "openlcb/SimpleStack.hxx"
 #include "openlcb/SimpleNodeInfoMockUserFile.hxx"
 #include "openlcb/EventHandlerTemplates.hxx"
-#ifdef TARGET_LPC11Cxx
-#include "freertos_drivers/nxp/11cxx_async_can.hxx"
-#endif
 
 #ifdef __EMSCRIPTEN__
 #include <emscripten.h>
@@ -224,9 +221,7 @@ int appl_main(int argc, char* argv[])
 #if defined (__linux__) || defined (__MACH__)
     stack.print_all_packets();
     stack.connect_tcp_gridconnect_hub("localhost",12021);
-#elif defined(TARGET_LPC11Cxx)
-    lpc11cxx::CreateCanDriver(stack.can_hub());
-#elif defined(__FreeRTOS__) || defined(__CMSIS_RTOS2)
+#elif defined(__CMSIS_RTOS2)
     stack.add_can_port_select("/dev/can0");
 #elif defined(__EMSCRIPTEN__)
     new JSWebsocketClient(stack.can_hub(), "ws://localhost:50003");
