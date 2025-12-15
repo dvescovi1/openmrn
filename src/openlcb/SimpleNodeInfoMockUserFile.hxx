@@ -40,10 +40,9 @@
 #include "SimpleNodeInfo.hxx"
 #if defined(__FreeRTOS__) || defined(__CMSIS_RTOS2)
 #include "freertos_drivers/common/RamDisk.hxx"
-#endif
-
-#ifndef __WINNT__
+#elif !defined(__WINNT__)
 #include "os/TempFile.hxx"
+#endif
 
 namespace openlcb {
 

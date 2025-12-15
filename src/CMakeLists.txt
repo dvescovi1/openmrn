@@ -68,6 +68,7 @@ if(SOURCE_COUNT GREATER 0)
         PUBLIC
             $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
             $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../inc>
+            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../inc/freertos>
             $<INSTALL_INTERFACE:inc/openmrn>
     )
     
@@ -88,6 +89,7 @@ else()
         INTERFACE
             $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
             $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../inc>
+            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../inc/freertos>
             $<INSTALL_INTERFACE:inc/openmrn>
     )
     
