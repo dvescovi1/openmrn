@@ -24,7 +24,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * \file SimpleNodeInfoMockUserFile.hxx
+ * \file SimpleNodeInfoMockUserFile.cxx
  *
  * Mock file implementation for the SNIP user-modifiable data. Use this in
  * tests and when there is no storage available.
@@ -33,51 +33,48 @@
  * @date 22 Mar 2015
  */
 
-
-#ifndef _OPENLCB_SIMPLENODEINFOMOCKUSERFILE_HXX_
-#define _OPENLCB_SIMPLENODEINFOMOCKUSERFILE_HXX_
-
-#include "SimpleNodeInfo.hxx"
-#if defined(__FreeRTOS__) || defined(__CMSIS_RTOS2)
-#include "freertos_drivers/common/RamDisk.hxx"
+#ifndef  _POSIX_C_SOURCE
+#define  _POSIX_C_SOURCE  200112L
 #endif
 
-#ifndef __WINNT__
+#include "openlcb/SimpleNodeInfoMockUserFile.hxx"
+
+#include "utils/format_utils.hxx"
+
+#if defined(__FreeRTOS__) || defined(__CMSIS_RTOS2)
+// FreeRTOS and CMSIS RTOS v2 use RamDisk implementation
+#include "freertos_drivers/common/RamDisk.hxx"
+
+openlcb::MockSNIPUserFile::MockSNIPUserFile(const char *user_name,
+                                            const char *user_description)
+    : snipData_{2}
+    , userFile_(MockSNIPUserFile::snip_user_file_path, &snipData_, false)
+{
+    str_populate(snipData_.user_name, user_name);
+    str_populate(snipData_.user_description, user_description);
+}
+
+openlcb::MockSNIPUserFile::~MockSNIPUserFile()
+{
+}
+
+#elif !defined(__WINNT__)
+// POSIX implementation using TempFile
 #include "os/TempFile.hxx"
 
-namespace openlcb {
-
-/** Helper class for mock implementations. Creates a mock file with the SNIP
- * user-modifiable data inside that can be used as SNIP_DYNAMIC_FILENAME.
- *
- * Usage:
- * 
- * static MockSNIPUserFile g_snip_file(g_dir, "Default user name", "Default user description");
- * const char *const SNIP_DYNAMIC_FILENAME = MockSNIPUserFile::snip_user_file_path;
- */
-class MockSNIPUserFile
+openlcb::MockSNIPUserFile::MockSNIPUserFile(const char *user_name,
+                                            const char *user_description)
+  : userFile_(*TempDir::instance(), "snip_user_file")
 {
-public:
-#if defined(__FreeRTOS__) || defined(__CMSIS_RTOS2)
-    static constexpr const char* snip_user_file_path = "/etc/snip_user_data";
-#else
-    static char snip_user_file_path[128];
+    init_snip_user_file(userFile_.fd(), user_name, user_description);
+    HASSERT(userFile_.name().size() < sizeof(snip_user_file_path));
+    str_populate(snip_user_file_path, userFile_.name().c_str());
+}
+
+char openlcb::MockSNIPUserFile::snip_user_file_path[128] = "/dev/zero";
+
+openlcb::MockSNIPUserFile::~MockSNIPUserFile()
+{
+}
+
 #endif
-    MockSNIPUserFile(const char *user_name,
-                     const char *user_description);
-
-    ~MockSNIPUserFile();
-
-private:
-#if defined(__FreeRTOS__) || defined(__CMSIS_RTOS2)
-    SimpleNodeDynamicValues snipData_;
-    RamDisk userFile_;
-#else
-    TempFile userFile_;
-#endif
-};
-
-}  // namespace openlcb
-
-#endif // !winnt
-#endif // _OPENLCB_SIMPLENODEINFOMOCKUSERFILE_HXX_
