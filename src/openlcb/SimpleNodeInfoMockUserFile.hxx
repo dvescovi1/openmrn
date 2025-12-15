@@ -78,5 +78,4 @@ private:
 
 }  // namespace openlcb
 
-#endif // !winnt
 #endif // _OPENLCB_SIMPLENODEINFOMOCKUSERFILE_HXX_
