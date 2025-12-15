@@ -27,8 +27,8 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 # Embedded ARM library build
 # For cross-compilation, use: cmake -DCMAKE_TOOLCHAIN_FILE=<toolchain.cmake> ..
 
-# Option to build applications
-option(BUILD_APPLICATIONS "Build OpenMRN application examples" ON)
+# Option to build applications (OFF by default for library-only use)
+option(BUILD_APPLICATIONS "Build OpenMRN application examples" OFF)
 
 # Include subdirectories
 add_subdirectory(src)
