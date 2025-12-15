@@ -16,9 +16,9 @@ If you have STM32CubeIDE installed, the toolchain is typically at:
 C:\ST\STM32CubeCLT_1.18.0\GNU-tools-for-STM32\bin\
 ```
 
-STM32CubeH5 SDK is usually at:
+STM32CubeH5 SDK is usually at (any V1.x version works):
 ```
-C:\Users\<username>\STM32Cube\Repository\STM32Cube_FW_H5_V1.0.0\
+C:\Users\<username>\STM32Cube\Repository\STM32Cube_FW_H5_V1.x.x\
 ```
 
 ## Quick Start
