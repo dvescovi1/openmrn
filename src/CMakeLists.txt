@@ -10,11 +10,14 @@ file(GLOB_RECURSE OPENMRN_SOURCES
 )
 
 # Exclude test files and platform-specific implementations
-list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*[Tt]est.*")
+# Don't exclude Mock files - they're needed for embedded use
+list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*[Tt]est[^M].*")
 list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*/linux/.*")
 list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*/mach/.*")
 list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*/win/.*")
 list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*/windows/.*")
+list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*gtest.*")
+list(FILTER OPENMRN_SOURCES EXCLUDE REGEX ".*gmock.*")
 
 # Debug: show what sources were found
 list(LENGTH OPENMRN_SOURCES SOURCE_COUNT)
