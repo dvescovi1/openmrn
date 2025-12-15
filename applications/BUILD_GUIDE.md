@@ -27,7 +27,7 @@ C:\Users\<username>\STM32Cube\Repository\STM32Cube_FW_H5_V1.x.x\
 
 ```powershell
 # PowerShell
-$env:STM32CUBEH5_PATH = "C:\Users\<your-username>\STM32Cube\Repository\STM32Cube_FW_H5_V1.0.0"
+$env:STM32CUBEH5_PATH = "C:\Users\<your-username>\STM32Cube\Repository\STM32Cube_FW_H5_V1.5.1"
 $env:PATH = "C:\ST\STM32CubeCLT_1.18.0\GNU-tools-for-STM32\bin;$env:PATH"
 ```
 
