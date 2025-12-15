@@ -26,7 +26,7 @@ source OpenMRN libraries without having to be open source themselves.
 
 # Getting Started
 
-OpenMRN now uses **CMake** and is configured as a **static library** for embedded ARM Cortex-M targets with **FreeRTOS** or **CMSIS RTOS v2** support.
+OpenMRN now uses **CMake** and is configured as a **header-only library** for embedded ARM Cortex-M targets with **FreeRTOS** or **CMSIS RTOS v2** support.
 
 ## Quick Start for ARM Embedded Projects
 
@@ -52,7 +52,7 @@ For detailed instructions, see [EMBEDDED_BUILD.md](EMBEDDED_BUILD.md).
 
 ## What's Included
 
-This is a **static library** containing:
+This is a **header-only library** containing:
 - ✅ All OpenMRN headers (OpenLCB, DCC, executor, utils)
 - ✅ Core protocol implementations compiled as a library
 - ✅ **FreeRTOS** support (traditional OpenMRN platform)

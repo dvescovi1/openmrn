@@ -1,6 +1,6 @@
 # Building OpenMRN for Embedded ARM Targets
 
-OpenMRN is now configured as a **static library** for embedded ARM targets with **FreeRTOS** or **CMSIS RTOS v2** support.
+OpenMRN is configured as a **header-only library** for embedded ARM targets with **FreeRTOS** or **CMSIS RTOS v2** support.
 
 ## Quick Start
 
@@ -21,7 +21,7 @@ Download from [ARM Developer](https://developer.arm.com/downloads/-/gnu-rm)
 
 ### 2. Use in Your Project
 
-**OpenMRN compiles .cxx source files into a static library** that you link with your firmware. The library supports **FreeRTOS** or **CMSIS RTOS v2**.
+**OpenMRN is a header-only library** that you include in your firmware. The library supports **FreeRTOS** or **CMSIS RTOS v2**.
 
 ```bash
 # Option 1: Clone as subdirectory
@@ -344,12 +344,12 @@ add_custom_command(TARGET firmware.elf POST_BUILD
 
 ## Library Configuration
 
-The library is configured as **header-only** with:
+The library is configured as **header-only INTERFACE** with:
 - **No compilation required** - headers are included directly in your project
-- **No exceptions** (`-fno-exceptions` when used)
-- **No RTTI** (`-fno-rtti` when used)
+- **No exceptions** (`-fno-exceptions`)
+- **No RTTI** (`-fno-rtti`)
 - **All code inline** or in headers
-- **FreeRTOS driver support included**
+- **FreeRTOS/CMSIS RTOS v2 driver support included**
 - **Zero build time for the library itself**
 
 ## Build Options
