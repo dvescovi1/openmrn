@@ -1,8 +1,6 @@
 SUBDIRS = \
           freertos.armv7m.ek-tm4c123gxl \
           freertos.armv7m.ek-tm4c1294xl \
-          freertos.armv7m.lpc1768-mbed \
-          freertos.armv7m.lpc1769-lpcxpresso \
           freertos.armv7m.st-stm32f303-discovery \
           freertos.armv7m.st-stm32f303re-nucleo \
           freertos.armv7m.ti-launchpad-cc3220sf \

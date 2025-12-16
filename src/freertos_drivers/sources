@@ -79,9 +79,7 @@ endif
 
 endif
 
-ifeq ($(TARGET),freertos.armv4t)
-SUBDIRS += drivers_lpc2368
-endif
+
 
 
 
