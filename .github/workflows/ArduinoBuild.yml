@@ -10,7 +10,8 @@
 name: ArduinoBuild
 on:
   push:
-    branch: master
+    branches:
+      - master
   pull_request:
 jobs:
   build-stm32:
