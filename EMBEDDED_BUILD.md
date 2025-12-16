@@ -113,8 +113,9 @@ project(MyFirmware C CXX ASM)
 # Enable FetchContent
 include(FetchContent)
 
-# Select RTOS (CMSIS_RTOS2 or FREERTOS)
-set(OPENMRN_RTOS "CMSIS_RTOS2" CACHE STRING "RTOS to use")
+# IMPORTANT: Select RTOS BEFORE declaring OpenMRN
+# This ensures the correct RTOS defines (__FreeRTOS__ or __CMSIS_RTOS2) are set
+set(OPENMRN_RTOS "CMSIS_RTOS2" CACHE STRING "RTOS to use: CMSIS_RTOS2 or FREERTOS")
 
 # Declare OpenMRN dependency
 FetchContent_Declare(
@@ -397,6 +398,40 @@ RAM usage depends on:
 - Stack configuration
 
 ## Troubleshooting
+
+### "portmacro.h: No such file or directory" or FreeRTOS headers not found
+
+This error occurs when:
+1. You're using **CMSIS RTOS v2** but didn't set `OPENMRN_RTOS` before `FetchContent_MakeAvailable()`
+2. You're using **FreeRTOS** but haven't added FreeRTOS include paths to your project
+
+**Solution for CMSIS RTOS v2:**
+```cmake
+# CRITICAL: Set RTOS BEFORE FetchContent_MakeAvailable()
+set(OPENMRN_RTOS "CMSIS_RTOS2" CACHE STRING "RTOS to use")
+FetchContent_Declare(openmrn ...)
+FetchContent_MakeAvailable(openmrn)  # Now uses CMSIS RTOS v2 path
+```
+
+**Solution for FreeRTOS:**
+```cmake
+# Set RTOS to FreeRTOS
+set(OPENMRN_RTOS "FREERTOS" CACHE STRING "RTOS to use")
+
+# Add FreeRTOS to your project's include paths
+target_include_directories(your_firmware PRIVATE
+    path/to/freertos/include
+    path/to/freertos/portable/GCC/ARM_CM33  # Adjust for your port
+)
+```
+
+**Verify correct RTOS is selected:**
+Look for this in CMake output:
+```
+-- Configuring OpenMRN as header-only INTERFACE library
+--   RTOS: CMSIS_RTOS2    <-- Should match your choice
+--   Defines: __CMSIS_RTOS2
+```
 
 ### Toolchain not found
 ```bash
