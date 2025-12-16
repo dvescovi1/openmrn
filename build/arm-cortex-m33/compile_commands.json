@@ -1,715 +1,715 @@
 [
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\ble\\Advertisement.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\ble\\Advertisement.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\ble\\Advertisement.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\ble\\Advertisement.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\ble\\Advertisement.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\ble\\Advertisement.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\ble\\Defs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\ble\\Defs.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\ble\\Defs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\ble\\Defs.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\ble\\Defs.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\ble\\Defs.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\console\\Console.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\console\\Console.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\console\\Console.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\console\\Console.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\console\\Console.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\console\\Console.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\DccDebug.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\DccDebug.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\DccDebug.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\DccDebug.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\DccDebug.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\dcc\\DccDebug.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\Defs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\Defs.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\Defs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\Defs.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\Defs.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\dcc\\Defs.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\LocalTrackIf.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\LocalTrackIf.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\LocalTrackIf.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\LocalTrackIf.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\LocalTrackIf.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\dcc\\LocalTrackIf.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\Loco.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\Loco.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\Loco.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\Loco.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\Loco.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\dcc\\Loco.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\Packet.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\Packet.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\Packet.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\Packet.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\Packet.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\dcc\\Packet.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\RailCom.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailCom.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\RailCom.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailCom.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailCom.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\dcc\\RailCom.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\RailcomBroadcastDecoder.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailcomBroadcastDecoder.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\RailcomBroadcastDecoder.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailcomBroadcastDecoder.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailcomBroadcastDecoder.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\dcc\\RailcomBroadcastDecoder.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\RailcomDebug.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailcomDebug.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\RailcomDebug.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailcomDebug.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailcomDebug.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\dcc\\RailcomDebug.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\SimpleUpdateLoop.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\SimpleUpdateLoop.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\SimpleUpdateLoop.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\SimpleUpdateLoop.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\SimpleUpdateLoop.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\dcc\\SimpleUpdateLoop.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\UpdateLoop.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\UpdateLoop.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\UpdateLoop.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\UpdateLoop.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\UpdateLoop.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\dcc\\UpdateLoop.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\dcc_constants.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\dcc_constants.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\dcc\\dcc_constants.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\dcc_constants.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\dcc_constants.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\dcc\\dcc_constants.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\executor\\AsyncNotifiableBlock.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\AsyncNotifiableBlock.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\executor\\AsyncNotifiableBlock.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\AsyncNotifiableBlock.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\executor\\AsyncNotifiableBlock.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\executor\\AsyncNotifiableBlock.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\executor\\Executor.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\Executor.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\executor\\Executor.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\Executor.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\executor\\Executor.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\executor\\Executor.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\executor\\Notifiable.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\Notifiable.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\executor\\Notifiable.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\Notifiable.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\executor\\Notifiable.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\executor\\Notifiable.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\executor\\Service.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\Service.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\executor\\Service.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\Service.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\executor\\Service.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\executor\\Service.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\executor\\StateFlow.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\StateFlow.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\executor\\StateFlow.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\StateFlow.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\executor\\StateFlow.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\executor\\StateFlow.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\executor\\Timer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\Timer.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\executor\\Timer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\Timer.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\executor\\Timer.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\executor\\Timer.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\AliasAllocator.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\AliasAllocator.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\AliasAllocator.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\AliasAllocator.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\AliasAllocator.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\AliasAllocator.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\AliasCache.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\AliasCache.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\AliasCache.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\AliasCache.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\AliasCache.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\AliasCache.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BLEAdvertisement.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BLEAdvertisement.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BLEAdvertisement.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BLEAdvertisement.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BLEAdvertisement.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BLEAdvertisement.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BLEService.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BLEService.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BLEService.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BLEService.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BLEService.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BLEService.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BroadcastTime.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTime.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BroadcastTime.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTime.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTime.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BroadcastTime.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BroadcastTimeClient.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeClient.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BroadcastTimeClient.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeClient.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeClient.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BroadcastTimeClient.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BroadcastTimeDefs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeDefs.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BroadcastTimeDefs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeDefs.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeDefs.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BroadcastTimeDefs.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BroadcastTimeServer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeServer.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BroadcastTimeServer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeServer.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeServer.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BroadcastTimeServer.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BulkAliasAllocator.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BulkAliasAllocator.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BulkAliasAllocator.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BulkAliasAllocator.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BulkAliasAllocator.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\BulkAliasAllocator.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\CanDefs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\CanDefs.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\CanDefs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\CanDefs.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\CanDefs.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\CanDefs.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\CompileCdiMain.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\CompileCdiMain.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\CompileCdiMain.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\CompileCdiMain.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\CompileCdiMain.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\CompileCdiMain.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\ConfigEntry.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\ConfigEntry.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\ConfigEntry.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\ConfigEntry.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\ConfigEntry.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\ConfigEntry.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\ConfigUpdateFlow.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\ConfigUpdateFlow.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\ConfigUpdateFlow.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\ConfigUpdateFlow.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\ConfigUpdateFlow.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\ConfigUpdateFlow.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\Datagram.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Datagram.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\Datagram.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Datagram.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Datagram.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\Datagram.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DatagramCan.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DatagramCan.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DatagramCan.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DatagramCan.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DatagramCan.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DatagramCan.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DatagramTcp.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DatagramTcp.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DatagramTcp.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DatagramTcp.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DatagramTcp.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DatagramTcp.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DccAccyProducer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DccAccyProducer.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DccAccyProducer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DccAccyProducer.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DccAccyProducer.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DccAccyProducer.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DefaultCdi.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DefaultCdi.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DefaultCdi.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DefaultCdi.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DefaultCdi.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DefaultCdi.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DefaultNode.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DefaultNode.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DefaultNode.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DefaultNode.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DefaultNode.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\DefaultNode.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\EventHandler.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandler.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\EventHandler.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandler.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandler.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\EventHandler.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\EventHandlerContainer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandlerContainer.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\EventHandlerContainer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandlerContainer.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandlerContainer.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\EventHandlerContainer.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\EventHandlerTemplates.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandlerTemplates.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\EventHandlerTemplates.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandlerTemplates.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandlerTemplates.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\EventHandlerTemplates.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\EventService.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventService.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\EventService.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventService.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventService.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\EventService.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\If.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\If.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\If.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\If.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\If.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\If.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\IfCan.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfCan.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\IfCan.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfCan.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfCan.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\IfCan.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\IfImpl.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfImpl.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\IfImpl.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfImpl.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfImpl.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\IfImpl.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\IfTcp.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfTcp.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\IfTcp.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfTcp.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfTcp.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\IfTcp.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\MemoryConfig.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\MemoryConfig.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\MemoryConfig.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\MemoryConfig.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\MemoryConfig.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\MemoryConfig.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\Node.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Node.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\Node.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Node.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Node.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\Node.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\NodeBrowser.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NodeBrowser.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\NodeBrowser.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NodeBrowser.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NodeBrowser.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\NodeBrowser.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\NodeInitializeFlow.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NodeInitializeFlow.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\NodeInitializeFlow.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NodeInitializeFlow.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NodeInitializeFlow.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\NodeInitializeFlow.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\NonAuthoritativeEventProducer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NonAuthoritativeEventProducer.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\NonAuthoritativeEventProducer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NonAuthoritativeEventProducer.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NonAuthoritativeEventProducer.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\NonAuthoritativeEventProducer.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\PIPClient.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\PIPClient.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\PIPClient.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\PIPClient.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\PIPClient.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\PIPClient.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\RoutingLogic.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\RoutingLogic.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\RoutingLogic.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\RoutingLogic.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\RoutingLogic.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\RoutingLogic.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\SimpleNodeInfo.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfo.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\SimpleNodeInfo.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfo.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfo.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\SimpleNodeInfo.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\SimpleNodeInfoMockUserFile.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfoMockUserFile.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\SimpleNodeInfoMockUserFile.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfoMockUserFile.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfoMockUserFile.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\SimpleNodeInfoMockUserFile.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\SimpleNodeInfoResponse.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfoResponse.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\SimpleNodeInfoResponse.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfoResponse.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfoResponse.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\SimpleNodeInfoResponse.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\SimpleStack.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleStack.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\SimpleStack.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleStack.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleStack.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\SimpleStack.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\Stream.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Stream.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\Stream.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Stream.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Stream.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\Stream.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\StreamReceiver.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\StreamReceiver.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\StreamReceiver.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\StreamReceiver.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\StreamReceiver.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\StreamReceiver.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\StreamTransport.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\StreamTransport.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\StreamTransport.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\StreamTransport.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\StreamTransport.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\StreamTransport.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TcpDefs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TcpDefs.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TcpDefs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TcpDefs.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TcpDefs.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TcpDefs.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionCvSpace.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionCvSpace.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionCvSpace.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionCvSpace.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionCvSpace.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionCvSpace.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionDefs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionDefs.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionDefs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionDefs.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionDefs.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionDefs.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionProxy.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionProxy.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionProxy.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionProxy.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionProxy.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionProxy.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionTestTrain.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionTestTrain.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionTestTrain.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionTestTrain.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionTestTrain.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionTestTrain.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionThrottle.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionThrottle.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionThrottle.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionThrottle.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionThrottle.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionThrottle.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionTrain.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionTrain.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionTrain.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionTrain.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionTrain.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\TractionTrain.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\Velocity.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Velocity.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\Velocity.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Velocity.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Velocity.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\Velocity.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\WriteHelper.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\WriteHelper.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\WriteHelper.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\WriteHelper.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\WriteHelper.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\WriteHelper.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\nmranet_constants.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\nmranet_constants.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\openlcb\\nmranet_constants.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\nmranet_constants.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\nmranet_constants.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\openlcb\\nmranet_constants.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\os\\FakeClock.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\FakeClock.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\os\\FakeClock.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\FakeClock.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\FakeClock.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\os\\FakeClock.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\os\\MDNS.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\MDNS.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\os\\MDNS.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\MDNS.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\MDNS.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\os\\MDNS.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\os\\OSImpl.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\OSImpl.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\os\\OSImpl.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\OSImpl.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\OSImpl.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\os\\OSImpl.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\os\\OSSelectWakeup.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\OSSelectWakeup.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\os\\OSSelectWakeup.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\OSSelectWakeup.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\OSSelectWakeup.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\os\\OSSelectWakeup.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\os\\TempFile.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\TempFile.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\os\\TempFile.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\TempFile.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\TempFile.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\os\\TempFile.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\os\\logging_malloc.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\logging_malloc.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\os\\logging_malloc.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\logging_malloc.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\logging_malloc.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\os\\logging_malloc.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu11 -o CMakeFiles\\openmrn-core.dir\\src\\os\\os.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\os.c",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu11 -o CMakeFiles\\openmrn-core.dir\\src\\os\\os.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\os.c",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\os.c",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\os\\os.c.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu11 -o CMakeFiles\\openmrn-core.dir\\src\\os\\stack_malloc.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\stack_malloc.c",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu11 -o CMakeFiles\\openmrn-core.dir\\src\\os\\stack_malloc.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\stack_malloc.c",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\stack_malloc.c",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\os\\stack_malloc.c.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu11 -o CMakeFiles\\openmrn-core.dir\\src\\os\\watchdog.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\watchdog.c",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu11 -o CMakeFiles\\openmrn-core.dir\\src\\os\\watchdog.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\watchdog.c",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\watchdog.c",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\os\\watchdog.c.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\Base64.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Base64.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\Base64.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Base64.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\Base64.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\Base64.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\Blinker.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Blinker.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\Blinker.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Blinker.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\Blinker.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\Blinker.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\Buffer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Buffer.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\Buffer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Buffer.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\Buffer.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\Buffer.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\CanIf.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\CanIf.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\CanIf.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\CanIf.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\CanIf.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\CanIf.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\ClientConnection.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ClientConnection.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\ClientConnection.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ClientConnection.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\ClientConnection.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\ClientConnection.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\ConfigUpdateListener.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ConfigUpdateListener.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\ConfigUpdateListener.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ConfigUpdateListener.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\ConfigUpdateListener.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\ConfigUpdateListener.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\Crc.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Crc.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\Crc.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Crc.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\Crc.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\Crc.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\DirectHub.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHub.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\DirectHub.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHub.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHub.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\DirectHub.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\DirectHubGc.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHubGc.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\DirectHubGc.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHubGc.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHubGc.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\DirectHubGc.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\DirectHubLegacy.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHubLegacy.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\DirectHubLegacy.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHubLegacy.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHubLegacy.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\DirectHubLegacy.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\FdUtils.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\FdUtils.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\FdUtils.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\FdUtils.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\FdUtils.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\FdUtils.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\FileUtils.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\FileUtils.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\FileUtils.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\FileUtils.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\FileUtils.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\FileUtils.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\ForwardAllocator.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ForwardAllocator.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\ForwardAllocator.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ForwardAllocator.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\ForwardAllocator.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\ForwardAllocator.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\GcStreamParser.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\GcStreamParser.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\GcStreamParser.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\GcStreamParser.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\GcStreamParser.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\GcStreamParser.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\GcTcpHub.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\GcTcpHub.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\GcTcpHub.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\GcTcpHub.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\GcTcpHub.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\GcTcpHub.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\GridConnect.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\GridConnect.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\GridConnect.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\GridConnect.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\GridConnect.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\GridConnect.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\GridConnectHub.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\GridConnectHub.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\GridConnectHub.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\GridConnectHub.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\GridConnectHub.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\GridConnectHub.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\HubDevice.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\HubDevice.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\HubDevice.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\HubDevice.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\HubDevice.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\HubDevice.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\HubDeviceSelect.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\HubDeviceSelect.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\HubDeviceSelect.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\HubDeviceSelect.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\HubDeviceSelect.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\HubDeviceSelect.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\JSHubPort.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\JSHubPort.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\JSHubPort.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\JSHubPort.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\JSHubPort.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\JSHubPort.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\Queue.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Queue.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\Queue.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Queue.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\Queue.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\Queue.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\ReflashBootloader.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ReflashBootloader.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\ReflashBootloader.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ReflashBootloader.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\ReflashBootloader.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\ReflashBootloader.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\ServiceLocator.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ServiceLocator.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\ServiceLocator.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ServiceLocator.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\ServiceLocator.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\ServiceLocator.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\SimpleQueue.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\SimpleQueue.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\SimpleQueue.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\SimpleQueue.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\SimpleQueue.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\SimpleQueue.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\SocketCan.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\SocketCan.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\SocketCan.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\SocketCan.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\SocketCan.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\SocketCan.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\SocketClient.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\SocketClient.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\SocketClient.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\SocketClient.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\SocketClient.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\SocketClient.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\Stats.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Stats.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\Stats.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Stats.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\Stats.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\Stats.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\StringPrintf.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\StringPrintf.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\StringPrintf.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\StringPrintf.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\StringPrintf.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\StringPrintf.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\constants.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\constants.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\constants.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\constants.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\constants.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\constants.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu11 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\errno_exit.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\errno_exit.c",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu11 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\errno_exit.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\errno_exit.c",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\errno_exit.c",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\errno_exit.c.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\format_utils.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\format_utils.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\format_utils.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\format_utils.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\format_utils.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\format_utils.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\gc_format.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\gc_format.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\gc_format.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\gc_format.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\gc_format.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\gc_format.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu11 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\ieeehalfprecision.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ieeehalfprecision.c",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu11 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\ieeehalfprecision.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ieeehalfprecision.c",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\ieeehalfprecision.c",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\ieeehalfprecision.c.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\logging.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\logging.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\logging.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\logging.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\logging.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\logging.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\socket_listener.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\socket_listener.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\utils\\socket_listener.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\socket_listener.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\socket_listener.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\utils\\socket_listener.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\traction_modem\\Output.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\traction_modem\\Output.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\traction_modem\\Output.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\traction_modem\\Output.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\traction_modem\\Output.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\traction_modem\\Output.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\withrottle\\Server.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\withrottle\\Server.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\withrottle\\Server.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\withrottle\\Server.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\withrottle\\Server.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\withrottle\\Server.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\withrottle\\ServerCommand.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\withrottle\\ServerCommand.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\withrottle\\ServerCommand.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\withrottle\\ServerCommand.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\withrottle\\ServerCommand.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\withrottle\\ServerCommand.cxx.obj"
 },
 {
   "directory": "C:/GitHub/dv/openmrn/build/arm-cortex-m33",
-  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\withrottle\\ServerCommandLoco.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\withrottle\\ServerCommandLoco.cxx",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -DOPENMRNPATH=\\\"C:/GitHub/dv/openmrn\\\" -IC:/GitHub/dv/openmrn/src -IC:/GitHub/dv/openmrn/inc  -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -g -std=gnu++14 -o CMakeFiles\\openmrn-core.dir\\src\\withrottle\\ServerCommandLoco.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\withrottle\\ServerCommandLoco.cxx",
   "file": "C:\\GitHub\\dv\\openmrn\\src\\withrottle\\ServerCommandLoco.cxx",
   "output": "CMakeFiles\\openmrn-core.dir\\src\\withrottle\\ServerCommandLoco.cxx.obj"
 }

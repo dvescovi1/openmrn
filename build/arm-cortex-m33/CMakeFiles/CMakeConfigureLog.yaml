@@ -135,8 +135,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-tej4mw"
-      binary: "C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-tej4mw"
+      source: "C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-vo8kdz"
+      binary: "C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-vo8kdz"
     cmakeVariables:
       CMAKE_C_FLAGS: " -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard"
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -145,10 +145,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-tej4mw'
+        Change Dir: 'C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-vo8kdz'
         
-        Run Build Command(s): C:/ST/STM32CubeCLT_1.18.0/Ninja/bin/ninja.exe -v cmTC_156ab
-        [1/2] C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard    -v -o CMakeFiles/cmTC_156ab.dir/CMakeCCompilerABI.c.obj -c C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): C:/ST/STM32CubeCLT_1.18.0/Ninja/bin/ninja.exe -v cmTC_34c63
+        [1/2] C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard    -v -o CMakeFiles/cmTC_34c63.dir/CMakeCCompilerABI.c.obj -c C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe
         Target: arm-none-eabi
@@ -156,8 +156,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 13.3.1 20240614 (GNU Tools for STM32 13.3.rel1.20240926-1715) 
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_156ab.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_156ab.dir/'
-         C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1.exe -quiet -v -imultilib thumb/v8-m.main+fp/hard -iprefix C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_156ab.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o C:\\Users\\dvesc\\AppData\\Local\\Temp\\cc9E35Mh.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_34c63.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_34c63.dir/'
+         C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1.exe -quiet -v -imultilib thumb/v8-m.main+fp/hard -iprefix C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_34c63.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o C:\\Users\\dvesc\\AppData\\Local\\Temp\\ccED9W2P.s
         GNU C17 (GNU Tools for STM32 13.3.rel1.20240926-1715) version 13.3.1 20240614 (arm-none-eabi)
         	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -174,13 +174,13 @@ events:
          C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/lib/gcc/../../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: ff0140b734b22faecf673fec3a6a923f
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_156ab.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_156ab.dir/'
-         C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv8-m.main+dsp+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-sp-d16 -mfpu=fpv5-sp-d16 -meabi=5 -o CMakeFiles/cmTC_156ab.dir/CMakeCCompilerABI.c.obj C:\\Users\\dvesc\\AppData\\Local\\Temp\\cc9E35Mh.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_34c63.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_34c63.dir/'
+         C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv8-m.main+dsp+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-sp-d16 -mfpu=fpv5-sp-d16 -meabi=5 -o CMakeFiles/cmTC_34c63.dir/CMakeCCompilerABI.c.obj C:\\Users\\dvesc\\AppData\\Local\\Temp\\ccED9W2P.s
         GNU assembler version 2.42.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 13.3.rel1.20240926-1715) 2.42.0.20240614
         COMPILER_PATH=C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_156ab.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_156ab.dir/CMakeCCompilerABI.c.'\x0d
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.18.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_156ab.a && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_156ab.a  CMakeFiles/cmTC_156ab.dir/CMakeCCompilerABI.c.obj && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_156ab.a && cd ."
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_34c63.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_34c63.dir/CMakeCCompilerABI.c.'\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.18.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_34c63.a && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_34c63.a  CMakeFiles/cmTC_34c63.dir/CMakeCCompilerABI.c.obj && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_34c63.a && cd ."
         
       exitCode: 0
   -
@@ -218,10 +218,10 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-tej4mw']
+        ignore line: [Change Dir: 'C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-vo8kdz']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/ST/STM32CubeCLT_1.18.0/Ninja/bin/ninja.exe -v cmTC_156ab]
-        ignore line: [[1/2] C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard    -v -o CMakeFiles/cmTC_156ab.dir/CMakeCCompilerABI.c.obj -c C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): C:/ST/STM32CubeCLT_1.18.0/Ninja/bin/ninja.exe -v cmTC_34c63]
+        ignore line: [[1/2] C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard    -v -o CMakeFiles/cmTC_34c63.dir/CMakeCCompilerABI.c.obj -c C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe]
         ignore line: [Target: arm-none-eabi]
@@ -229,8 +229,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.3.1 20240614 (GNU Tools for STM32 13.3.rel1.20240926-1715) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_156ab.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_156ab.dir/']
-        ignore line: [ C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1.exe -quiet -v -imultilib thumb/v8-m.main+fp/hard -iprefix C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_156ab.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o C:\\Users\\dvesc\\AppData\\Local\\Temp\\cc9E35Mh.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_34c63.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_34c63.dir/']
+        ignore line: [ C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1.exe -quiet -v -imultilib thumb/v8-m.main+fp/hard -iprefix C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_34c63.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o C:\\Users\\dvesc\\AppData\\Local\\Temp\\ccED9W2P.s]
         ignore line: [GNU C17 (GNU Tools for STM32 13.3.rel1.20240926-1715) version 13.3.1 20240614 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 7.3-win32 20180312  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -247,8 +247,8 @@ events:
         ignore line: [ C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/lib/gcc/../../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: ff0140b734b22faecf673fec3a6a923f]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_156ab.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_156ab.dir/']
-        ignore line: [ C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv8-m.main+dsp+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-sp-d16 -mfpu=fpv5-sp-d16 -meabi=5 -o CMakeFiles/cmTC_156ab.dir/CMakeCCompilerABI.c.obj C:\\Users\\dvesc\\AppData\\Local\\Temp\\cc9E35Mh.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_34c63.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_34c63.dir/']
+        ignore line: [ C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv8-m.main+dsp+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-sp-d16 -mfpu=fpv5-sp-d16 -meabi=5 -o CMakeFiles/cmTC_34c63.dir/CMakeCCompilerABI.c.obj C:\\Users\\dvesc\\AppData\\Local\\Temp\\ccED9W2P.s]
         ignore line: [GNU assembler version 2.42.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 13.3.rel1.20240926-1715) 2.42.0.20240614]
         ignore line: [COMPILER_PATH=C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/]
         ignore line: [C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/]
@@ -260,8 +260,8 @@ events:
         ignore line: [C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/]
         ignore line: [C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/]
         ignore line: [C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_156ab.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_156ab.dir/CMakeCCompilerABI.c.'\x0d]
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.18.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_156ab.a && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_156ab.a  CMakeFiles/cmTC_156ab.dir/CMakeCCompilerABI.c.obj && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_156ab.a && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_34c63.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_34c63.dir/CMakeCCompilerABI.c.'\x0d]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.18.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_34c63.a && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_34c63.a  CMakeFiles/cmTC_34c63.dir/CMakeCCompilerABI.c.obj && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_34c63.a && cd ."]
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -279,8 +279,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-t5hjh5"
-      binary: "C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-t5hjh5"
+      source: "C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-sn1os7"
+      binary: "C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-sn1os7"
     cmakeVariables:
       CMAKE_CXX_FLAGS: " -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -289,10 +289,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-t5hjh5'
+        Change Dir: 'C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-sn1os7'
         
-        Run Build Command(s): C:/ST/STM32CubeCLT_1.18.0/Ninja/bin/ninja.exe -v cmTC_54ea9
-        [1/2] C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard    -v -o CMakeFiles/cmTC_54ea9.dir/CMakeCXXCompilerABI.cpp.obj -c C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): C:/ST/STM32CubeCLT_1.18.0/Ninja/bin/ninja.exe -v cmTC_aa30c
+        [1/2] C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard    -v -o CMakeFiles/cmTC_aa30c.dir/CMakeCXXCompilerABI.cpp.obj -c C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe
         Target: arm-none-eabi
@@ -300,8 +300,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 13.3.1 20240614 (GNU Tools for STM32 13.3.rel1.20240926-1715) 
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_54ea9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_54ea9.dir/'
-         C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1plus.exe -quiet -v -imultilib thumb/v8-m.main+fp/hard -iprefix C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_54ea9.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o C:\\Users\\dvesc\\AppData\\Local\\Temp\\ccu9FSsG.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_aa30c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_aa30c.dir/'
+         C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1plus.exe -quiet -v -imultilib thumb/v8-m.main+fp/hard -iprefix C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_aa30c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o C:\\Users\\dvesc\\AppData\\Local\\Temp\\cczm3Jub.s
         GNU C++17 (GNU Tools for STM32 13.3.rel1.20240926-1715) version 13.3.1 20240614 (arm-none-eabi)
         	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -324,13 +324,13 @@ events:
          C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/lib/gcc/../../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 81f15da80051adef2eee7279f6f54e34
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_54ea9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_54ea9.dir/'
-         C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv8-m.main+dsp+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-sp-d16 -mfpu=fpv5-sp-d16 -meabi=5 -o CMakeFiles/cmTC_54ea9.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\dvesc\\AppData\\Local\\Temp\\ccu9FSsG.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_aa30c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_aa30c.dir/'
+         C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv8-m.main+dsp+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-sp-d16 -mfpu=fpv5-sp-d16 -meabi=5 -o CMakeFiles/cmTC_aa30c.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\dvesc\\AppData\\Local\\Temp\\cczm3Jub.s
         GNU assembler version 2.42.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 13.3.rel1.20240926-1715) 2.42.0.20240614
         COMPILER_PATH=C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/;C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_54ea9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_54ea9.dir/CMakeCXXCompilerABI.cpp.'\x0d
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.18.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_54ea9.a && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_54ea9.a  CMakeFiles/cmTC_54ea9.dir/CMakeCXXCompilerABI.cpp.obj && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_54ea9.a && cd ."
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_aa30c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_aa30c.dir/CMakeCXXCompilerABI.cpp.'\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.18.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_aa30c.a && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_aa30c.a  CMakeFiles/cmTC_aa30c.dir/CMakeCXXCompilerABI.cpp.obj && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_aa30c.a && cd ."
         
       exitCode: 0
   -
@@ -380,10 +380,10 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-t5hjh5']
+        ignore line: [Change Dir: 'C:/GitHub/dv/openmrn/build/arm-cortex-m33/CMakeFiles/CMakeScratch/TryCompile-sn1os7']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/ST/STM32CubeCLT_1.18.0/Ninja/bin/ninja.exe -v cmTC_54ea9]
-        ignore line: [[1/2] C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard    -v -o CMakeFiles/cmTC_54ea9.dir/CMakeCXXCompilerABI.cpp.obj -c C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): C:/ST/STM32CubeCLT_1.18.0/Ninja/bin/ninja.exe -v cmTC_aa30c]
+        ignore line: [[1/2] C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard    -v -o CMakeFiles/cmTC_aa30c.dir/CMakeCXXCompilerABI.cpp.obj -c C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe]
         ignore line: [Target: arm-none-eabi]
@@ -391,8 +391,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.3.1 20240614 (GNU Tools for STM32 13.3.rel1.20240926-1715) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_54ea9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_54ea9.dir/']
-        ignore line: [ C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1plus.exe -quiet -v -imultilib thumb/v8-m.main+fp/hard -iprefix C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_54ea9.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o C:\\Users\\dvesc\\AppData\\Local\\Temp\\ccu9FSsG.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_aa30c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_aa30c.dir/']
+        ignore line: [ C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1plus.exe -quiet -v -imultilib thumb/v8-m.main+fp/hard -iprefix C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/ST/STM32CubeCLT_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_aa30c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o C:\\Users\\dvesc\\AppData\\Local\\Temp\\cczm3Jub.s]
         ignore line: [GNU C++17 (GNU Tools for STM32 13.3.rel1.20240926-1715) version 13.3.1 20240614 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 7.3-win32 20180312  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -415,8 +415,8 @@ events:
         ignore line: [ C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/lib/gcc/../../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 81f15da80051adef2eee7279f6f54e34]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_54ea9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_54ea9.dir/']
-        ignore line: [ C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv8-m.main+dsp+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-sp-d16 -mfpu=fpv5-sp-d16 -meabi=5 -o CMakeFiles/cmTC_54ea9.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\dvesc\\AppData\\Local\\Temp\\ccu9FSsG.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_aa30c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_aa30c.dir/']
+        ignore line: [ C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv8-m.main+dsp+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-sp-d16 -mfpu=fpv5-sp-d16 -meabi=5 -o CMakeFiles/cmTC_aa30c.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\dvesc\\AppData\\Local\\Temp\\cczm3Jub.s]
         ignore line: [GNU assembler version 2.42.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 13.3.rel1.20240926-1715) 2.42.0.20240614]
         ignore line: [COMPILER_PATH=C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/]
         ignore line: [C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/]
@@ -428,8 +428,8 @@ events:
         ignore line: [C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/]
         ignore line: [C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/]
         ignore line: [C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_54ea9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_54ea9.dir/CMakeCXXCompilerABI.cpp.'\x0d]
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.18.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_54ea9.a && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_54ea9.a  CMakeFiles/cmTC_54ea9.dir/CMakeCXXCompilerABI.cpp.obj && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_54ea9.a && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m33' '-mthumb' '-mfpu=fpv5-sp-d16' '-mfloat-abi=hard' '-v' '-o' 'CMakeFiles/cmTC_aa30c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_aa30c.dir/CMakeCXXCompilerABI.cpp.'\x0d]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.18.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_aa30c.a && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_aa30c.a  CMakeFiles/cmTC_aa30c.dir/CMakeCXXCompilerABI.cpp.obj && C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_aa30c.a && cd ."]
         ignore line: []
         ignore line: []
         implicit libs: []
