@@ -1,4 +1,8 @@
 cmake_minimum_required(VERSION 3.14)
+
+# Skip compiler test for bare-metal toolchains (must be before project())
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+
 project(OpenMRN VERSION 1.0.0 LANGUAGES C CXX ASM)
 
 # Export compile commands for IDEs

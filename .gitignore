@@ -71,6 +71,7 @@ demangled.txt
 objcopy.params
 compile_cdi
 compile_cdi.exe
+build/
 
 # files that are local to the build environment
 set250k.c
