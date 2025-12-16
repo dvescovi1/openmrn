@@ -1,1 +1,0 @@
-../../../../boards/nxp-lpc2368-panda2/Makefile

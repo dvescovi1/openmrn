@@ -9,8 +9,6 @@ option(FREERTOS "freertos" OFF)
 option(USE_DEVICE_FILE_SYSTEM "use device file system" OFF)
 option(TARGET_BARE_ARMV7M     "bare armv7m"            OFF)
 option(TARGET_ARMV7M          "bare armv7m"            OFF)
-option(TARGET_BARE_ARMV6M     "bare armv6m"            OFF)
-option(TARGET_ARMV6M          "bare armv6m"            OFF)
 option(TARGET_SPIFFS          "spiffs"                 OFF)
 option(TARGET_TM4C129         "tm4c129"                OFF)
 

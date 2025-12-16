@@ -1,1 +1,0 @@
-../esp-esp8266-32mbit-generic/eagle.common.ld

@@ -8,8 +8,6 @@ SUBDIRS = linux.x86 \
         freertos.armv7m.mbed-1768 \
         freertos.armv7m.lpc1769-lpcxpresso \
         freertos.armv7m.lpc1768-mbed \
-        freertos.armv6m.lpc11cxx \
-        freertos.armv6m.st-stm32f072b-discovery \
 	freertos.armv7m.st-stm32f103rb-olimexino \
         freertos.armv7m.st-stm32f303-discovery \
         freertos.armv7m.st-stm32f303re-nucleo-dev-board \
