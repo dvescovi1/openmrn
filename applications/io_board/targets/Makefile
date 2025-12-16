@@ -1,8 +1,6 @@
 SUBDIRS = \
           freertos.armv7m.ek-tm4c123gxl \
           freertos.armv7m.ek-tm4c1294xl \
-          freertos.armv7m.st-stm32f303-discovery \
-          freertos.armv7m.st-stm32f303re-nucleo \
           freertos.armv7m.ti-launchpad-cc3220sf \
           freertos.armv7m.z-dev-board-123 \
           js.emscripten \
