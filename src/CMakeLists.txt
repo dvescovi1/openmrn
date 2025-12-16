@@ -59,10 +59,8 @@ else()
     message(FATAL_ERROR "Invalid OPENMRN_RTOS value: ${OPENMRN_RTOS}. Must be CMSIS_RTOS2 or FREERTOS")
 endif()
 
-# Embedded ARM specific definitions for STM32H563
+# Common definitions
 target_compile_definitions(openmrn INTERFACE
-    STM32H563xx
-    USE_HAL_DRIVER
     __STDC_FORMAT_MACROS
 )
 
