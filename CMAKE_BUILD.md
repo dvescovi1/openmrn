@@ -4,36 +4,28 @@ This directory contains CMake build configuration for OpenMRN.
 
 ## Building with CMake
 
-### Basic build (Linux/macOS):
+### Using CMake Presets (Recommended):
 
 ```bash
-mkdir build
-cd build
-cmake ..
-cmake --build .
+cmake --preset arm-cortex-m33
+cmake --build build/arm-cortex-m33
 ```
 
-### Install to system:
+### Manual configuration:
 
 ```bash
-cmake --build . --target install
-```
-
-### Build with tests:
-
-```bash
-cmake .. -DBUILD_TESTS=ON
-cmake --build .
-ctest
-```
-
-### Cross-compile for ARM (requires toolchain):
-
-```bash
+mkdir build && cd build
 cmake .. -DCMAKE_TOOLCHAIN_FILE=../cmake/toolchains/arm-cortex-m33.cmake \
          -DENABLE_FREERTOS=ON \
          -DFREERTOSPATH=/path/to/freertos
 cmake --build .
+```
+
+### Build applications:
+
+```bash
+cmake --preset arm-cortex-m33 -DBUILD_APPLICATIONS=ON
+cmake --build build/arm-cortex-m33
 ```
 
 ## Using OpenMRN in Your CMake Project
@@ -67,7 +59,7 @@ target_link_libraries(your_target PRIVATE OpenMRN::core)
 
 ## CMake Options
 
-- `BUILD_APPLICATIONS` - Build OpenMRN applications (default: ON)
+- `BUILD_APPLICATIONS` - Build OpenMRN applications (default: OFF)
 - `BUILD_TESTS` - Build tests (default: OFF)
 - `BUILD_SHARED_LIBS` - Build shared libraries instead of static (default: OFF)
 - `ENABLE_FREERTOS` - Enable FreeRTOS support (default: OFF, requires FREERTOSPATH)
@@ -75,23 +67,18 @@ target_link_libraries(your_target PRIVATE OpenMRN::core)
 ## Target Platforms
 
 The build system supports:
-- Linux x86/x64
-- macOS
-- ARM Cortex-M4 (ARMv7-M)
-- ARM Cortex-M33 (ARMv8-M)
-- TI TM4C129
-- STM32F7/H5
+- `BUILD_TESTS` - Build tests (default: OFF)
+- `BUILD_SHARED_LIBS` - Build shared libraries instead of static (default: OFF)
+- `ENABLE_FREERTOS` - Enable FreeRTOS support (default: OFF, requires FREERTOSPATH)
 
-## Board Configuration
+## Supported Target
 
-When building for embedded targets, specify board:
-
-```cmake
-openmrn_add_application(my_app
-    SOURCES main.cxx
+The build system supports:
+- **ARM Cortex-M33 (ARMv8-M)** - STM32H5 series
+- **Board**: ST STM32H563ZI Nucleo-144
+- **Targets**: freertos.armv8m, bare.armv8mmain.cxx
     BOARD st-stm32h563zi-nucleo
     TARGET freertos.armv8m
-)
 ```
 
 ## Toolchain Files
@@ -100,14 +87,13 @@ Toolchain files are provided in `cmake/toolchains/`:
 - `arm-none-eabi.cmake` - Generic ARM bare-metal
 - `arm-cortex-m4.cmake` - Cortex-M4 (ARMv7-M)
 - `arm-cortex-m33.cmake` - Cortex-M33 (ARMv8-M)
+ base
+- `arm-cortex-m33.cmake` - Cortex-M33 (ARMv8-M) for STM32H5
 
-## Compatibility
+## CMake Presets
 
-The CMake build system runs alongside the existing Makefile system.
-Both can coexist during the transition period.
-
-## Helper Functions
-
+Use CMake presets for streamlined configuration:
+- `arm-cortex-m33` - STM32H563ZI Nucleo with FreeRTOS
 ### openmrn_add_application
 
 Creates an application executable:
@@ -159,31 +145,23 @@ openmrn_add_board(target_name board-path
 ## Examples
 
 ### Build for Linux:
+```bashOpenMRN Library:
 ```bash
-mkdir build && cd build
-cmake ..
-make
+cmake --preset arm-cortex-m33
+cmake --build build/arm-cortex-m33
 ```
 
-### Build for STM32H563ZI Nucleo:
+### Build with Applications:
 ```bash
-mkdir build && cd build
-cmake .. \
-  -DCMAKE_TOOLCHAIN_FILE=../cmake/toolchains/arm-cortex-m33.cmake \
-  -DSTM32CUBEH5PATH=/path/to/STM32CubeH5 \
-  -DENABLE_FREERTOS=ON \
-  -DFREERTOSPATH=/path/to/FreeRTOS
-make
+cmake --preset arm-cortex-m33 -DBUILD_APPLICATIONS=ON
+cmake --build build/arm-cortex-m33
 ```
 
-### Install OpenMRN:
-```bash
-mkdir build && cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local
-make
-sudo make install
-```
-
+### Using in VS Code:
+1. Open Command Palette (Ctrl+Shift+P)
+2. Run: **CMake: Configure**
+3. Select preset: **arm-cortex-m33**
+4. Run: **CMake: Build**
 ## Troubleshooting
 
 ### Missing pthread
@@ -193,13 +171,23 @@ sudo apt-get install libpthread-stubs0-dev
 ```
 
 ### Missing ARM toolchain
-Install arm-none-eabi-gcc:
-```bash
-sudo apt-get install gcc-arm-none-eabi
-```
+InsRequirements
 
-### CMake version too old
-OpenMRN requires CMake 3.14 or newer:
-```bash
-cmake --version
-```
+- **CMake**: 3.14 or newer
+- **ARM Toolchain**: arm-none-eabi-gcc (e.g., from STM32CubeCLT)
+- **FreeRTOS**: Optional, for FreeRTOS-based targets
+- **STM32CubeH5**: Optional, for STM32H5 HAL drivers
+
+## Troubleshooting
+
+### Compiler test failures
+If you see "The C compiler is not able to compile a simple test program":
+- Delete the `build/` directory: `rm -rf build`
+- Reconfigure: `cmake --preset arm-cortex-m33`
+
+### Missing ARM toolchain
+Ensure arm-none-eabi-gcc is in PATH or use STM32CubeCLT.
+
+### VS Code CMake extension issues
+- Run: **Developer: Reload Window**
+- Delete cache: **CMake: Delete Cache and Reconfigure**
