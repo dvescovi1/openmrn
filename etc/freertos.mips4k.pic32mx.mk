@@ -30,8 +30,8 @@ ENDGROUP := -Wl,--end-group
 
 INCLUDES += -I$(FREERTOSPATH)/Source/include \
             -I$(FREERTOSPATH)/Source/portable/MPLAB/PIC32MX \
-            -I$(OPENMRNPATH)/include/freertos \
-            -idirafter $(OPENMRNPATH)/include/freertos_select \
+            -I$(OPENMRNPATH)/inc/freertos \
+            -idirafter $(OPENMRNPATH)/inc/freertos_select \
             -I$(OPENMRNPATH)/src/freertos_drivers/common \
             -isystem $(MIPSNEWLIBPATH)/include
 

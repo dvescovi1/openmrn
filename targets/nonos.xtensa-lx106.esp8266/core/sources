@@ -10,7 +10,7 @@ CSRCS += core_esp8266_noniso.c \
         libatomic.c \
 
 
-CFLAGS += -I$(COREPATH) -include $(OPENMRNPATH)/include/esp8266/esp_predef.h
+CFLAGS += -I$(COREPATH) -include $(OPENMRNPATH)/inc/esp8266/esp_predef.h
 
 #-include $(ESPARDUINOPATH)/hardware/esp8266/2.2.0/tools/sdk/include/ets_sys.h
 

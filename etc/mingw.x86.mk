@@ -25,7 +25,7 @@ STARTGROUP := -Wl,--start-group
 ENDGROUP := -Wl,--end-group
 
 INCLUDES += -I/usr/mingw-pthreads/mingw32/i686-w64-mingw32/include \
-            -I$(OPENMRNPATH)/include/windows
+            -I$(OPENMRNPATH)/inc/windows
 
 CFLAGS = -c -g -O0 -Wall -Werror -MD -MP -std=gnu99 -m32 -fno-stack-protector \
          -D_GNU_SOURCE -Wno-unknown-pragmas 

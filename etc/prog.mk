@@ -60,7 +60,7 @@ INCLUDES += -I.
 
 #we don't have to recurse into lib, because there are no sources there. We don't need a liblib.a
 #SUBDIRS += lib
-INCLUDES += -I$(OPENMRNPATH)/src/ -I$(OPENMRNPATH)/include
+INCLUDES += -I$(OPENMRNPATH)/src/ -I$(OPENMRNPATH)/inc
 ifdef APP_PATH
 INCLUDES += -I$(APP_PATH)
 CDIEXTRA += -I$(APP_PATH)
@@ -86,7 +86,7 @@ ifeq ($(OS),Windows_NT)
 include $(OPENMRNPATH)/etc/path_windows.mk
 else
     ifeq ($(shell uname -s),Darwin)
-        CDIEXTRA += -I$(OPENMRNPATH)/include/mach
+        CDIEXTRA += -I$(OPENMRNPATH)/inc/mach
     endif
 endif
 
@@ -140,7 +140,7 @@ cdi.o : compile_cdi
 	rm -f cdi.d
 
 compile_cdi: config.hxx $(OPENMRNPATH)/src/openlcb/CompileCdiMain.cxx
-	g++ -o $@ -I. -I$(OPENMRNPATH)/src -I$(OPENMRNPATH)/include $(CDIEXTRA)  --std=c++11 -MMD -MF $@.d $(CXXFLAGSEXTRA) $(OPENMRNPATH)/src/openlcb/CompileCdiMain.cxx
+	g++ -o $@ -I. -I$(OPENMRNPATH)/src -I$(OPENMRNPATH)/inc $(CDIEXTRA)  --std=c++11 -MMD -MF $@.d $(CXXFLAGSEXTRA) $(OPENMRNPATH)/src/openlcb/CompileCdiMain.cxx
 
 config.hxx: Revision.hxxout
 

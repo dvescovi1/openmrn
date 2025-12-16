@@ -25,7 +25,7 @@ alltest-%:
 	+$(MAKE) $(filter $(@:alltest-%=%)/%,$(TESTOUTPUTS))
 
 INCLUDES += -I$(GTESTPATH)/include -I$(GMOCKPATH)/include -I "$(GMOCKPATH)" \
-            -I$(OPENMRNPATH)/src -I$(OPENMRNPATH)/include
+            -I$(OPENMRNPATH)/src -I$(OPENMRNPATH)/inc
 
 CFLAGS += $(INCLUDES)
 CXXFLAGS += $(INCLUDES)

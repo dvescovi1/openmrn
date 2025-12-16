@@ -131,7 +131,7 @@ set(SRCS
 
 set(INCLUDE_DIRS
     ${OPENMRNPATH}/src
-    ${OPENMRNPATH}/include/esp-idf
+    ${OPENMRNPATH}/inc/esp-idf
 )
 
 set(IDF_DEPS

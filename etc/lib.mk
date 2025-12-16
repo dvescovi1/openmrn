@@ -24,7 +24,7 @@ endif
 export PARENTDIR := $(REL_DIR)
 export PARENTLIB := $(LIBBASENAME)
 
-INCLUDES += -I./ -I$(OPENMRNPATH)/src/ -I$(OPENMRNPATH)/include
+INCLUDES += -I./ -I$(OPENMRNPATH)/src/ -I$(OPENMRNPATH)/inc
 include $(OPENMRNPATH)/etc/$(TARGET).mk
 
 exist := $(wildcard $(SRCDIR)/sources)

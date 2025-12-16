@@ -18,7 +18,7 @@ LD = clang++
 STARTGROUP :=
 ENDGROUP :=
 
-INCLUDES += -I$(OPENMRNPATH)/include/mach
+INCLUDES += -I$(OPENMRNPATH)/inc/mach
 
 CFLAGS = -c -g -O0 -Wall -Werror -MP -std=c99 -fno-stack-protector \
          -D_GNU_SOURCE

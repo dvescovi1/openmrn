@@ -7,7 +7,7 @@ SRCDIR ?= $(abspath ../../../$(BASENAME))
 VPATH = $(SRCDIR)
 
 INCLUDES += -I./ -I../ -I../include 
-INCLUDES += -I$(OPENMRNPATH)/include
+INCLUDES += -I$(OPENMRNPATH)/inc
 INCLUDES += -I$(OPENMRNPATH)/src
 include $(OPENMRNPATH)/etc/$(TARGET).mk
 include $(OPENMRNPATH)/etc/path.mk

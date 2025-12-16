@@ -22,7 +22,7 @@ foreach(testsourcefile ${TESTS})
     target_include_directories(${testname}
         PUBLIC
             $ENV{OPENMRNPATH}/src
-            $ENV{OPENMRNPATH}/include
+            $ENV{OPENMRNPATH}/inc
             $ENV{SXMLCPATH}/src
             ${ROOT_DIR}
     )

@@ -23,7 +23,7 @@ STARTGROUP := -Wl,--start-group
 ENDGROUP := -Wl,--end-group
 
 INCLUDES += -I$(NUTTXPATH)/include \
-            -I$(OPENMRNPATH)/include/nuttx
+            -I$(OPENMRNPATH)/inc/nuttx
 
 #ARCHOPTIMIZATION =
 ARCHOPTIMIZATION = -O3 -fno-strict-aliasing -fno-strength-reduce -fomit-frame-pointer
