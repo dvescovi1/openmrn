@@ -7,5 +7,6 @@ file(GLOB TRAIN_SOURCES
 
 openmrn_add_application(train
     SOURCES ${TRAIN_SOURCES}
-    TARGET linux.x86
+    BOARD st-stm32h563zi-nucleo
+    TARGET freertos.armv8m
 )

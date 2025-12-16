@@ -7,5 +7,6 @@ file(GLOB SIMPLE_CLIENT_SOURCES
 
 openmrn_add_application(simple_client
     SOURCES ${SIMPLE_CLIENT_SOURCES}
-    TARGET linux.x86
+    BOARD st-stm32h563zi-nucleo
+    TARGET freertos.armv8m
 )

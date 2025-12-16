@@ -7,5 +7,6 @@ file(GLOB CLINIC_APP_SOURCES
 
 openmrn_add_application(clinic_app
     SOURCES ${CLINIC_APP_SOURCES}
-    TARGET linux.x86
+    BOARD st-stm32h563zi-nucleo
+    TARGET freertos.armv8m
 )

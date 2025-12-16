@@ -1,1 +1,0 @@
-../../../../boards/nxp-lpc175x-edetector/target.ld

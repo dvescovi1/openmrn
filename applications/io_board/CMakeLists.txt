@@ -7,5 +7,6 @@ file(GLOB IO_BOARD_SOURCES
 
 openmrn_add_application(io_board
     SOURCES ${IO_BOARD_SOURCES}
-    TARGET linux.x86
+    BOARD st-stm32h563zi-nucleo
+    TARGET freertos.armv8m
 )

@@ -7,5 +7,6 @@ file(GLOB TIME_SERVER_SOURCES
 
 openmrn_add_application(time_server
     SOURCES ${TIME_SERVER_SOURCES}
-    TARGET linux.x86
+    BOARD st-stm32h563zi-nucleo
+    TARGET freertos.armv8m
 )
