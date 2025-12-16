@@ -14,7 +14,7 @@ set(OPENMRNPATH ${CMAKE_CURRENT_SOURCE_DIR} CACHE PATH "OpenMRN root path")
 
 # Options for different build configurations
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
-option(BUILD_APPLICATIONS "Build OpenMRN applications" ON)
+option(BUILD_APPLICATIONS "Build OpenMRN applications" OFF)
 option(BUILD_TESTS "Build tests" OFF)
 option(ENABLE_FREERTOS "Enable FreeRTOS support" OFF)
 
