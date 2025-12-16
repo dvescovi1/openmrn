@@ -1,0 +1,57 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 14,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "arm-cortex-m33",
+      "displayName": "ARM Cortex-M33 (ARMv8-M)",
+      "description": "Build for ARM Cortex-M33 using arm-none-eabi-gcc",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/arm-cortex-m33",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/arm-cortex-m33.cmake",
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "arm-cortex-m4",
+      "displayName": "ARM Cortex-M4 (ARMv7-M)",
+      "description": "Build for ARM Cortex-M4 using arm-none-eabi-gcc",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/arm-cortex-m4",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/arm-cortex-m4.cmake",
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "linux-x86",
+      "displayName": "Linux/Windows x86",
+      "description": "Build for host system",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/linux-x86",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "BUILD_APPLICATIONS": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "arm-cortex-m33",
+      "configurePreset": "arm-cortex-m33"
+    },
+    {
+      "name": "arm-cortex-m4",
+      "configurePreset": "arm-cortex-m4"
+    },
+    {
+      "name": "linux-x86",
+      "configurePreset": "linux-x86"
+    }
+  ]
+}
