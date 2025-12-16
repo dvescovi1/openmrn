@@ -64,35 +64,35 @@ target_link_libraries(your_target PRIVATE OpenMRN::core)
 - `BUILD_SHARED_LIBS` - Build shared libraries instead of static (default: OFF)
 - `ENABLE_FREERTOS` - Enable FreeRTOS support (default: OFF, requires FREERTOSPATH)
 
-## Target Platforms
-
-The build system supports:
-- `BUILD_TESTS` - Build tests (default: OFF)
-- `BUILD_SHARED_LIBS` - Build shared libraries instead of static (default: OFF)
-- `ENABLE_FREERTOS` - Enable FreeRTOS support (default: OFF, requires FREERTOSPATH)
-
 ## Supported Target
 
 The build system supports:
 - **ARM Cortex-M33 (ARMv8-M)** - STM32H5 series
 - **Board**: ST STM32H563ZI Nucleo-144
-- **Targets**: freertos.armv8m, bare.armv8mmain.cxx
+- **Targets**: freertos.armv8m, bare.armv8m
+
+## Application Example
+
+```cmake
+openmrn_add_application(app_name
+    SOURCES main.cxx
     BOARD st-stm32h563zi-nucleo
     TARGET freertos.armv8m
+)
 ```
 
 ## Toolchain Files
 
 Toolchain files are provided in `cmake/toolchains/`:
-- `arm-none-eabi.cmake` - Generic ARM bare-metal
-- `arm-cortex-m33.cmake` - Cortex-M33 (ARMv8-M)
- base
+- `arm-none-eabi.cmake` - Generic ARM bare-metal base
 - `arm-cortex-m33.cmake` - Cortex-M33 (ARMv8-M) for STM32H5
 
 ## CMake Presets
 
 Use CMake presets for streamlined configuration:
 - `arm-cortex-m33` - STM32H563ZI Nucleo with FreeRTOS
+
+## Helper Functions
 ### openmrn_add_application
 
 Creates an application executable:
@@ -143,8 +143,7 @@ openmrn_add_board(target_name board-path
 
 ## Examples
 
-### Build for Linux:
-```bashOpenMRN Library:
+### Build OpenMRN Library:
 ```bash
 cmake --preset arm-cortex-m33
 cmake --build build/arm-cortex-m33
@@ -161,16 +160,8 @@ cmake --build build/arm-cortex-m33
 2. Run: **CMake: Configure**
 3. Select preset: **arm-cortex-m33**
 4. Run: **CMake: Build**
-## Troubleshooting
 
-### Missing pthread
-If you get pthread errors on Linux, install:
-```bash
-sudo apt-get install libpthread-stubs0-dev
-```
-
-### Missing ARM toolchain
-InsRequirements
+## Requirements
 
 - **CMake**: 3.14 or newer
 - **ARM Toolchain**: arm-none-eabi-gcc (e.g., from STM32CubeCLT)

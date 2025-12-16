@@ -111,6 +111,7 @@ target_include_directories(openmrn-core PUBLIC
 # Add compile definitions
 target_compile_definitions(openmrn-core PUBLIC
     OPENMRNPATH="${OPENMRNPATH}"
+    __FreeRTOS__
 )
 
 # Platform-specific settings
