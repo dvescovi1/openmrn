@@ -35,11 +35,7 @@
 #ifndef _OS_OS_HXX_
 #define _OS_OS_HXX_
 
-#ifdef __FreeRTOS__
-#include <freertos/endian.h>
-#else
 #include <endian.h>
-#endif
 
 #include "utils/macros.h"
 #include "os/os.h"
