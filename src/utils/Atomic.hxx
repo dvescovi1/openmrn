@@ -37,7 +37,42 @@
 #ifndef _UTILS_ATOMIC_HXX_
 #define _UTILS_ATOMIC_HXX_
 
-#ifdef __FreeRTOS__
+// Check for CMSIS RTOS v2 FIRST (before FreeRTOS) since some CMSIS RTOS v2
+// implementations (like ThreadX wrapper) might also define __FreeRTOS__
+#if defined(__CMSIS_RTOS2)
+
+#include "os/OS.hxx"
+
+/// Lightweight locking class for protecting small critical sections.
+///
+/// Properties:
+/// - May be recursively acquired
+/// - CMSIS RTOS v2: Uses os_mutex_t for portable locking
+///
+/// Usage: Declare Atomic as a private base class, add a class member
+/// variable or a global variable of type Atomic. Then use AtomicHolder to
+/// protect the critical sections.
+class Atomic
+{
+public:
+    void lock()
+    {
+        os_mutex_lock(&mu_);
+    }
+    void unlock()
+    {
+        os_mutex_unlock(&mu_);
+    }
+private:
+    /// Mutex that protects.
+    ///
+    /// NOTE: it is important that this be trivially initialized and the Atomic
+    /// class have no (nontrivial) constructor. This is the only way to avoid
+    /// race conditions and initialization order problems during startup.
+    os_mutex_t mu_ = OS_RECURSIVE_MUTEX_INITIALIZER;
+};
+
+#elif defined(__FreeRTOS__)
 #include <stdint.h>
 #include "FreeRTOS.h"
 #include "portmacro.h"
