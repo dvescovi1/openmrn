@@ -1,5 +1,4 @@
 SUBDIRS = \
-          freertos.armv7m.ek-tm4c123gxl \
           freertos.armv7m.ek-tm4c1294xl \
           freertos.armv7m.ti-launchpad-cc3220sf \
           freertos.armv7m.z-dev-board-123 \

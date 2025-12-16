@@ -1,5 +1,4 @@
 SUBDIRS = \
-    freertos.armv7m.ek-tm4c123gxl \
     freertos.armv7m.ek-tm4c1294xl \
     linux.armv7a \
     linux.x86 \
