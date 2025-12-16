@@ -2,7 +2,6 @@ SUBDIRS = \
           freertos.armv7m.ek-tm4c1294xl \
           freertos.armv7m.z-dev-board-123 \
           js.emscripten \
-          linux.armv7a \
           linux.x86 \
 
 

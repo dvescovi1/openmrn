@@ -1,6 +1,5 @@
 SUBDIRS = \
     freertos.armv7m.ek-tm4c1294xl \
-    linux.armv7a \
     linux.x86 \
     mach.x86_64
 
