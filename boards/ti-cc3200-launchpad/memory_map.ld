@@ -1,1 +1,0 @@
-../ti-cc3200-generic/memory_map.ld
