@@ -85,7 +85,6 @@ The build system supports:
 
 Toolchain files are provided in `cmake/toolchains/`:
 - `arm-none-eabi.cmake` - Generic ARM bare-metal
-- `arm-cortex-m4.cmake` - Cortex-M4 (ARMv7-M)
 - `arm-cortex-m33.cmake` - Cortex-M33 (ARMv8-M)
  base
 - `arm-cortex-m33.cmake` - Cortex-M33 (ARMv8-M) for STM32H5

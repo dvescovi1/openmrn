@@ -56,15 +56,6 @@
 #include <semaphore.h>
 #endif
 
-#if defined (__MACH__)
-#include <mach/mach_time.h>
-#endif
-
-#if defined (__WIN32__)
-#include <sys/time.h>
-#include <unistd.h>
-#endif
-
 #include "utils/macros.h"
 
 #ifdef __cplusplus
@@ -437,16 +428,8 @@ OS_INLINE int os_thread_get_priority_max(void)
 #elif OPENMRN_FEATURE_MUTEX_PTHREAD
 /** Static initializer for mutexes */
 #define OS_MUTEX_INITIALIZER PTHREAD_MUTEX_INITIALIZER
-
-#if defined (__nuttx__)
-/** Static initializer for recursive mutexes */
-#define OS_RECURSIVE_MUTEX_INITIALIZER {0, SEM_INITIALIZER(1), PTHREAD_MUTEX_RECURSIVE, 0}
-#elif defined (__MACH__)
-#define OS_RECURSIVE_MUTEX_INITIALIZER PTHREAD_RECURSIVE_MUTEX_INITIALIZER
-#else
 /** Static initializer for recursive mutexes */
 #define OS_RECURSIVE_MUTEX_INITIALIZER PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP
-#endif
 #endif
 
 #ifdef __EMSCRIPTEN__
@@ -1056,18 +1039,6 @@ do                                     \
  * @return time in nanoseconds since system start
  */
 extern long long os_get_time_monotonic(void);
-
-#if defined (__WIN32__)
-/** Implementation of standard sleep().
- * @param seconds number of seconds to sleep
- */
-OS_INLINE unsigned sleep(unsigned seconds)
-{
-    usleep(seconds * 1000);
-    return 0;
-}
-#endif
-
 
 #ifdef __cplusplus
 }
