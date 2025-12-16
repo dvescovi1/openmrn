@@ -1,7 +1,6 @@
 SUBDIRS = \
 	posix.server \
 	posix.client \
-	freertos.armv7m.ti-launchpad-cc3200 \
 
 
 #	freertos.armv7m.ek-tm4c1294xl \
