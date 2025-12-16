@@ -15,11 +15,11 @@ cmake --build build/arm-cortex-m33
 
 ```bash
 mkdir build && cd build
-cmake .. -DCMAKE_TOOLCHAIN_FILE=../cmake/toolchains/arm-cortex-m33.cmake \
-         -DENABLE_FREERTOS=ON \
-         -DFREERTOSPATH=/path/to/freertos
+cmake .. -DCMAKE_TOOLCHAIN_FILE=../cmake/toolchains/arm-cortex-m33.cmake
 cmake --build .
 ```
+
+**Note**: OpenMRN requires FreeRTOS and automatically defines `__FreeRTOS__`. Ensure your FreeRTOS kernel is available in your include paths.
 
 ### Build applications:
 
@@ -62,14 +62,13 @@ target_link_libraries(your_target PRIVATE OpenMRN::core)
 - `BUILD_APPLICATIONS` - Build OpenMRN applications (default: OFF)
 - `BUILD_TESTS` - Build tests (default: OFF)
 - `BUILD_SHARED_LIBS` - Build shared libraries instead of static (default: OFF)
-- `ENABLE_FREERTOS` - Enable FreeRTOS support (default: OFF, requires FREERTOSPATH)
 
 ## Supported Target
 
 The build system supports:
 - **ARM Cortex-M33 (ARMv8-M)** - STM32H5 series
 - **Board**: ST STM32H563ZI Nucleo-144
-- **Targets**: freertos.armv8m, bare.armv8m
+- **Target**: freertos.armv8m (FreeRTOS only)
 
 ## Application Example
 
@@ -165,8 +164,8 @@ cmake --build build/arm-cortex-m33
 
 - **CMake**: 3.14 or newer
 - **ARM Toolchain**: arm-none-eabi-gcc (e.g., from STM32CubeCLT)
-- **FreeRTOS**: Optional, for FreeRTOS-based targets
-- **STM32CubeH5**: Optional, for STM32H5 HAL drivers
+- **FreeRTOS**: Required for all builds
+- **STM32CubeH5**: Required for STM32H5 HAL drivers
 
 ## Troubleshooting
 
