@@ -35,7 +35,11 @@
 #ifndef _OPENLCB_ENDIANHELPER_HXX_
 #define _OPENLCB_ENDIANHELPER_HXX_
 
-#include "endian.h"
+#ifdef __FreeRTOS__
+#include <freertos/endian.h>
+#else
+#include <endian.h>
+#endif
 #include "openlcb/Defs.hxx"
 
 namespace openlcb {
