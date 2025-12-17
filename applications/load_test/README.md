@@ -74,8 +74,7 @@ approximate gap between actual performance and desired performance.
 
 ### Load generator
 
-The load generator for computers is in the linux.x86 target under
-`applications/load_test/targets/linux.x86`. Invoke it with the argument `-d
+The load generator can be built using CMake. Invoke it with the argument `-d
 /dev/ttyACM0` to send load to a CAN-bus via LCC-Buffer. Driving load into
 network hubs is also supported.
 
@@ -84,17 +83,6 @@ packets/second to generate. Each packet is an event report.
 
 There may be jitter in the exact timing of the packets generated, but there is
 no drift, i.e. the speed averages to the desired throughput.
-
-### Load generator for MCUs
-
-There is a character driver `freertos_drivers/ti/TivaTestPacketSource.hxx`
-which is able to generate a fixed stream of GridConnect packets. This is
-specific to TI's driverlib SDK because it is using a hardware timer for
-accurate packet timing and delivery.
-
-The target `applications/load_test/targets/frertos.armv7m.ek-tm4c123gxl` is
-using the fake packet source with a hub to emit it to a CAN-bus port. This
-configuration also tests the gridconnect parsing code's efficiency.
 
 # Measurement techniques
 
