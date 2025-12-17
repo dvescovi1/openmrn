@@ -42,28 +42,12 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <fcntl.h>
-#if !defined (GCC_MEGA_AVR)
 #include <unistd.h>
-#endif // !GCC_MEGA_AVR
 
 #if defined (__FreeRTOS__)
 #include "devtab.h"
 #include "FreeRTOS.h"
 #include "task.h"
-
-#elif defined(__WIN32__)
-
-#include <winsock2.h>
-#include <ws2tcpip.h> /* socklen_t */
-#include <time.h>
-#include <signal.h>
-
-#elif defined(ESP_NONOS)
-
-#include <sys/select.h>
-#include <sched.h>
-#include <signal.h>
-#include <user_interface.h>
 
 #else
 
@@ -100,45 +84,6 @@ long long rtcOffset = 0;
 /** This magic value is written to a task's taskList entry in order to signal
  * the idle task to pick it out of the taskList structure. */
 #define DELETED_TASK_MAGIC 0xb5c5d5e5
-
-/* This section of code is required because CodeSourcery's mips-gcc
- * distribution contains a strangely compiled NewLib (in the unhosted-libc.a
- * version) that does not forward these function calls to the implementations
- * we have. We are thus forced to override their weak definition of these
- * functions. */
-#if defined(TARGET_PIC32MX) || defined(ESP_NONOS)
-#include "reent.h"
-
-#ifndef _READ_WRITE_RETURN_TYPE
-#define _READ_WRITE_RETURN_TYPE ssize_t
-#endif
-
-int open(const char* b, int flags, ...)
-{
-    return _open_r(_impure_ptr, b, flags, 0);
-}
-int close(int fd)
-{
-    return _close_r(_impure_ptr, fd);
-}
-_READ_WRITE_RETURN_TYPE read(int fd, void* buf, size_t count)
-{
-    return _read_r(_impure_ptr, fd, buf, count);
-}
-_READ_WRITE_RETURN_TYPE write(int fd, const void* buf, size_t count)
-{
-    return _write_r(_impure_ptr, fd, buf, count);
-}
-off_t lseek(int fd, off_t offset, int whence)
-{
-    return _lseek_r(_impure_ptr, fd, offset, whence);
-}
-int fstat(int fd, struct stat* buf)
-{
-    return _fstat_r(_impure_ptr, fd, buf);
-}
-
-#endif
 
 
 #if OPENMRN_FEATURE_THREAD_FREERTOS
@@ -228,94 +173,6 @@ int os_thread_once(os_thread_once_t *once, void (*routine)(void))
 }
 #endif
 
-#if defined (__WIN32__)
-/** Windows does not support pipes, so we made our own with a pseudo socketpair.
- * @param fildes fildes[0] is open for reading, filedes[1] is open for writing
- * @return 0 upon success, else -1 with errno set to indicate error
- */
-int pipe(int fildes[2])
-{
-    struct sockaddr_in addr;  
-    int listener, connector, acceptor;
-    socklen_t addrlen = sizeof(addr);
-
-    if ((listener = socket(AF_INET, SOCK_STREAM, 0)) <= 0)
-    {
-        errno = EMFILE;
-        return -1;
-    }
-    if ((connector = socket(AF_INET, SOCK_STREAM, 0)) <= 0)
-    {
-        closesocket(listener);
-        errno = EMFILE;
-        return -1;
-    }
-    
-    memset(&addr, 0, sizeof(addr));
-    addr.sin_family = AF_INET;
-    addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
-    addr.sin_port = 0; 
-
-    int reuse = 0;
-    if (setsockopt(listener, SOL_SOCKET, SO_REUSEADDR, 
-                   (char*)&reuse, (socklen_t)sizeof(reuse)) < 0)
-    {
-        closesocket(listener);
-        closesocket(connector);
-        errno = EMFILE;
-        return -1;
-    }
-
-    if (bind(listener, (const struct sockaddr*)&addr, sizeof(addr)) < 0)
-    {
-        closesocket(listener);
-        closesocket(connector);
-        errno = EMFILE;
-        return -1;
-    }
-    
-    if  (getsockname(listener, (struct sockaddr*)&addr, &addrlen) < 0)
-    {
-        closesocket(listener);
-        closesocket(connector);
-        errno = EMFILE;
-        return -1;
-    }
-
-    if (listen(listener, 1) < 0)
-    {
-        closesocket(listener);
-        closesocket(connector);
-        errno = EMFILE;
-        return -1;
-    }
-
-    if (connect(connector, (const struct sockaddr*)&addr, addrlen) < 0)
-    {
-        closesocket(listener);
-        closesocket(connector);
-        errno = EMFILE;
-        return -1;
-    }
-   
-    if ((acceptor = accept(listener, NULL, NULL)) < 0)
-    {
-        closesocket(listener);
-        closesocket(connector);
-        errno = EMFILE;
-        return  -1;
-    }
-
-    int flag = 1;
-    setsockopt(connector, IPPROTO_TCP, TCP_NODELAY, (char*)&flag, sizeof(int));
-    setsockopt(acceptor, IPPROTO_TCP, TCP_NODELAY, (char*)&flag, sizeof(int));
-
-    fildes[0] = connector;
-    fildes[1] = acceptor;
-    closesocket(listener);
-    return 0;
-}
-#endif
 
 #if OPENMRN_FEATURE_THREAD_FREERTOS
 extern const void* stack_malloc(unsigned long length);
@@ -502,63 +359,7 @@ int os_thread_create(os_thread_t *thread, const char *name, int priority,
     }
     return result;
 #endif
-#if OPENMRN_FEATURE_THREAD_PTHREAD    
-    pthread_attr_t attr;
-
-    int result = pthread_attr_init(&attr);
-    if (result != 0)
-    {
-        return result;
-    }
-    result = pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED);
-    if (result != 0)
-    {
-        return result;
-    }
-
-#if OPENMRN_FEATURE_PTHREAD_SETSTACK
-    struct sched_param sched_param;
-    result = pthread_attr_setstacksize(&attr, stack_size);
-    if (result != 0)
-    {
-        return result;
-    }
-
-    sched_param.sched_priority = 0; /* default priority */
-    result = pthread_attr_setschedparam(&attr, &sched_param);
-    if (result != 0)
-    {
-        return result;
-    }
-
-    result = pthread_attr_setinheritsched(&attr, PTHREAD_EXPLICIT_SCHED);
-    if (result != 0)
-    {
-        return result;
-    }
-
-    result = pthread_attr_setschedpolicy(&attr, SCHED_FIFO);
-    if (result != 0)
-    {
-        return result;
-    }
-#endif // no stack size set needed
-    pthread_t local_thread_handle;
-    if (!thread)
-    {
-        thread = &local_thread_handle;
-    }
-    result = pthread_create(thread, &attr, start_routine, arg);
-
-#if OPENMRN_HAVE_PTHREAD_SETNAME
-    if (!result)
-    {
-        pthread_setname_np(*thread, name);
-    }
-#endif
-
-    return result;
-#endif // pthread implementation
+    return -1;
 }
 #endif // not single threaded
 
@@ -576,69 +377,12 @@ long long os_get_time_monotonic(void)
     portTickType tick = xTaskGetTickCount();
     time = ((long long)tick) << NSEC_TO_TICK_SHIFT;
     time += hw_get_partial_tick_time_nsec();
-#elif defined (__MACH__)
-    /* get the timebase info */
-    mach_timebase_info_data_t info;
-    mach_timebase_info(&info);
-    
-    /* get the timestamp */
-    time = (long long)mach_absolute_time();
-    
-    /* convert to nanoseconds */
-    time *= info.numer;
-    time /= info.denom;
-#elif defined (__WIN32__)
-    struct timeval tv;
-    gettimeofday(&tv, NULL);
-    time = ((long long)tv.tv_sec * 1000LL * 1000LL * 1000LL) +
-           ((long long)tv.tv_usec * 1000LL);
-#elif defined(ARDUINO)
-    // redeclare micros() prototype to remove compiler warning
-    unsigned long micros();
-    
-    static uint32_t last_micros = 0;
-    static uint32_t overflow_micros = 0;
-
-    os_atomic_lock();
-    uint32_t new_micros = (uint32_t) micros();
-    if (new_micros < last_micros)
-    {
-        ++overflow_micros;
-    }
-    last_micros = new_micros;
-    os_atomic_unlock();
-    
-    time = overflow_micros;
-    time <<= 32;
-    time += new_micros;
-    time *= 1000;    // Convert micros to nanos
-#elif defined(ESP_NONOS)
-    static uint32_t clockmul = 0;
-    if (clockmul == 0) {
-        clockmul = system_rtc_clock_cali_proc();
-        clockmul *= 1000;
-        clockmul >>= 10;
-    }
-    time = system_get_rtc_time();
-    time *= clockmul;
-    time >>= 2;
 #else
 
     struct timespec ts;
-#if defined (__nuttx__)
-    clock_gettime(CLOCK_REALTIME, &ts);
-#else
     clock_gettime(CLOCK_MONOTONIC, &ts);
-#endif
     time = ((long long)ts.tv_sec * 1000000000LL) + ts.tv_nsec;
 
-#ifdef GTEST
-    long long fake_time = os_get_fake_time();
-    if (fake_time >= 0)
-    {
-        return fake_time;
-    }
-#endif // not GTEST
 
 #endif
     /* This logic ensures that every successive call is one value larger
@@ -659,22 +403,6 @@ long long os_get_time_monotonic(void)
     return time;
 }
 
-#if defined(__EMSCRIPTEN__)
-int os_thread_once(os_thread_once_t *once, void (*routine)(void))
-{
-    if (once->state == OS_THREAD_ONCE_NEVER)
-    {
-        once->state = OS_THREAD_ONCE_INPROGRESS;
-        routine();
-        once->state = OS_THREAD_ONCE_DONE;
-    }
-    else if (once->state == OS_THREAD_ONCE_INPROGRESS)
-    {
-        DIE("Recursive call to os_thread_once.");
-    }
-    return 0;
-}
-#endif
 
 #if defined (__FreeRTOS__)
 /* standard C library hooks for multi-threading */
@@ -701,74 +429,6 @@ void __malloc_unlock(struct _reent *reent)
     }
 }
 
-// These wrappers allow for the stubbing in of a custom memory allocator.
-// Originally these were needed for newlib-nano because Newlib-nano did not
-// implement proper multi-thread locking for the heap methods. Later,
-// Newlib-nano was updated to use the __malloc_lock()/unlock() methods. This
-// has been verified in ARM GCC version 8.2.1 (20181213). It is assumed that
-// later versions of ARM GCC no longer need these definitions either, if using
-// the integrated Newlib-nano heap.
-#if 0
-void *__real__malloc_r(struct _reent *reent, size_t size);
-void *__real__calloc_r(struct _reent *reent, size_t nmemb, size_t size);
-void *__real__realloc_r(struct _reent *reent, void *ptr, size_t size);
-void __real__free_r(struct _reent *rent, void *address);
-
-/** malloc() wrapper for newlib-nano
- * @param reent reentrancy structure
- * @param size size of malloc in bytes
- * @return pointer to newly malloc'd space
- */
-void *__wrap__malloc_r(struct _reent *reent, size_t size)
-{
-    void *result;
-    __malloc_lock(reent);
-    result = __real__malloc_r(reent, size);
-    __malloc_unlock(reent);
-    return result;
-}
-
-/** malloc() wrapper for newlib-nano
- * @param reent reentrancy structure
- * @param nmemb number of elements of provided size
- * @param size size of malloc in bytes
- * @return pointer to newly malloc'd space
- */
-void *__wrap__calloc_r(struct _reent *reent, size_t nmemb, size_t size)
-{
-    void *result;
-    __malloc_lock(reent);
-    result = __real__calloc_r(reent, nmemb, size);
-    __malloc_unlock(reent);
-    return result;
-}
-
-/** malloc() wrapper for newlib-nano
- * @param reent reentrancy structure
- * @param ptr pointer to reallocate
- * @param size size of malloc in bytes
- * @return pointer to newly malloc'd space
- */
-void *__wrap__realloc_r(struct _reent *reent, void *ptr, size_t size)
-{
-    void *result;
-    __malloc_lock(reent);
-    result = __real__realloc_r(reent, ptr, size);
-    __malloc_unlock(reent);
-    return result;
-}
-
-/** free() wrapper for newlib-nano
- * @param reent reentrancy structure
- * @param address pointer to previously malloc'd address
- */
-void __wrap__free_r(struct _reent *reent, void *address)
-{
-    __malloc_lock(reent);
-    __real__free_r(reent, address);
-    __malloc_unlock(reent);
-}
-#endif
 
 /** Implementation of standard sleep().
  * @param seconds number of seconds to sleep
@@ -922,23 +582,10 @@ void vApplicationIdleHook( void )
     xTaskResumeAll();
 }
 
-#ifdef TARGET_PIC32MX
-static void __attribute__((nomips16)) os_yield_trampoline(void)
-{
-    taskYIELD();
-}
-
-void __attribute__((nomips16)) os_isr_exit_yield_test(int woken)
-{
-   portEND_SWITCHING_ISR(woken); 
-}
-
-#else
 static inline void __attribute__((always_inline)) os_yield_trampoline(void)
 {
     taskYIELD();
 }
-#endif
 
 /** Entry point to the main thread.
  * @param arg unused argument
@@ -1027,20 +674,12 @@ int main(int argc, char *argv[])
 
     vTaskStartScheduler();
 #else
-#if defined (__WIN32__)
-    /* enable Windows networking */
-    WSADATA wsa_data;
-    WSAStartup(WINSOCK_VERSION, &wsa_data);
-#endif
     return appl_main(argc, argv);
 #endif
 }
 
 #endif // ESP_PLATFORM
 
-#if defined(ARDUINO)
-unsigned critical_nesting;
-#endif
 
 #if 0 && defined(ESP_NONOS)
 struct _reent *_impure_ptr = NULL;
