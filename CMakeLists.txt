@@ -37,43 +37,36 @@ file(GLOB_RECURSE OPENMRN_CONSOLE_SOURCES
     ${OPENMRNPATH}/src/console/*.cxx
     ${OPENMRNPATH}/src/console/*.c
 )
-list(FILTER OPENMRN_CONSOLE_SOURCES EXCLUDE REGEX ".*\\.cxxtest$")
 
 file(GLOB_RECURSE OPENMRN_DCC_SOURCES 
     ${OPENMRNPATH}/src/dcc/*.cxx
     ${OPENMRNPATH}/src/dcc/*.c
 )
-list(FILTER OPENMRN_DCC_SOURCES EXCLUDE REGEX ".*\\.cxxtest$")
 
 file(GLOB_RECURSE OPENMRN_EXECUTOR_SOURCES 
     ${OPENMRNPATH}/src/executor/*.cxx
     ${OPENMRNPATH}/src/executor/*.c
 )
-list(FILTER OPENMRN_EXECUTOR_SOURCES EXCLUDE REGEX ".*\\.cxxtest$")
 
 file(GLOB_RECURSE OPENMRN_OPENLCB_SOURCES 
     ${OPENMRNPATH}/src/openlcb/*.cxx
     ${OPENMRNPATH}/src/openlcb/*.c
 )
-list(FILTER OPENMRN_OPENLCB_SOURCES EXCLUDE REGEX ".*\\.cxxtest$")
 
 file(GLOB_RECURSE OPENMRN_OS_SOURCES 
     ${OPENMRNPATH}/src/os/*.cxx
     ${OPENMRNPATH}/src/os/*.c
 )
-list(FILTER OPENMRN_OS_SOURCES EXCLUDE REGEX ".*\\.cxxtest$")
 
 file(GLOB_RECURSE OPENMRN_UTILS_SOURCES 
     ${OPENMRNPATH}/src/utils/*.cxx
     ${OPENMRNPATH}/src/utils/*.c
 )
-list(FILTER OPENMRN_UTILS_SOURCES EXCLUDE REGEX ".*\\.cxxtest$")
 
 file(GLOB_RECURSE OPENMRN_TRACTION_MODEM_SOURCES 
     ${OPENMRNPATH}/src/traction_modem/*.cxx
     ${OPENMRNPATH}/src/traction_modem/*.c
 )
-list(FILTER OPENMRN_TRACTION_MODEM_SOURCES EXCLUDE REGEX ".*\\.cxxtest$")
 
 # Combine all core sources
 set(OPENMRN_CORE_SOURCES
@@ -164,7 +157,6 @@ install(DIRECTORY ${OPENMRNPATH}/src/
     FILES_MATCHING 
     PATTERN "*.h"
     PATTERN "*.hxx"
-    PATTERN "*.cxxtest" EXCLUDE
 )
 
 install(DIRECTORY ${OPENMRNPATH}/inc/
