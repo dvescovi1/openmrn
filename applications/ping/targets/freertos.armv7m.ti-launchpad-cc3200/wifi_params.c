@@ -1,4 +1,4 @@
-#include "protocol.hxx"
+#include "protocol.hpp"
 
 /// Name of wifi accesspoint to connect to.
 char WIFI_SSID[] = "moreland5107";

@@ -4,7 +4,7 @@ include(${OPENMRNPATH}/cmake/openmrn_library.cmake)
 
 file(GLOB executor_sources 
     "${OPENMRNPATH}/src/executor/*.c"
-    "${OPENMRNPATH}/src/executor/*.cxx"
+    "${OPENMRNPATH}/src/executor/*.cpp"
 )
 
 if(executor_sources)

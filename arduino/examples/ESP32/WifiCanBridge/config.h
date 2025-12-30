@@ -1,12 +1,12 @@
 #ifndef _ARDUINO_EXAMPLE_ESP32WIFICANBRIDGE_CONFIG_H_
 #define _ARDUINO_EXAMPLE_ESP32WIFICANBRIDGE_CONFIG_H_
 
-#include "openlcb/ConfiguredConsumer.hxx"
-#include "openlcb/ConfiguredProducer.hxx"
-#include "openlcb/ConfigRepresentation.hxx"
-#include "openlcb/MemoryConfig.hxx"
+#include "openlcb/ConfiguredConsumer.hpp"
+#include "openlcb/ConfiguredProducer.hpp"
+#include "openlcb/ConfigRepresentation.hpp"
+#include "openlcb/MemoryConfig.hpp"
 
-#include "freertos_drivers/esp32/Esp32WiFiConfiguration.hxx"
+#include "freertos_drivers/esp32/Esp32WiFiConfiguration.hpp"
 
 namespace openlcb
 {

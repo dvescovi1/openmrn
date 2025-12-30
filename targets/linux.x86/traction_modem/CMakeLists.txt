@@ -2,7 +2,7 @@
 
 file(GLOB traction_modem_sources 
     "${OPENMRNPATH}/src/traction_modem/*.c"
-    "${OPENMRNPATH}/src/traction_modem/*.cxx"
+    "${OPENMRNPATH}/src/traction_modem/*.cpp"
 )
 
 if(traction_modem_sources)

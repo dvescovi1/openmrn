@@ -2,7 +2,7 @@
 
 file(GLOB withrottle_sources 
     "${OPENMRNPATH}/src/withrottle/*.c"
-    "${OPENMRNPATH}/src/withrottle/*.cxx"
+    "${OPENMRNPATH}/src/withrottle/*.cpp"
 )
 
 if(withrottle_sources)

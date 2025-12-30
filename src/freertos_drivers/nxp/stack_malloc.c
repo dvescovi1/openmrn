@@ -35,7 +35,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "utils/blinker.h"
-#include "utils/constants.hxx"
+#include "utils/constants.hpp"
 
 /// Linker symbol defining the address where the ethernet RAM segment starts in
 /// the 32-bit address space.

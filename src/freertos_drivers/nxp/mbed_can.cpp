@@ -33,7 +33,7 @@
  */
 
 #include "mbed.h"
-#include "Can.hxx"
+#include "Can.hpp"
 #ifdef TARGET_LPC2368
 #include "lpc23xx.h"
 

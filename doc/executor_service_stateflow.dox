@@ -57,9 +57,9 @@ DispatchFlow instance.
 @section examples Examples
 @subsection service_state_flow One Service with Two StateFlows
 @code
-#include "executor/Service.hxx"
-#include "executor/StateFlow.hxx"
-#include "executor/Timer.hxx"
+#include "executor/Service.hpp"
+#include "executor/StateFlow.hpp"
+#include "executor/Timer.hpp"
 
 ExampleService : public Service
 {

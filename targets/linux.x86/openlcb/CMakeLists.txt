@@ -4,7 +4,7 @@ include(${OPENMRNPATH}/cmake/openmrn_library.cmake)
 
 file(GLOB openlcb_sources 
     "${OPENMRNPATH}/src/openlcb/*.c"
-    "${OPENMRNPATH}/src/openlcb/*.cxx"
+    "${OPENMRNPATH}/src/openlcb/*.cpp"
 )
 
 if(openlcb_sources)

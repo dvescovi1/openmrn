@@ -49,7 +49,7 @@
 
 #include <stdlib.h>
 
-#include "utils/constants.hxx"
+#include "utils/constants.hpp"
 
 /** Defines the default bit-rate for CAN devices. */
 DECLARE_CONST(nmranet_can_bitrate);

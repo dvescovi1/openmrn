@@ -34,7 +34,7 @@
 #ifndef _UTILS_GC_FORMAT_H_
 #define _UTILS_GC_FORMAT_H_
 
-#include "utils/constants.hxx"
+#include "utils/constants.hpp"
 
 #ifdef __cplusplus
 extern "C" {

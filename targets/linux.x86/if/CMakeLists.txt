@@ -2,7 +2,7 @@
 
 file(GLOB if_sources 
     "${OPENMRNPATH}/src/if/*.c"
-    "${OPENMRNPATH}/src/if/*.cxx"
+    "${OPENMRNPATH}/src/if/*.cpp"
 )
 
 if(if_sources)

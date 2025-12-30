@@ -2,7 +2,7 @@
 
 file(GLOB console_sources 
     "${OPENMRNPATH}/src/console/*.c"
-    "${OPENMRNPATH}/src/console/*.cxx"
+    "${OPENMRNPATH}/src/console/*.cpp"
 )
 
 if(console_sources)

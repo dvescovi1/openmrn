@@ -2,7 +2,7 @@
 
 file(GLOB cue_sources 
     "${OPENMRNPATH}/src/cue/*.c"
-    "${OPENMRNPATH}/src/cue/*.cxx"
+    "${OPENMRNPATH}/src/cue/*.cpp"
 )
 
 if(cue_sources)

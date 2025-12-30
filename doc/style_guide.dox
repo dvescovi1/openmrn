@@ -234,19 +234,19 @@
  * /* @file Example.cxx (this is an abbreviated file for example only)
  *  */
  *
- * #include "Example.hxx"
+ * #include "Example.hpp"
  *
  * #include <new>
  * #include <cstdio>
  * 
- * #include "nmranet/NMRAnetNode.hxx" /* needed for access to class Node */
+ * #include "nmranet/NMRAnetNode.hpp" /* needed for access to class Node */
  * /* This is a very long comment that would ordinarily exceed 80 characters
  *  * of text so it is on its own line above the include to document the
  *  * inclusion of nmranet/NMRAnetStream.hxx
  *  */
- * #include "nmranet/NMRAnetStream.hxx"
- * #include "os/OS.hxx"
- * #include "utils/Map.hxx"
+ * #include "nmranet/NMRAnetStream.hpp"
+ * #include "os/OS.hpp"
+ * #include "utils/Map.hpp"
  * @endcode
  *
  * It is important to note that there is quite a bit of legacy code that was

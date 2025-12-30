@@ -7,7 +7,7 @@ function(create_openmrn_lib lib_path parent_lib)
     
     file(GLOB_RECURSE sources
         "${OPENMRNPATH}/src/${lib_path}/*.c"
-        "${OPENMRNPATH}/src/${lib_path}/*.cxx"
+        "${OPENMRNPATH}/src/${lib_path}/*.cpp"
         "${OPENMRNPATH}/src/${lib_path}/*.cpp"
         "${OPENMRNPATH}/src/${lib_path}/*.S"
     )

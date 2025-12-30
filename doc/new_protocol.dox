@@ -56,7 +56,7 @@ Start your class by inheriting from IncomingMessageStateFlow.
 
 @code
 
-#include "nmranet/If.hxx"
+#include "nmranet/If.hpp"
 
 class ProtocolIdentificationHandler : public IncomingMessageStateFlow {
 ...
@@ -112,7 +112,7 @@ add the constant there like the others.
 
 @code 
 
-#include "nmranet/Defs.hxx"
+#include "nmranet/Defs.hpp"
 
 ...
 
@@ -333,7 +333,7 @@ cxxtest as the .hxx and .cxx file). Start by pulling in one of the known test
 helper classes:
 
 @code
-#include "utils/async_if_test_helper.hxx"
+#include "utils/async_if_test_helper.hpp"
 @endcode
 
 Options include `async_datagram_test_helper.hxx` or

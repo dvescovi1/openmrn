@@ -4,7 +4,7 @@ include(${OPENMRNPATH}/cmake/openmrn_library.cmake)
 
 file(GLOB dcc_sources 
     "${OPENMRNPATH}/src/dcc/*.c"
-    "${OPENMRNPATH}/src/dcc/*.cxx"
+    "${OPENMRNPATH}/src/dcc/*.cpp"
 )
 
 if(dcc_sources)

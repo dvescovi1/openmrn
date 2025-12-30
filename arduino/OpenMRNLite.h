@@ -38,15 +38,15 @@
 
 #include <Arduino.h>
 
-#include "CDIXMLGenerator.hxx"
-#include "executor/Notifiable.hxx"
-#include "freertos_drivers/common/Can.hxx"
-#include "freertos_drivers/common/WifiDefs.hxx"
-#include "openlcb/SimpleStack.hxx"
-#include "utils/FileUtils.hxx"
-#include "utils/GridConnectHub.hxx"
+#include "CDIXMLGenerator.hpp"
+#include "executor/Notifiable.hpp"
+#include "freertos_drivers/common/Can.hpp"
+#include "freertos_drivers/common/WifiDefs.hpp"
+#include "openlcb/SimpleStack.hpp"
+#include "utils/FileUtils.hpp"
+#include "utils/GridConnectHub.hpp"
 #include "utils/logging.h"
-#include "utils/Uninitialized.hxx"
+#include "utils/Uninitialized.hpp"
 
 #if defined(ESP_PLATFORM)
 
@@ -66,22 +66,22 @@ constexpr UBaseType_t OPENMRN_TASK_PRIORITY = ESP_TASK_TCPIP_PRIO - 1;
 
 } // namespace openmrn_arduino
 
-#include "freertos_drivers/esp32/Esp32Gpio.hxx"
-#include "freertos_drivers/esp32/Esp32SocInfo.hxx"
+#include "freertos_drivers/esp32/Esp32Gpio.hpp"
+#include "freertos_drivers/esp32/Esp32SocInfo.hpp"
 
 // If we are using ESP-IDF v4.3 (or later) enable the Esp32Ledc API.
-#include "freertos_drivers/esp32/Esp32Ledc.hxx"
+#include "freertos_drivers/esp32/Esp32Ledc.hpp"
 
 // ESP32-H2 and ESP32-C2 do not have a built-in TWAI controller.
 #if !defined(CONFIG_IDF_TARGET_ESP32H2) && !defined(CONFIG_IDF_TARGET_ESP32C2)
 
 // If we are using ESP-IDF v4.3 (or later) enable the usage of the TWAI device.
-#include "freertos_drivers/esp32/Esp32Can.hxx"
+#include "freertos_drivers/esp32/Esp32Can.hpp"
 
 #endif // NOT ESP32-H2 and NOT ESP32-C2
 
-#include "freertos_drivers/esp32/Esp32HardwareSerialAdapter.hxx"
-#include "freertos_drivers/esp32/Esp32WiFiManager.hxx"
+#include "freertos_drivers/esp32/Esp32HardwareSerialAdapter.hpp"
+#include "freertos_drivers/esp32/Esp32WiFiManager.hpp"
 
 // On the ESP32 we have persistent file system access so enable
 // dynamic CDI.xml generation support
@@ -90,13 +90,13 @@ constexpr UBaseType_t OPENMRN_TASK_PRIORITY = ESP_TASK_TCPIP_PRIO - 1;
 #endif // ESP32
 
 #ifdef ARDUINO_ARCH_STM32
-#include "freertos_drivers/stm32/Stm32Can.hxx"
-#include "freertos_drivers/arduino/ArduinoGpio.hxx"
+#include "freertos_drivers/stm32/Stm32Can.hpp"
+#include "freertos_drivers/arduino/ArduinoGpio.hpp"
 #endif
 
 #ifdef ARDUINO_FEATHER_M4_CAN
-#include "freertos_drivers/sam/FeatherM4Can.hxx"
-#include "freertos_drivers/arduino/ArduinoGpio.hxx"
+#include "freertos_drivers/sam/FeatherM4Can.hpp"
+#include "freertos_drivers/arduino/ArduinoGpio.hpp"
 #endif
 
 

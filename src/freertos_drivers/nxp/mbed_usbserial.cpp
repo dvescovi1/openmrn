@@ -36,7 +36,7 @@
 
 #include "mbed.h"
 #include "USBSerial.h"
-#include "Serial.hxx"
+#include "Serial.hpp"
 #include "os/os.h"
 #include "utils/macros.h"
 #include "portmacro.h"

@@ -2,7 +2,7 @@
 
 file(GLOB ble_sources 
     "${OPENMRNPATH}/src/ble/*.c"
-    "${OPENMRNPATH}/src/ble/*.cxx"
+    "${OPENMRNPATH}/src/ble/*.cpp"
 )
 
 if(ble_sources)
