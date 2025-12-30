@@ -1,36 +1,29 @@
 # Targets subdirectory CMakeLists.txt
 # This builds the target-specific libraries and executables
 
-# Define all available targets
-set(TARGETS
-    linux.x86
-    linux.llvm
-    linux.armv7a
-    freertos.armv7m
-    freertos.armv6m
-    mach.x86_64
-    bare.armv7m
-    js.emscripten
-    mingw.x86
-    nonos.xtensa-lx106.esp8266
-)
+# Auto-discover all targets with CMakeLists.txt files
+file(GLOB target_dirs "${CMAKE_CURRENT_SOURCE_DIR}/*")
 
-# Add subdirectories for each target
-foreach(target ${TARGETS})
-    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${target}/CMakeLists.txt")
-        add_subdirectory(${target})
-        message(STATUS "Added target: ${target}")
-    else()
-        message(STATUS "Skipping target ${target} - CMakeLists.txt not yet created")
+foreach(target_dir ${target_dirs})
+    if(IS_DIRECTORY "${target_dir}")
+        get_filename_component(target_name "${target_dir}" NAME)
+        
+        # Skip special directories
+        if(NOT target_name MATCHES "^\\." AND NOT target_name MATCHES "^CMake" AND NOT target_name STREQUAL "test")
+            if(EXISTS "${target_dir}/CMakeLists.txt")
+                add_subdirectory(${target_name})
+                message(STATUS "Added target: ${target_name}")
+            else()
+                message(STATUS "Skipping target ${target_name} - CMakeLists.txt not found")
+            endif()
+        endif()
     endif()
 endforeach()
 
-# Convenience targets
+# Convenience target
 add_custom_target(all-targets
     COMMENT "Build all available targets"
 )
 
 # Test target
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/test")
-    add_subdirectory(test)
-endif()
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/test/CMakeLists.txt")

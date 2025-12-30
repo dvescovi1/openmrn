@@ -14,26 +14,20 @@ endif()
 # Include helper modules
 include(${OPENMRNPATH}/cmake/openmrn_library.cmake)
 
-# Define the core module libraries that need to be built for this target
-set(MODULES
-    os
-    executor
-    dcc
-    openlcb
-    utils
-    withrottle
-    if
-    console
-    ble
-    cue
-    traction_modem
-)
+# Auto-discover module subdirectories
+file(GLOB module_dirs "${CMAKE_CURRENT_SOURCE_DIR}/*")
 
-# Add module subdirectories
-foreach(module ${MODULES})
-    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${module}")
-        add_subdirectory(${module})
-        message(STATUS "Added module: ${module}")
+foreach(module_dir ${module_dirs})
+    if(IS_DIRECTORY "${module_dir}")
+        get_filename_component(module_name "${module_dir}" NAME)
+        
+        # Skip special directories
+        if(NOT module_name MATCHES "^\\." AND NOT module_name MATCHES "^CMake" AND NOT module_name STREQUAL "test")
+            if(EXISTS "${module_dir}/CMakeLists.txt")
+                add_subdirectory(${module_name})
+                message(STATUS "Added module: ${module_name}")
+            endif()
+        endif()
     endif()
 endforeach()
 
@@ -43,6 +37,6 @@ add_custom_target(linux.x86-all
 )
 
 # Add optional test subdirectory if it exists
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/test")
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/test/CMakeLists.txt")
     add_subdirectory(test)
 endif()

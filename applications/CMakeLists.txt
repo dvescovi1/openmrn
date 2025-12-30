@@ -1,36 +1,20 @@
 # Applications subdirectory CMakeLists.txt
 
-# Define all available applications
-set(APPLICATIONS
-    async_blink
-    blink_raw
-    bootloader
-    bootloader_client
-    can_eth
-    reflash_bootloader
-    clinic_app
-    hub
-    io_board
-    js_hub
-    js_client
-    js_cdi_server
-    memconfig_utils
-    send_datagram
-    simple_client
-    tractionproxy
-    train
-    tcp_blink_client
-    usb_can
-    time_client
-    time_server
-)
+# Auto-discover all applications with CMakeLists.txt files
+file(GLOB app_dirs "${CMAKE_CURRENT_SOURCE_DIR}/*")
 
-# Add subdirectories for each application that has a CMakeLists.txt
-foreach(app ${APPLICATIONS})
-    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${app}/CMakeLists.txt")
-        add_subdirectory(${app})
-    elseif(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${app}")
-        message(STATUS "Skipping application ${app} - CMakeLists.txt not yet migrated")
+foreach(app_dir ${app_dirs})
+    if(IS_DIRECTORY "${app_dir}")
+        get_filename_component(app_name "${app_dir}" NAME)
+        
+        # Skip hidden directories and common non-app directories
+        if(NOT app_name MATCHES "^\\." AND NOT app_name MATCHES "^CMake")
+            if(EXISTS "${app_dir}/CMakeLists.txt")
+                add_subdirectory(${app_name})
+            else()
+                # message(STATUS "Skipping application ${app_name} - CMakeLists.txt not found")
+            endif()
+        endif()
     endif()
 endforeach()
 
