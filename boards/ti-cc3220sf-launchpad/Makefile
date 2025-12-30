@@ -1,1 +1,0 @@
-../ti-cc3220sf-generic/Makefile
