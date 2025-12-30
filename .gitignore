@@ -78,6 +78,10 @@ set250k.nc
 openmrnpath.mk
 package-lock.json
 
+# CMake build directory
+build/
+build-*/
+
 #Mac OS X file system artifacts
 .DS_Store
 

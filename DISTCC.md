@@ -129,7 +129,7 @@ on the far end of the tunnel.
 Then compile OpenMRN stuff with very high parallelism:
 
 ```bash
-~/openmrn/applications/io_board/target/freertos.armv7m.ek-tm4c123gxl$ make -j21
+~/openmrn/applications/hub/targets/linux.x86$ make -j21
 ```
 
 ### How do I know if it worked?

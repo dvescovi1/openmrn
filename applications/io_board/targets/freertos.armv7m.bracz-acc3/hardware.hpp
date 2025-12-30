@@ -1,1 +1,0 @@
-../../../../boards/ti-bracz-acc3/hardware.v3.hxx

@@ -40,7 +40,7 @@ parser.add_option("-t", "--targets", dest="targets",
                   help="quoted list of targets: "
                        "(linux.x86 mach.x86 mach.x86_64 freertos.armv7m), "
                        "optionally a user defined suffix can be added, "
-                       "for example: freertos.armv7m.ek-lm4f120xl "
+                       "for example: freertos.armv7m.stm32f4 "
                        "[default: %default]",
                   metavar="TARGETS")
 parser.add_option("-p", "--path", dest="path", default=None,

@@ -1,1 +1,0 @@
-../../../../boards/st-stm32f072b-discovery/memory_map.ld

@@ -1,1 +1,0 @@
-../../../../boards/nxp-lpc1768-mbed-tch/startup_LPC17xx.S

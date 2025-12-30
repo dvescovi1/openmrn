@@ -50,8 +50,7 @@ The new CMake build system provides:
 - **Target architecture support**:
   - linux.x86, linux.llvm, linux.armv7a
   - mach.x86_64 (macOS)
-  - freertos.armv7m, freertos.armv6m, freertos.armv4t
-  - freertos.mips4k.pic32mx
+  - freertos.armv7m, freertos.armv6m
   - bare.armv7m
   - js.emscripten (JavaScript)
   - mingw.x86 (Windows)
@@ -109,10 +108,7 @@ The following target architectures still need CMakeLists.txt files:
 - linux.llvm
 - linux.armv7a
 - mach.x86_64
-- freertos.armv7m.mbed-lpc1768
 - freertos.armv6m
-- freertos.armv4t
-- freertos.mips4k.pic32mx
 - bare.armv7m
 - js.emscripten
 - mingw.x86
