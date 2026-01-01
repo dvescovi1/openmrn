@@ -1,1 +1,0 @@
-../../../../boards/st-stm32f103rb-olimexino/Makefile

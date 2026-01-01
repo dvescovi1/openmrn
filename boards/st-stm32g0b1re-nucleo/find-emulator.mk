@@ -1,1 +1,0 @@
-../st-stm32g0b1xx/find-emulator.mk

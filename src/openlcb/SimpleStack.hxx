@@ -39,7 +39,6 @@
 
 #include "executor/Executor.hxx"
 #include "nmranet_config.h"
-#include "openmrn_features.h"
 #include "openlcb/AliasAllocator.hxx"
 #include "openlcb/ConfigRepresentation.hxx"
 #include "openlcb/ConfigUpdateFlow.hxx"
@@ -56,6 +55,7 @@
 #include "openlcb/SimpleNodeInfo.hxx"
 #include "openlcb/TractionTrain.hxx"
 #include "openlcb/TrainInterface.hxx"
+#include "openmrn_features.h"
 #include "utils/ActivityLed.hxx"
 #include "utils/GcTcpHub.hxx"
 #include "utils/GridConnectHub.hxx"
@@ -368,7 +368,7 @@ public:
     /// Adds a gridconnect port to the CAN bus.
     void add_gridconnect_port(const char *path, Notifiable *on_exit = nullptr);
 
-#if defined(__linux__) || defined(__MACH__)
+#if defined(__linux__)
     /// Adds a gridconnect port to the CAN bus with setting the TTY options to
     /// raw. Suitablefor linux /dev/ttyACMxx devices. The most important option
     /// this call sets is to not echo characters coming in from the device back
@@ -469,7 +469,7 @@ public:
 protected:
     /// Helper function for start_stack et al.
     void start_iface(bool restart) override;
-    
+
 private:
     class CanPhysicalIf : public PhysicalIf
     {
@@ -531,7 +531,7 @@ public:
     /// be select-capable.
     /// @param on_error will be invoked when the link is closed due to
     /// experiencing an error.
-    void add_tcp_port_select(int fd, Notifiable* on_error = nullptr)
+    void add_tcp_port_select(int fd, Notifiable *on_error = nullptr)
     {
         if_tcp()->add_network_fd(fd, on_error);
     }
@@ -552,7 +552,7 @@ private:
     }
 
     /// @return Interface object properly type cast.
-    IfTcp* if_tcp()
+    IfTcp *if_tcp()
     {
         return &static_cast<TcpPhysicalIf *>(ifaceHolder_.get())->ifTcp_;
     }

@@ -37,7 +37,7 @@
 #define LOGLEVEL INFO
 #endif
 
-#if defined(__linux__) || defined(__MACH__)
+#if defined(__linux__)
 #include <net/if.h>
 #include <termios.h> /* tc* functions */
 #endif
@@ -153,14 +153,17 @@ void SimpleStackBase::default_start_node()
             node(), MemoryConfigDefs::SPACE_ACDI_SYS, space);
         additionalComponents_.emplace_back(space);
     }
-#if OPENMRN_HAVE_POSIX_FD 
+#if OPENMRN_HAVE_POSIX_FD
     if (SNIP_DYNAMIC_FILENAME != nullptr)
     {
-        FileMemorySpace* space = nullptr;
-        if (SNIP_DYNAMIC_FILENAME == CONFIG_FILENAME) {
+        FileMemorySpace *space = nullptr;
+        if (SNIP_DYNAMIC_FILENAME == CONFIG_FILENAME)
+        {
             space = new FileMemorySpace(
                 configUpdateFlow_.get_fd(), sizeof(SimpleNodeDynamicValues));
-        } else {
+        }
+        else
+        {
             space = new FileMemorySpace(
                 SNIP_DYNAMIC_FILENAME, sizeof(SimpleNodeDynamicValues));
         }
@@ -211,9 +214,8 @@ void SimpleTrainCanStack::start_node()
 void SimpleStackBase::start_after_delay()
 {
     start_iface(false);
-    for (Node *node = iface()->first_local_node();
-         node != nullptr;
-         node = iface()->next_local_node(node->node_id()))
+    for (Node *node = iface()->first_local_node(); node != nullptr;
+        node = iface()->next_local_node(node->node_id()))
     {
         node->initialize();
     }
@@ -422,7 +424,7 @@ void SimpleCanStackBase::add_gridconnect_port(
     create_gc_port_for_can_hub(can_hub(), fd, on_exit);
 }
 
-#if defined(__linux__) || defined(__MACH__)
+#if defined(__linux__)
 void SimpleCanStackBase::add_gridconnect_tty(
     const char *device, Notifiable *on_exit)
 {

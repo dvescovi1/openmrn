@@ -1,1 +1,0 @@
-../st-stm32f1-generic/target.ld

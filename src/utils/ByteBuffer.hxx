@@ -27,7 +27,7 @@
  * \file ByteBuffer.hxx
  *
  * Specialization of the Buffer / Pool infrastructure for untyped data
- * stream. See { \link doc/byte_buffer.md }
+ * Internal stream implementation.
  *
  * @author Balazs Racz
  * @date 17 Apr 2022

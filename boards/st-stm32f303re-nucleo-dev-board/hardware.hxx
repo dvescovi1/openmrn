@@ -1,1 +1,0 @@
-../st-stm32f091rc-nucleo-dev-board/hardware.hxx

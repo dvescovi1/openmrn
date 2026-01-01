@@ -4,7 +4,7 @@
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are  permitted provided that the following conditions are met:
- * 
+ *
  *  - Redistributions of source code must retain the above copyright notice,
  *    this list of conditions and the following disclaimer.
  *
@@ -25,7 +25,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * \file logging.cxx
- * Facility to do debug printf's on a configurable loglevel. 
+ * Facility to do debug printf's on a configurable loglevel.
  *
  * @author Balazs Racz
  * @date 3 August 2013
@@ -33,7 +33,7 @@
 
 #include "logging.h"
 
-#if defined(__linux__) || defined(__MACH__)
+#if defined(__linux__)
 char logbuffer[4096];
 #elif defined(ESP_PLATFORM)
 char logbuffer[1024];
@@ -46,18 +46,21 @@ char logbuffer[256];
 os_mutex_t g_log_mutex = OS_MUTEX_INITIALIZER;
 #endif
 
-#ifdef MBED_USE_STDIO_LOGGING  // TARGET_LPC1768
+#ifdef MBED_USE_STDIO_LOGGING // TARGET_LPC1768
 
-extern "C" { void send_stdio_serial_message(const char* data); }
+extern "C" {
+void send_stdio_serial_message(const char *data);
+}
 
-void log_output(char* buf, int size) {
-    if (size <= 0) return;
+void log_output(char *buf, int size)
+{
+    if (size <= 0)
+        return;
     buf[size] = '\0';
     send_stdio_serial_message(buf);
 }
 
-#elif defined(__linux__) || defined(__MACH__) || defined(__EMSCRIPTEN__) || \
-      defined(ESP_PLATFORM)
+#elif defined(__linux__) || defined(__EMSCRIPTEN__) || defined(ESP_PLATFORM)
 
 #include "utils/stdio_logging.h"
 
@@ -70,6 +73,8 @@ void log_output(char* buf, int size) {
 /// @param size is now many bytes are there in the logging buffer. There is
 /// never a terminating \n in the log buffer. There is a terminating zero at
 /// buf[size].
-__attribute__((weak)) void log_output(char* buf, int size) {}
+__attribute__((weak)) void log_output(char *buf, int size)
+{
+}
 
 #endif

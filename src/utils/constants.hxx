@@ -46,7 +46,7 @@
 #define EXTERNCEND
 #endif
 
-#if defined (__EMSCRIPTEN__) || defined (__MACH__) || defined(__linux__) || defined(__PIC32MX__)
+#if defined(__EMSCRIPTEN__) || defined(__linux__) || defined(__PIC32MX__)
 #define NEED_SIMPLE_CONST
 #endif
 
@@ -120,7 +120,10 @@
 /// @param new_value an integer, the constant will be overridden to this value
 /// during the given scope.
 #define TEST_OVERRIDE_CONST(name, new_value)                                   \
-    ScopedOverride ov##name{config##name##override(), new_value}
+    ScopedOverride ov##name                                                    \
+    {                                                                          \
+        config##name##override(), new_value                                    \
+    }
 
 #endif // GTEST
 
@@ -135,11 +138,11 @@
         return (ptrdiff_t)(&_sym_##name);                                      \
     }
 
-#define DEFAULT_CONST(name, value) DEFAULT_CONST_(name, value) 
+#define DEFAULT_CONST(name, value) DEFAULT_CONST_(name, value)
 
 #define DEFAULT_CONST_(name, value)                                            \
     typedef signed char                                                        \
-    _do_not_add_declare_and_default_const_to_the_same_file_for_##name;         \
+        _do_not_add_declare_and_default_const_to_the_same_file_for_##name;     \
     asm(".global _sym_" #name " \n");                                          \
     asm(".weak _sym_" #name " \n");                                            \
     asm(".set _sym_" #name ", " #value " \n");

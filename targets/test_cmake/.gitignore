@@ -1,5 +1,0 @@
-# Build artifacts
-build/
-.nocov
-.cov
-coverage.html

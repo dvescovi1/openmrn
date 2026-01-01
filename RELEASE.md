@@ -2,37 +2,23 @@
 
 This document details how releases need to be built and published for OpenMRN.
 
-## Purpose and content of releases
+## Purpose and current scope
 
-Releases fulfill two purposes:
+The project now targets a single embedded configuration
+(`freertos.armv7m` with board `st-stm32f767zi-nucleo`). We no longer publish
+host or JavaScript binaries. Releases are currently source-only tags; users
+build firmware locally with the ARM GCC toolchain.
 
-- Precompiled binaries are made available for download. This is important for
-  those that do not have facilities or the experience to compile OpenMRN
-  applications from source.
-  
-- (At a later point) a packaged library is made available with include headers
-  and `*.a` files that enable importing OpenMRN into a different compilation
-  environment, such as various IDEs for embedded development.
-  
-The following is out of scope of this documentation:
-
-- Releases for OpenMRNLite (Arduino compatible library) are documented in the
-  [arduino/RELEASE.md](arduino/RELEASE.md) file.
+Releases for OpenMRNLite (Arduino compatible library) are documented in the
+[arduino/RELEASE.md](arduino/RELEASE.md) file.
 
 ## Requirements for building releases
 
-- You need to be able to compile OpenMRN binaries. You need a linux host (or
-  VM). The necessary packages have to be installed:
-  
-  - beyond standard `g++` you will need `sudo apt-get install
-    libavahi-client-dev`
-    
-- You need both a linux.x86_64 and a raspberry pi host.
-
-- On the linux host you should install node.js, npm, emscripten, and the
-  packager:
-  
-  `sudo npm install -g pkg`
+- ARM GCC toolchain (for example, the `gcc-arm-none-eabi` toolchain used by the
+  default CMake configuration).
+- CMake 3.16+ and Python 3 for the build system scripts.
+- A developer workstation with access to the project source (no host
+  cross-builds for desktop or JS are supported).
   
 ## Release numbering
 
@@ -53,33 +39,10 @@ Release numbers are marked as major.minor.patch, such as `v2.10.1`.
 All of the make commands here need to be run in the openmrn directory
 (toplevel).
 
-1. Start with a clean checkout. Run `make release-clean`.
-
-2. On the linux.x86_64 host, run
-
-   `make -j5 release-bin`
-   
-3. Copy `openmrn/bin/release/applications.linux.x86_64.zip` as one of the
-   artifacts.
-   
-3. On the raspberry pi host, do the same:
-
-   `make release-clean`
-   
-   `make -j4 release-bin`
-   
-4. Copy `openmrn/bin/release/applications.linux.armv7l.zip` as one of the
-   artifacts. Rename it to `applications.linux.armv7l-raspberry-pi.zip`
-   
-5. On the linux.x86_64 host, build the javascript binaries. Run
-   
-   `make -j5 release-js`
-   
-6. Copy `openmrn/bin/release/applications.win.zip` and
-   `openmrn/bin/release/applications.macos.zip`.
-   
-7. On the OpenMRN GitHub project, select Releases, create a new release, select
-   create a new tag in the form of `release-v2.10.1`. Upload the release
-   artifacts that you collected.
-   
-8. Publish the release.
+1. Start with a clean checkout. Run `cmake -S . -B build` (the default target is
+  `freertos.armv7m` and uses the Cortex-M toolchain file).
+2. Build the project: `cmake --build build`.
+3. Flash or package the firmware as appropriate for the
+  `st-stm32f767zi-nucleo` board (application-specific steps may vary).
+4. Tag the release on GitHub (for example `release-v2.10.1`) after verifying the
+  build.

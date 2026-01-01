@@ -46,7 +46,7 @@ class Notifiable;
 
 extern "C" {
 extern void enter_bootloader();
-/** @todo need to find an alternative for reboot() for MacOS */
+/** reboot() is available on supported platforms */
 #if OPENMRN_FEATURE_REBOOT
 extern void reboot();
 #endif
@@ -74,7 +74,7 @@ public:
 
     /// Specifies which node the next operation pertains. If it returns false,
     /// the operation will be rejected by "unknown memory space ID".
-    virtual bool set_node(Node* node)
+    virtual bool set_node(Node *node)
     {
         return true;
     }
@@ -132,7 +132,7 @@ public:
     /// @return the number of bytes successfully written (before hitting the end
     ///         of the space)
     virtual size_t write(address_t destination, const uint8_t *data, size_t len,
-                         errorcode_t *error, Notifiable *again)
+        errorcode_t *error, Notifiable *again)
     {
         // Should never get here because read only address spaces should never
         // call write, and writable address spaces shall override this method.
@@ -157,17 +157,19 @@ public:
     /// @return the number of bytes successfully read (before hitting the end of
     ///         the space)
     virtual size_t read(address_t source, uint8_t *dst, size_t len,
-                        errorcode_t *error, Notifiable *again) = 0;
+        errorcode_t *error, Notifiable *again) = 0;
 
     /** Handles space freeze command. Returns an error code, or 0 for
      * success. */
-    virtual errorcode_t freeze() {
+    virtual errorcode_t freeze()
+    {
         return Defs::ERROR_INVALID_ARGS;
     }
 
     /** Handles space unfreeze command. Returns an error code, or 0 for
      * success. */
-    virtual errorcode_t unfreeze() {
+    virtual errorcode_t unfreeze()
+    {
         return Defs::ERROR_INVALID_ARGS;
     }
 };
@@ -184,7 +186,7 @@ public:
      * null-terminated string, which may point into read-only memory. */
     ReadOnlyMemoryBlock(const void *data)
         : data_(reinterpret_cast<const uint8_t *>(data))
-        , len_(strlen((const char*)data_))
+        , len_(strlen((const char *)data_))
     {
     }
 
@@ -192,7 +194,7 @@ public:
      * range [data, data+len) must be dereferenceable for read so long as this
      * object is alive. It may point into read-only memory. */
     ReadOnlyMemoryBlock(const void *data, address_t len)
-        : data_(reinterpret_cast<const uint8_t*>(data))
+        : data_(reinterpret_cast<const uint8_t *>(data))
         , len_(len)
     {
     }
@@ -203,9 +205,10 @@ public:
     }
 
     size_t read(address_t source, uint8_t *dst, size_t len, errorcode_t *error,
-                Notifiable *again) OVERRIDE
+        Notifiable *again) OVERRIDE
     {
-        if (source >= len_) {
+        if (source >= len_)
+        {
             *error = MemoryConfigDefs::ERROR_OUT_OF_BOUNDS;
             return 0;
         }
@@ -233,7 +236,7 @@ public:
      * range [data, data+len) must be dereferenceable for read and write so
      * long as this object is alive. */
     ReadWriteMemoryBlock(void *data, address_t len)
-        : data_(reinterpret_cast<uint8_t*>(data))
+        : data_(reinterpret_cast<uint8_t *>(data))
         , len_(len)
     {
     }
@@ -250,9 +253,10 @@ public:
     }
 
     size_t read(address_t source, uint8_t *dst, size_t len, errorcode_t *error,
-                Notifiable *again) OVERRIDE
+        Notifiable *again) OVERRIDE
     {
-        if (source >= len_) {
+        if (source >= len_)
+        {
             *error = MemoryConfigDefs::ERROR_OUT_OF_BOUNDS;
             return 0;
         }
@@ -266,12 +270,15 @@ public:
     }
 
     size_t write(address_t destination, const uint8_t *data, size_t len,
-                 errorcode_t *error, Notifiable *again) OVERRIDE {
-        if (destination >= len_) {
+        errorcode_t *error, Notifiable *again) OVERRIDE
+    {
+        if (destination >= len_)
+        {
             *error = MemoryConfigDefs::ERROR_OUT_OF_BOUNDS;
             return 0;
         }
-        if (destination + len > len_) {
+        if (destination + len > len_)
+        {
             len = len_ - destination;
         }
         memcpy(data_ + destination, data, len);
@@ -279,7 +286,7 @@ public:
     }
 
 private:
-    uint8_t *data_; //< Data bytes to serve.
+    uint8_t *data_;       //< Data bytes to serve.
     const address_t len_; //< Length of block to serve.
 };
 
@@ -289,8 +296,8 @@ private:
 class FileMemorySpace : public MemorySpace
 {
 public:
-    static const address_t AUTO_LEN = (address_t) - 1;
-    static const address_t UNLIMITED_LEN = (address_t) - 2;
+    static const address_t AUTO_LEN = (address_t)-1;
+    static const address_t UNLIMITED_LEN = (address_t)-2;
 
     /** Creates a memory space based on an fd.
      *
@@ -324,10 +331,10 @@ public:
     }
 
     size_t write(address_t destination, const uint8_t *data, size_t len,
-                 errorcode_t *error, Notifiable *again) OVERRIDE;
+        errorcode_t *error, Notifiable *again) OVERRIDE;
 
     size_t read(address_t source, uint8_t *dst, size_t len, errorcode_t *error,
-                Notifiable *again) OVERRIDE;
+        Notifiable *again) OVERRIDE;
 
 private:
     /** Makes fd a valid parameter, and ensures fileSize is filled in. */
@@ -341,7 +348,8 @@ private:
 /// Memory space implementation that exports the contents of a file as a memory
 /// space. The file can be specified either as a path or an fd. By default
 /// writes are also allowed.
-class ROFileMemorySpace : public FileMemorySpace {
+class ROFileMemorySpace : public FileMemorySpace
+{
 public:
     /** Creates a memory space based on an fd.
      *
@@ -351,7 +359,9 @@ public:
      * file.
      */
     ROFileMemorySpace(int fd, address_t len = AUTO_LEN)
-        : FileMemorySpace(fd, len) {}
+        : FileMemorySpace(fd, len)
+    {
+    }
 
     /** Creates a memory space based on a file name. Opens the file at the
      * first use, and never closes it.
@@ -363,7 +373,9 @@ public:
      * file.
      */
     ROFileMemorySpace(const char *name, address_t len = AUTO_LEN)
-        : FileMemorySpace(name, len) {}
+        : FileMemorySpace(name, len)
+    {
+    }
 
     bool read_only() OVERRIDE
     {
@@ -605,7 +617,8 @@ public:
 
     /// Overrides the default send method in orderto decide whether the queue
     /// the incoming datagram in the server queue or the client queue.
-    void send(DefaultDatagramHandler::message_type *message, unsigned priority = UINT_MAX) override
+    void send(DefaultDatagramHandler::message_type *message,
+        unsigned priority = UINT_MAX) override
     {
         size_t len = message->data()->payload.size();
         const uint8_t *bytes = (const uint8_t *)message->data()->payload.data();
@@ -643,13 +656,15 @@ public:
 
     /// Registers a second handler to forward all the client interactions,
     /// i.e. everythingthat comes back with the RESPONSE bit set.
-    void set_client(DatagramHandlerFlow* client) {
+    void set_client(DatagramHandlerFlow *client)
+    {
         HASSERT(client_ == nullptr || client_ == client);
         client_ = client;
     }
 
     /// Unregisters the previously registered second handler.
-    void clear_client(DatagramHandlerFlow* client) {
+    void clear_client(DatagramHandlerFlow *client)
+    {
         HASSERT(client_ == client);
         client_ = nullptr;
     }
@@ -681,7 +696,7 @@ private:
             return call_immediately(STATE(handle_read));
         }
         else if ((cmd & MemoryConfigDefs::COMMAND_MASK) ==
-                 MemoryConfigDefs::COMMAND_WRITE)
+            MemoryConfigDefs::COMMAND_WRITE)
         {
             return call_immediately(STATE(handle_write));
         }
@@ -795,13 +810,14 @@ private:
     public:
         RebootTimer(Service *s)
             : ::Timer(s->executor()->active_timers())
-        { }
+        {
+        }
 
         long long timeout() override
         {
-#if OPENMRN_FEATURE_REBOOT         
+#if OPENMRN_FEATURE_REBOOT
             reboot();
-#endif            
+#endif
             return DELETE;
         }
     };
@@ -820,7 +836,6 @@ private:
     /// @return openlcb error code, 0 on success
     uint16_t __attribute__((noinline)) app_handle_factory_reset(NodeID target);
 
-
     Action handle_options()
     {
         response_.reserve(7);
@@ -833,40 +848,49 @@ private:
             available_commands |= MemoryConfigDefs::AVAIL_SR;
         }
         // Figure out about ACDI spaces
-        MemorySpace* memspace = get_space(0xFC);
-        if (memspace) {
+        MemorySpace *memspace = get_space(0xFC);
+        if (memspace)
+        {
             available_commands |= MemoryConfigDefs::AVAIL_R0xFC;
         }
         memspace = get_space(0xFB);
-        if (memspace) {
+        if (memspace)
+        {
             available_commands |= MemoryConfigDefs::AVAIL_R0xFB;
-            if (!memspace->read_only()) {
+            if (!memspace->read_only())
+            {
                 available_commands |= MemoryConfigDefs::AVAIL_W0xFB;
             }
         }
         response_.push_back(available_commands >> 8);
         response_.push_back(available_commands & 0xff);
         // Write lengths
-        response_.push_back(static_cast<char> (
-            MemoryConfigDefs::LENGTH_1 | MemoryConfigDefs::LENGTH_2 |
-            MemoryConfigDefs::LENGTH_4 | MemoryConfigDefs::LENGTH_ARBITRARY));
+        response_.push_back(static_cast<char>(MemoryConfigDefs::LENGTH_1 |
+            MemoryConfigDefs::LENGTH_2 | MemoryConfigDefs::LENGTH_4 |
+            MemoryConfigDefs::LENGTH_ARBITRARY));
 
         uint8_t min_space = 0xFF;
         uint8_t max_space = 0;
         // Walks the spaces.
-        for (auto it = registry_.begin(); it != registry_.end(); ++it) {
+        for (auto it = registry_.begin(); it != registry_.end(); ++it)
+        {
             auto h = *it;
             uint8_t space = h.first.second;
-            Node* node = h.first.first;
-            //MemorySpace* space_impl = h.second;
-            if (node && node != message()->data()->dst) {
+            Node *node = h.first.first;
+            // MemorySpace* space_impl = h.second;
+            if (node && node != message()->data()->dst)
+            {
                 continue;
             }
-            if (space >= 0xFD) continue;
-            if (space > max_space) max_space = space;
-            if (space < min_space) min_space = space;
+            if (space >= 0xFD)
+                continue;
+            if (space > max_space)
+                max_space = space;
+            if (space < min_space)
+                min_space = space;
         }
-        if (max_space < min_space) {
+        if (max_space < min_space)
+        {
             max_space = 0xff;
             min_space = 0xfd;
         }
@@ -877,19 +901,23 @@ private:
 
     Action handle_get_space_info()
     {
-        if (message()->data()->payload.size() < 3) {
+        if (message()->data()->payload.size() < 3)
+        {
             // Incoming message too short.
             return respond_reject(DatagramClient::PERMANENT_ERROR);
         }
         uint8_t space_number = in_bytes()[2];
-        MemorySpace* space = get_space(space_number);
+        MemorySpace *space = get_space(space_number);
         response_.reserve(8);
         response_.push_back(DATAGRAM_ID);
         response_.push_back(MemoryConfigDefs::COMMAND_INFORMATION_REPLY);
         response_.push_back(space_number);
-        if (!space) {
+        if (!space)
+        {
             return respond_ok(DatagramDefs::REPLY_PENDING);
-        } else {
+        }
+        else
+        {
             response_[1]++;
         }
         MemorySpace::address_t address = space->max_address();
@@ -899,14 +927,17 @@ private:
         response_.push_back(address & 0xff);
         uint8_t flags = 0;
         address = space->min_address();
-        if (address) {
+        if (address)
+        {
             flags |= MemoryConfigDefs::FLAG_NZLA;
         }
-        if (space->read_only()) {
+        if (space->read_only())
+        {
             flags |= MemoryConfigDefs::FLAG_RO;
         }
         response_.push_back(flags);
-        if (address) {
+        if (address)
+        {
             response_.push_back((address >> 24) & 0xff);
             response_.push_back((address >> 16) & 0xff);
             response_.push_back((address >> 8) & 0xff);
@@ -943,7 +974,7 @@ private:
         response_.assign(response_len, c);
         inline_respond_ok(static_cast<uint8_t>(DatagramClient::REPLY_PENDING) |
             (static_cast<uint8_t>(space->get_read_timeout()) &
-            static_cast<uint8_t>(DatagramDefs::TIMEOUT_MASK)));
+                static_cast<uint8_t>(DatagramDefs::TIMEOUT_MASK)));
         return call_immediately(STATE(try_read));
     }
 
@@ -1028,7 +1059,7 @@ private:
         currentOffset_ = 0;
         inline_respond_ok(static_cast<uint8_t>(DatagramClient::REPLY_PENDING) |
             (static_cast<uint8_t>(space->get_write_timeout()) &
-            static_cast<uint8_t>(DatagramDefs::TIMEOUT_MASK)));
+                static_cast<uint8_t>(DatagramDefs::TIMEOUT_MASK)));
         return call_immediately(STATE(try_write));
     }
 
@@ -1053,8 +1084,8 @@ private:
         errorcode_t error = 0;
         if (write_len > 0)
         {
-            size_t written = space->write(address, in_bytes() + data_offset,
-                                          write_len, &error, this);
+            size_t written = space->write(
+                address, in_bytes() + data_offset, write_len, &error, this);
             currentOffset_ += written;
             write_len -= written;
             if (error == MemorySpace::ERROR_AGAIN)
@@ -1094,19 +1125,20 @@ private:
     MemorySpace *get_space(int space_number = -1)
     {
         if (space_number < 0)
-	{
-	    space_number = get_space_number();
-	}
+        {
+            space_number = get_space_number();
+        }
         if (space_number < 0)
-	{
+        {
             return nullptr;
-	}
+        }
         MemorySpace *space =
             registry_.lookup(message()->data()->dst, space_number);
         if (!space)
         {
-            LOG(WARNING, "MemoryConfig: asked node 0x%012" PRIx64 " for unknown space "
-                         "%d. Source {0x%012" PRIx64 ", %03x}",
+            LOG(WARNING,
+                "MemoryConfig: asked node 0x%012" PRIx64 " for unknown space "
+                "%d. Source {0x%012" PRIx64 ", %03x}",
                 message()->data()->dst->node_id(), space_number,
                 message()->data()->src.id, message()->data()->src.alias);
             return nullptr;
@@ -1121,12 +1153,12 @@ private:
     }
 
     ///@todo (balazs.racz) implement lock/unlock.
-    //NodeID lockNode_; //< Holds the node ID that locked us.
+    // NodeID lockNode_; //< Holds the node ID that locked us.
 
-    Registry registry_;         //< holds the known memory spaces
+    Registry registry_; //< holds the known memory spaces
     /// If there is a memory config client, we will forward response traffic to
     /// it.
-    DatagramHandlerFlow* client_{nullptr};
+    DatagramHandlerFlow *client_ {nullptr};
     /// If there is a handler for stream requests, we will forward the
     /// respective traffic to it.
     DatagramHandlerFlow *streamHandler_ {nullptr};

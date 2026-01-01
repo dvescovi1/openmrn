@@ -37,9 +37,7 @@
 #define _POSIX_C_SOURCE 200112L
 #endif
 
-#if defined(__MACH__)
-#define _DARWIN_C_SOURCE // mkdtemp
-#endif
+// macOS support removed
 
 #if defined(ESP_NONOS)
 #define __sh__ // for ftruncate
@@ -53,7 +51,7 @@
 #if !defined(__FreeRTOS__) && !defined(__WINNT__)
 TempDir::TempDir()
 {
-#if defined(__linux__) || defined(__MACH__)
+#if defined(__linux__)
     dirName_ = "/tmp/openmrntmpdirXXXXXX";
 #else
     dirName_ = "./openmrntmpdirXXXXXX";
@@ -66,20 +64,19 @@ TempDir::TempDir()
 //
 // TempFile::TempFile()
 //
-TempFile::TempFile(const TempDir& dir, const string& basename)
+TempFile::TempFile(const TempDir &dir, const string &basename)
 {
     fileName_ = dir.name() + "/" + basename + ".XXXXXX";
     (void)fileName_.c_str();
-    fd_ = mkstemp((char*)fileName_.c_str());
+    fd_ = mkstemp((char *)fileName_.c_str());
 }
 
 //
 // TempFile::rewrite()
 //
-void TempFile::rewrite(const string& s)
+void TempFile::rewrite(const string &s)
 {
     ::lseek(fd_, 0, SEEK_SET);
     ::ftruncate(fd_, 0);
     write(s);
 }
-

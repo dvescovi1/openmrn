@@ -576,17 +576,6 @@ long long os_get_time_monotonic(void)
     portTickType tick = xTaskGetTickCount();
     time = ((long long)tick) << NSEC_TO_TICK_SHIFT;
     time += hw_get_partial_tick_time_nsec();
-#elif defined (__MACH__)
-    /* get the timebase info */
-    mach_timebase_info_data_t info;
-    mach_timebase_info(&info);
-    
-    /* get the timestamp */
-    time = (long long)mach_absolute_time();
-    
-    /* convert to nanoseconds */
-    time *= info.numer;
-    time /= info.denom;
 #elif defined (__WIN32__)
     struct timeval tv;
     gettimeofday(&tv, NULL);
@@ -625,11 +614,7 @@ long long os_get_time_monotonic(void)
 #else
 
     struct timespec ts;
-#if defined (__nuttx__)
-    clock_gettime(CLOCK_REALTIME, &ts);
-#else
     clock_gettime(CLOCK_MONOTONIC, &ts);
-#endif
     time = ((long long)ts.tv_sec * 1000000000LL) + ts.tv_nsec;
 
 #ifdef GTEST

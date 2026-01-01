@@ -1,0 +1,8 @@
+# ninja log v5
+16	206	7890068217655849	src/CMakeFiles/openmrn.dir/dcc/dcc_constants.cxx.obj	4bd9ab86b5eaf17
+26	313	7890068218635873	src/CMakeFiles/openmrn.dir/dcc/Defs.cxx.obj	488cf3e310659c8f
+45	1487	7890068230428268	src/CMakeFiles/openmrn.dir/dcc/RailcomBroadcastDecoder.cxx.obj	f6023a27ba77a0bc
+8	1533	7890068230898249	src/CMakeFiles/openmrn.dir/ble/Defs.cxx.obj	a0216eeb5f0212e3
+314	1570	7890068231298229	src/CMakeFiles/openmrn.dir/dcc/RailcomDebug.cxx.obj	2d5d6d9aa5cf2ba8
+207	1588	7890068231488278	src/CMakeFiles/openmrn.dir/dcc/RailCom.cxx.obj	57f7b4c84fd5a7e9
+4	1674	7890068232348220	src/CMakeFiles/openmrn.dir/ble/Advertisement.cxx.obj	974e4b7fc1db2d6f

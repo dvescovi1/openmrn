@@ -31,14 +31,14 @@
  * @date 20 May 2013
  */
 
-//#define LOGLEVEL VERBOSE
+// #define LOGLEVEL VERBOSE
 
 #include "openmrn_features.h"
 
 #include "utils/GridConnectHub.hxx"
 
-#include "executor/StateFlow.hxx"
 #include "can_frame.h"
+#include "executor/StateFlow.hxx"
 #include "nmranet_config.h"
 #include "utils/Buffer.hxx"
 #include "utils/BufferPort.hxx"
@@ -46,8 +46,8 @@
 #if OPENMRN_FEATURE_EXECUTOR_SELECT
 #include "utils/HubDeviceSelect.hxx"
 #endif
-#include "utils/Hub.hxx"
 #include "utils/GcStreamParser.hxx"
+#include "utils/Hub.hxx"
 #include "utils/gc_format.h"
 
 /// Actual implementation for the gridconnect bridge between a string-typed Hub
@@ -250,7 +250,8 @@ public:
         {
             int max_frames_to_parse =
                 config_gridconnect_bridge_max_incoming_packets();
-            if (max_frames_to_parse > 1) {
+            if (max_frames_to_parse > 1)
+            {
                 frameAllocator_.reset(new LimitedPool(
                     sizeof(CanHubFlow::buffer_type), max_frames_to_parse));
             }
@@ -279,7 +280,8 @@ public:
             return destination_;
         }
 
-        /** Takes more characters from the pending incoming buffer. @return next state */
+        /** Takes more characters from the pending incoming buffer. @return next
+         * state */
         Action entry() override
         {
             inBuf_ = message()->data()->data();
@@ -298,7 +300,8 @@ public:
                 {
                     // End of frame. Allocate an output buffer and parse the
                     // frame.
-                    return allocate_and_call(destination_, STATE(parse_to_output_frame), frameAllocator_.get());
+                    return allocate_and_call(destination_,
+                        STATE(parse_to_output_frame), frameAllocator_.get());
                 }
             }
             // Will notify the caller.
@@ -310,7 +313,7 @@ public:
          * process buffer. @return next state. */
         Action parse_to_output_frame()
         {
-            auto* b = get_allocation_result(destination_);
+            auto *b = get_allocation_result(destination_);
             if (streamSegmenter_.parse_frame_to_output(b->data()))
             {
                 b->data()->skipMember_ = skipMember_;
@@ -327,7 +330,7 @@ public:
     private:
         /// Holds the state of the incoming characters and the boundary.
         GcStreamParser streamSegmenter_;
-        
+
         /// The incoming characters.
         const char *inBuf_;
         /// The remaining number of characters in inBuf_.
@@ -336,7 +339,7 @@ public:
         // Allocator to get the frame from. If NULL, the target's default
         // buffer pool will be used.
         std::unique_ptr<LimitedPool> frameAllocator_;
-        
+
         // ==== static data ====
 
         /// Pipe to send data to.
@@ -354,17 +357,14 @@ private:
     unsigned isRegistered_ : 1;
 };
 
-GCAdapterBase *GCAdapterBase::CreateGridConnectAdapter(HubFlow *gc_side,
-                                                       CanHubFlow *can_side,
-                                                       bool double_bytes)
+GCAdapterBase *GCAdapterBase::CreateGridConnectAdapter(
+    HubFlow *gc_side, CanHubFlow *can_side, bool double_bytes)
 {
     return new GCAdapter(gc_side, can_side, double_bytes);
 }
 
 GCAdapterBase *GCAdapterBase::CreateGridConnectAdapter(HubFlow *gc_side_read,
-                                                       HubFlow *gc_side_write,
-                                                       CanHubFlow *can_side,
-                                                       bool double_bytes)
+    HubFlow *gc_side_write, CanHubFlow *can_side, bool double_bytes)
 {
     return new GCAdapter(gc_side_read, gc_side_write, can_side, double_bytes);
 }
@@ -398,11 +398,11 @@ struct GcPacketPrinter::Impl : public CanHubPortInterface
     {
         AutoReleaseBuffer<CanHubData> b(message);
         char str[40];
-        char* p = gc_format_generate(message->data(), str, false);
+        char *p = gc_format_generate(message->data(), str, false);
         *p = 0;
         if (timestamped_)
         {
-#if defined(__linux__) || defined(__MACH__)
+#if defined(__linux__)
             struct timeval tv;
             gettimeofday(&tv, nullptr);
             struct tm t;
@@ -421,12 +421,13 @@ struct GcPacketPrinter::Impl : public CanHubPortInterface
     }
 
     /// Which hun are we registered to.
-    CanHubFlow* canHub_;
+    CanHubFlow *canHub_;
     /// Whether we are printing timestamps of the packets.
     bool timestamped_;
 };
 
-GcPacketPrinter::GcPacketPrinter(CanHubFlow *can_hub, bool timestamped) : impl_(new Impl(can_hub, timestamped))
+GcPacketPrinter::GcPacketPrinter(CanHubFlow *can_hub, bool timestamped)
+    : impl_(new Impl(can_hub, timestamped))
 {
 }
 
@@ -456,13 +457,16 @@ struct GcHubPort : public Executable
         , onExit_(on_exit)
     {
         LOG(VERBOSE, "gchub port %p", (Executable *)this);
-        if (use_select) {
+        if (use_select)
+        {
 #ifndef OPENMRN_FEATURE_EXECUTOR_SELECT
             DIE("select is not supported");
 #else
             gcWrite_.reset(new HubDeviceSelect<HubFlow>(&gcHub_, fd, this));
 #endif
-        } else {
+        }
+        else
+        {
             gcWrite_.reset(new FdHubPort<HubFlow>(&gcHub_, fd, this));
         }
     }
@@ -489,7 +493,7 @@ struct GcHubPort : public Executable
     std::unique_ptr<FdHubPortInterface> gcWrite_;
     /** If not null, this notifiable will be called when the device is
      * closed. */
-    Notifiable* onExit_;
+    Notifiable *onExit_;
 
     /** Callback in case the connection is closed due to error. */
     void notify() OVERRIDE
@@ -511,7 +515,8 @@ struct GcHubPort : public Executable
         }
         LOG(INFO, "GCHubPort: Shutting down gridconnect port %d. (%p)",
             gcWrite_->fd(), bridge_.get());
-        if (onExit_) {
+        if (onExit_)
+        {
             onExit_->notify();
             onExit_ = nullptr;
         }

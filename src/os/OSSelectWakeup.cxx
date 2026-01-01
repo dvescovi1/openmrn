@@ -1,49 +1,46 @@
 /** \copyright
-* Copyright (c) 2015, Balazs Racz
-* All rights reserved.
-*
-* Redistribution and use in source and binary forms, with or without
-* modification, are  permitted provided that the following conditions are met:
-*
-*  - Redistributions of source code must retain the above copyright notice,
-*    this list of conditions and the following disclaimer.
-*
-*  - Redistributions in binary form must reproduce the above copyright notice,
-*    this list of conditions and the following disclaimer in the documentation
-*    and/or other materials provided with the distribution.
-*
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-* AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-* ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-* LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-* CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-* SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-* INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-* CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-* ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-* POSSIBILITY OF SUCH DAMAGE.
-*
-* \file OSSelectWakeup.cxx
-* Helper class for portable wakeup of a thread blocked in a select call.
-*
-* @author Balazs Racz
-* @date 10 Apr 2015
-*/
+ * Copyright (c) 2015, Balazs Racz
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are  permitted provided that the following conditions are met:
+ *
+ *  - Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ *
+ *  - Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ *
+ * \file OSSelectWakeup.cxx
+ * Helper class for portable wakeup of a thread blocked in a select call.
+ *
+ * @author Balazs Racz
+ * @date 10 Apr 2015
+ */
 
 #include "os/OSSelectWakeup.hxx"
 #include "utils/logging.h"
-#if defined(__MACH__)
-#define _DARWIN_C_SOURCE // pselect
-#endif
+// macOS support removed
 
 void empty_signal_handler(int)
 {
 }
 
-int OSSelectWakeup::select(int nfds, fd_set *readfds,
-                           fd_set *writefds, fd_set *exceptfds,
-                           long long deadline_nsec)
+int OSSelectWakeup::select(int nfds, fd_set *readfds, fd_set *writefds,
+    fd_set *exceptfds, long long deadline_nsec)
 {
     {
         AtomicHolder l(this);
@@ -65,8 +62,7 @@ int OSSelectWakeup::select(int nfds, fd_set *readfds,
         }
     }
 #if OPENMRN_FEATURE_DEVICE_SELECT
-    int ret =
-        Device::select(nfds, readfds, writefds, exceptfds, deadline_nsec);
+    int ret = Device::select(nfds, readfds, writefds, exceptfds, deadline_nsec);
     if (!ret && pendingWakeup_)
     {
         ret = -1;
@@ -96,10 +92,9 @@ int OSSelectWakeup::select(int nfds, fd_set *readfds,
     // divide in two steps to avoid overflow on ESP32
     timeout.tv_sec = (deadline_nsec / 1000) / 1000000LL;
     timeout.tv_usec = (deadline_nsec / 1000) % 1000000LL;
-    int ret =
-        ::select(nfds, readfds, writefds, exceptfds, &timeout);
+    int ret = ::select(nfds, readfds, writefds, exceptfds, &timeout);
 #elif !defined(OPENMRN_FEATURE_SINGLE_THREADED)
-    #error no select implementation in multi threaded OS.
+#error no select implementation in multi threaded OS.
 #else
     // Single threaded OS: nothing to wake up.
     int ret = 0;
@@ -119,8 +114,8 @@ int OSSelectWakeup::select(int nfds, fd_set *readfds,
 #include <esp_vfs.h>
 #include <fcntl.h>
 #include <pthread.h>
-#include <sys/types.h>
 #include <sys/stat.h>
+#include <sys/types.h>
 
 /// Protects the initialization of vfs_id.
 static pthread_once_t vfs_init_once = PTHREAD_ONCE_INIT;
@@ -134,7 +129,6 @@ static pthread_key_t select_wakeup_key;
 /// NOTE: The ESP VFS layer will ensure uniqueness and pass this FD back into
 /// all VFS APIs we implement.
 static constexpr int WAKEUP_VFS_FD = 0;
-
 
 /// This function is called by the ESP32's select implementation. It is passed
 /// in as a function pointer to the VFS API.
@@ -174,8 +168,7 @@ static esp_err_t esp_end_select(void *arg)
     OSSelectWakeup *parent =
         (OSSelectWakeup *)pthread_getspecific(select_wakeup_key);
     HASSERT(parent);
-    LOG(VERBOSE, "esp end select (thr %p parent %p)", os_thread_self(),
-        parent);
+    LOG(VERBOSE, "esp end select (thr %p parent %p)", os_thread_self(), parent);
     parent->esp_end_select();
     return ESP_OK;
 }
@@ -232,7 +225,7 @@ void OSSelectWakeup::esp_wakeup()
     // and not the system global FD.
     FD_SET(WAKEUP_VFS_FD, exceptFds_);
 
-    LOG(VERBOSE, "wakeup es %p %u", espSem_.sem, *(unsigned*)espSem_.sem);
+    LOG(VERBOSE, "wakeup es %p %u", espSem_.sem, *(unsigned *)espSem_.sem);
     esp_vfs_select_triggered(espSem_);
 }
 
@@ -261,7 +254,7 @@ void OSSelectWakeup::esp_wakeup_from_isr()
     }
 }
 
-static int esp_wakeup_open(const char * path, int flags, int mode)
+static int esp_wakeup_open(const char *path, int flags, int mode)
 {
     // This virtual FS has only one fd, 0.
     return WAKEUP_VFS_FD;

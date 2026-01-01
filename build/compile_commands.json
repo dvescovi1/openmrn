@@ -1,0 +1,680 @@
+[
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\ble\\Advertisement.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\ble\\Advertisement.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\ble\\Advertisement.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\ble\\Advertisement.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\ble\\Defs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\ble\\Defs.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\ble\\Defs.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\ble\\Defs.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\console\\Console.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\console\\Console.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\console\\Console.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\console\\Console.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\dcc\\dcc_constants.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\dcc_constants.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\dcc_constants.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\dcc\\dcc_constants.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\dcc\\DccDebug.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\DccDebug.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\DccDebug.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\dcc\\DccDebug.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\dcc\\Defs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\Defs.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\Defs.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\dcc\\Defs.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\dcc\\LocalTrackIf.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\LocalTrackIf.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\LocalTrackIf.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\dcc\\LocalTrackIf.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\dcc\\Loco.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\Loco.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\Loco.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\dcc\\Loco.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\dcc\\Packet.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\Packet.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\Packet.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\dcc\\Packet.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\dcc\\RailcomBroadcastDecoder.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailcomBroadcastDecoder.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailcomBroadcastDecoder.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\dcc\\RailcomBroadcastDecoder.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\dcc\\RailCom.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailCom.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailCom.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\dcc\\RailCom.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\dcc\\RailcomDebug.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailcomDebug.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\RailcomDebug.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\dcc\\RailcomDebug.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\dcc\\SimpleUpdateLoop.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\SimpleUpdateLoop.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\SimpleUpdateLoop.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\dcc\\SimpleUpdateLoop.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\dcc\\UpdateLoop.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\dcc\\UpdateLoop.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\dcc\\UpdateLoop.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\dcc\\UpdateLoop.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\executor\\AsyncNotifiableBlock.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\AsyncNotifiableBlock.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\executor\\AsyncNotifiableBlock.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\executor\\AsyncNotifiableBlock.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\executor\\Executor.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\Executor.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\executor\\Executor.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\executor\\Executor.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\executor\\Notifiable.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\Notifiable.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\executor\\Notifiable.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\executor\\Notifiable.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\executor\\Service.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\Service.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\executor\\Service.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\executor\\Service.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\executor\\StateFlow.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\StateFlow.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\executor\\StateFlow.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\executor\\StateFlow.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\executor\\Timer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\executor\\Timer.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\executor\\Timer.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\executor\\Timer.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\AliasAllocator.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\AliasAllocator.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\AliasAllocator.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\AliasAllocator.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\AliasCache.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\AliasCache.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\AliasCache.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\AliasCache.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\BLEAdvertisement.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BLEAdvertisement.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BLEAdvertisement.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\BLEAdvertisement.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\BLEService.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BLEService.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BLEService.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\BLEService.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\BroadcastTime.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTime.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTime.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\BroadcastTime.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\BroadcastTimeClient.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeClient.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeClient.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\BroadcastTimeClient.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\BroadcastTimeDefs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeDefs.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeDefs.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\BroadcastTimeDefs.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\BroadcastTimeServer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeServer.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BroadcastTimeServer.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\BroadcastTimeServer.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\BulkAliasAllocator.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BulkAliasAllocator.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\BulkAliasAllocator.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\BulkAliasAllocator.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\CanDefs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\CanDefs.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\CanDefs.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\CanDefs.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\ConfigEntry.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\ConfigEntry.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\ConfigEntry.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\ConfigEntry.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\ConfigUpdateFlow.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\ConfigUpdateFlow.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\ConfigUpdateFlow.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\ConfigUpdateFlow.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\Datagram.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Datagram.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Datagram.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\Datagram.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\DatagramCan.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DatagramCan.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DatagramCan.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\DatagramCan.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\DatagramTcp.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DatagramTcp.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DatagramTcp.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\DatagramTcp.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\DccAccyProducer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DccAccyProducer.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DccAccyProducer.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\DccAccyProducer.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\DefaultNode.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DefaultNode.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DefaultNode.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\DefaultNode.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\DefaultCdi.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DefaultCdi.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\DefaultCdi.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\DefaultCdi.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\EventHandler.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandler.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandler.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\EventHandler.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\EventHandlerContainer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandlerContainer.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandlerContainer.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\EventHandlerContainer.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\EventHandlerTemplates.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandlerTemplates.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventHandlerTemplates.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\EventHandlerTemplates.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\EventService.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventService.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\EventService.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\EventService.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\If.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\If.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\If.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\If.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\IfCan.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfCan.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfCan.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\IfCan.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\IfImpl.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfImpl.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfImpl.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\IfImpl.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\IfTcp.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfTcp.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\IfTcp.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\IfTcp.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\MemoryConfig.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\MemoryConfig.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\MemoryConfig.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\MemoryConfig.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\nmranet_constants.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\nmranet_constants.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\nmranet_constants.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\nmranet_constants.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\Node.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Node.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Node.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\Node.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\NodeBrowser.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NodeBrowser.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NodeBrowser.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\NodeBrowser.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\NodeInitializeFlow.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NodeInitializeFlow.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NodeInitializeFlow.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\NodeInitializeFlow.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\NonAuthoritativeEventProducer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NonAuthoritativeEventProducer.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\NonAuthoritativeEventProducer.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\NonAuthoritativeEventProducer.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\PIPClient.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\PIPClient.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\PIPClient.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\PIPClient.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\RoutingLogic.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\RoutingLogic.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\RoutingLogic.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\RoutingLogic.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\SimpleNodeInfo.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfo.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfo.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\SimpleNodeInfo.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\SimpleNodeInfoMockUserFile.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfoMockUserFile.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfoMockUserFile.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\SimpleNodeInfoMockUserFile.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\SimpleNodeInfoResponse.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfoResponse.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleNodeInfoResponse.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\SimpleNodeInfoResponse.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\SimpleStack.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleStack.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\SimpleStack.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\SimpleStack.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\StreamReceiver.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\StreamReceiver.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\StreamReceiver.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\StreamReceiver.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\StreamTransport.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\StreamTransport.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\StreamTransport.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\StreamTransport.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\TcpDefs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TcpDefs.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TcpDefs.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\TcpDefs.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\TractionCvSpace.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionCvSpace.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionCvSpace.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\TractionCvSpace.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\TractionDefs.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionDefs.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionDefs.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\TractionDefs.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\TractionProxy.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionProxy.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionProxy.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\TractionProxy.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\TractionTestTrain.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionTestTrain.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionTestTrain.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\TractionTestTrain.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\TractionThrottle.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionThrottle.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionThrottle.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\TractionThrottle.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\TractionTrain.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionTrain.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\TractionTrain.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\TractionTrain.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\Velocity.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Velocity.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\Velocity.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\Velocity.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\openlcb\\WriteHelper.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\openlcb\\WriteHelper.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\openlcb\\WriteHelper.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\openlcb\\WriteHelper.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\os\\FakeClock.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\FakeClock.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\FakeClock.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\os\\FakeClock.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\os\\logging_malloc.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\logging_malloc.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\logging_malloc.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\os\\logging_malloc.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\os\\MDNS.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\MDNS.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\MDNS.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\os\\MDNS.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu99 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\os\\os.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\os.c",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\os.c",
+  "output": "src\\CMakeFiles\\openmrn.dir\\os\\os.c.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\os\\OSImpl.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\OSImpl.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\OSImpl.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\os\\OSImpl.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\os\\OSSelectWakeup.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\OSSelectWakeup.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\OSSelectWakeup.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\os\\OSSelectWakeup.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu99 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\os\\stack_malloc.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\stack_malloc.c",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\stack_malloc.c",
+  "output": "src\\CMakeFiles\\openmrn.dir\\os\\stack_malloc.c.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\os\\TempFile.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\TempFile.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\TempFile.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\os\\TempFile.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu99 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\os\\watchdog.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\os\\watchdog.c",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\os\\watchdog.c",
+  "output": "src\\CMakeFiles\\openmrn.dir\\os\\watchdog.c.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\traction_modem\\Output.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\traction_modem\\Output.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\traction_modem\\Output.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\traction_modem\\Output.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\Base64.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Base64.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\Base64.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\Base64.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\Blinker.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Blinker.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\Blinker.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\Blinker.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\Buffer.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Buffer.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\Buffer.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\Buffer.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\CanIf.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\CanIf.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\CanIf.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\CanIf.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\ClientConnection.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ClientConnection.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\ClientConnection.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\ClientConnection.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\ConfigUpdateListener.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ConfigUpdateListener.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\ConfigUpdateListener.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\ConfigUpdateListener.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\constants.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\constants.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\constants.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\constants.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\Crc.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Crc.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\Crc.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\Crc.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\DirectHub.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHub.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHub.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\DirectHub.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\DirectHubGc.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHubGc.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHubGc.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\DirectHubGc.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\DirectHubLegacy.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHubLegacy.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\DirectHubLegacy.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\DirectHubLegacy.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu99 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\errno_exit.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\errno_exit.c",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\errno_exit.c",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\errno_exit.c.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\FdUtils.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\FdUtils.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\FdUtils.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\FdUtils.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\FileUtils.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\FileUtils.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\FileUtils.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\FileUtils.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\format_utils.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\format_utils.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\format_utils.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\format_utils.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\ForwardAllocator.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ForwardAllocator.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\ForwardAllocator.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\ForwardAllocator.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\GcStreamParser.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\GcStreamParser.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\GcStreamParser.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\GcStreamParser.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\GcTcpHub.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\GcTcpHub.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\GcTcpHub.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\GcTcpHub.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\gc_format.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\gc_format.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\gc_format.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\gc_format.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\GridConnect.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\GridConnect.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\GridConnect.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\GridConnect.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\GridConnectHub.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\GridConnectHub.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\GridConnectHub.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\GridConnectHub.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\HubDevice.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\HubDevice.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\HubDevice.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\HubDevice.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\HubDeviceSelect.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\HubDeviceSelect.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\HubDeviceSelect.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\HubDeviceSelect.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu99 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\ieeehalfprecision.c.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ieeehalfprecision.c",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\ieeehalfprecision.c",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\ieeehalfprecision.c.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\JSHubPort.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\JSHubPort.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\JSHubPort.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\JSHubPort.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\logging.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\logging.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\logging.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\logging.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\Queue.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Queue.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\Queue.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\Queue.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\ReflashBootloader.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ReflashBootloader.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\ReflashBootloader.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\ReflashBootloader.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\ServiceLocator.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\ServiceLocator.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\ServiceLocator.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\ServiceLocator.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\SocketCan.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\SocketCan.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\SocketCan.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\SocketCan.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\SocketClient.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\SocketClient.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\SocketClient.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\SocketClient.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\socket_listener.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\socket_listener.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\socket_listener.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\socket_listener.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\Stats.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\Stats.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\Stats.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\Stats.cxx.obj"
+},
+{
+  "directory": "C:/GitHub/dv/openmrn/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.18.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe -IC:/GitHub/dv/openmrn/include -IC:/GitHub/dv/openmrn/src -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g -std=gnu++17 -Wall -Wextra -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -Wno-unused-parameter -fno-strict-aliasing -Wno-deprecated-declarations -o src\\CMakeFiles\\openmrn.dir\\utils\\StringPrintf.cxx.obj -c C:\\GitHub\\dv\\openmrn\\src\\utils\\StringPrintf.cxx",
+  "file": "C:\\GitHub\\dv\\openmrn\\src\\utils\\StringPrintf.cxx",
+  "output": "src\\CMakeFiles\\openmrn.dir\\utils\\StringPrintf.cxx.obj"
+}
+]

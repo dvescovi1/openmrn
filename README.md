@@ -26,28 +26,26 @@ source OpenMRN libraries without having to be open source themselves.
 
 # Getting Started
 
+OpenMRN is now built with CMake. The project targets a single embedded configuration:
+`freertos.armv7m` on the `st-stm32f767zi-nucleo` STM32F767 Nucleo development board.
+
+## Building with CMake
+
+Requirements:
+- CMake 3.15+
+- ARM GCC toolchain (gcc-arm-none-eabi)
+- Python 3 (for build scripts)
+
+Build commands:
+```bash
+cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=cmake/cortex-m-toolchain.cmake
+cmake --build build
+```
+
+For more details on the CMake migration, see [CMAKE_MIGRATION.md](CMAKE_MIGRATION.md).
+
 Most of the documentation for OpenMRN is in
-[doxygen](http://www.stack.nl/~dimitri/doxygen/) format. The best way to view
-the documents is to build the HTML files (instructions below).
 
-The existing OpenMRN stack makes heavy use of Linux build tools. As a result,
-the best way to get up and running, and to build the documentation, is within
-Linux or Mac OS X. If you have a Windows, we recommend that you create a Linux
-virtual machine. Below are some high-level instructions on getting started.
-
-## Create a Linux Virtual Machine
-
-* Install Oracle [VirtualBox](https://www.virtualbox.org/) which is available for
-free.
-* Create a virtual machine
-    * Ideally, this should be a 64-bit virtual machine
-    * Assign it at least 4GB of RAM
-    * Assign it multiple cores (improves build speed)
-    * Create a _dynamically allocated_ virtual disk that is larger than the
-      default. The default is 10GB, and we recommend at least 30GB. More is
-      better because the virtual machine file itself will expand, but the
-      maximum size is hard to change in the future
-* Download a copy of Ubuntu desktop. At the time of this writing, 16.04 LTS is a
   good machine. Download this as an ISO disk image
 * Start the virtual machine. It will ask you to select a startup disk. Select
   the ISO file that you downloaded for Ubuntu desktop
@@ -69,7 +67,7 @@ access to the internet):
 
 ```
 sudo apt-get install git
-sudo apt-get install doxygen
+
 cd ~
 git clone https://github.com/bakerstu/openmrn/
 ```

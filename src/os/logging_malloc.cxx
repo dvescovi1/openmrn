@@ -1,8 +1,8 @@
-#if !defined (__EMSCRIPTEN__) && !defined (__MACH__)
+#if !defined(__EMSCRIPTEN__)
 
-#include <unwind.h>
 #include "os/os.h"
 #include "utils/Atomic.hxx"
+#include <unwind.h>
 
 #define MAX_STRACE 20
 #define MIN_SIZE_TRACED 64
@@ -59,16 +59,17 @@ struct trace *find_current_trace(unsigned hash)
 extern "C" {
 extern void *__wrap_malloc(size_t size);
 extern void *__real_malloc(size_t size);
-void* usb_malloc(unsigned long length);
+void *usb_malloc(unsigned long length);
 }
 
 struct trace *add_new_trace(unsigned hash)
 {
-    unsigned total_size = sizeof(struct trace) + strace_len * sizeof(stacktrace[0]);
+    unsigned total_size =
+        sizeof(struct trace) + strace_len * sizeof(stacktrace[0]);
 #if defined(TARGET_LPC2368) || defined(TARGET_LPC1768)
-    struct trace* t = (struct trace*)usb_malloc(total_size);
+    struct trace *t = (struct trace *)usb_malloc(total_size);
 #else
-    struct trace* t = (struct trace*)__real_malloc(total_size);
+    struct trace *t = (struct trace *)__real_malloc(total_size);
 #endif
     memcpy(t + 1, stacktrace, strace_len * sizeof(stacktrace[0]));
     t->hash = hash;
@@ -78,7 +79,8 @@ struct trace *add_new_trace(unsigned hash)
     all_traces = t;
     return t;
 }
-static Atomic* get_lock() {
+static Atomic *get_lock()
+{
     static Atomic lock;
     return &lock;
 }
@@ -103,19 +105,21 @@ _Unwind_Reason_Code trace_func(struct _Unwind_Context *context, void *arg)
 
 void *__wrap_malloc(size_t size)
 {
-    if (size < MIN_SIZE_TRACED) {
+    if (size < MIN_SIZE_TRACED)
+    {
         return __real_malloc(size);
     }
     uintptr_t saved_lr = 0;
 #if defined(TARGET_LPC2368) || defined(TARGET_LPC1768) || defined(GCC_ARMCM3)
-    asm volatile ("mov %0, lr \n" : "=r" (saved_lr));
+    asm volatile("mov %0, lr \n" : "=r"(saved_lr));
 #endif
     {
         AtomicHolder holder(get_lock());
         strace_len = 0;
         _Unwind_Backtrace(&trace_func, 0);
-        if (strace_len == 1) {
-            stacktrace[strace_len++] = (void*)saved_lr;
+        if (strace_len == 1)
+        {
+            stacktrace[strace_len++] = (void *)saved_lr;
         }
         unsigned h = hash_trace(strace_len, (unsigned *)stacktrace);
         struct trace *t = find_current_trace(h);

@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/GitHub/dv/openmrn/build/cmake_install.cmake",
+		"C:/GitHub/dv/openmrn/build/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

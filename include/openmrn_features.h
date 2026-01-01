@@ -41,7 +41,7 @@
 #include <esp_idf_version.h>
 #else
 #define ESP_IDF_VERSION 0
-#define ESP_IDF_VERSION_VAL(a,b,c) 1
+#define ESP_IDF_VERSION_VAL(a, b, c) 1
 #endif // ESP_PLATFORM
 
 #ifdef __FreeRTOS__
@@ -74,7 +74,7 @@
 #define OPENMRN_HAVE_SOCKET_FSTAT 1
 #endif
 
-/// @todo this should probably be a whitelist: __linux__ || __MACH__.
+/// @todo this should probably be a whitelist: __linux__.
 #if !defined(__FreeRTOS__) && !defined(__WINNT__) && !defined(ESP_PLATFORM) && \
     !defined(ARDUINO) && !defined(ESP_NONOS)
 /// Uses ::pselect in the Executor for sleep and pkill for waking up.
@@ -126,11 +126,11 @@
 #else
 /// Use pthread for os_thread_create.
 #define OPENMRN_FEATURE_THREAD_PTHREAD 1
-#if !defined (__MINGW32__) && !defined (__MACH__)
+#if !defined(__MINGW32__)
 /// Use pthread_setname for setting the newly created thread's name.
 #define OPENMRN_HAVE_PTHREAD_SETNAME 1
 #endif
-#if !defined(__linux__) && !defined(__MACH__)
+#if !defined(__linux__)
 /// Use pthread_attr for setting the stack size of newly created threads.
 /// Linux/Unix allocates stack as needed.
 #define OPENMRN_FEATURE_PTHREAD_SETSTACK 1
@@ -164,7 +164,7 @@
 #define OPENMRN_FEATURE_BSD_SOCKETS_IGNORE_SIGPIPE 1
 #endif
 
-#if defined(__linux__) || defined(__MACH__) || defined(ESP_PLATFORM)
+#if defined(__linux__) || defined(ESP_PLATFORM)
 /// Compiles support for reporting EOF as an error for read/write.
 #define OPENMRN_FEATURE_BSD_SOCKETS_REPORT_EOF_ERROR 1
 #endif
@@ -176,6 +176,5 @@
 /// MemoryConfig.cxx.
 #define OPENMRN_FEATURE_REBOOT 1
 #endif
-
 
 #endif // _INCLUDE_OPENMRN_FEATURES_

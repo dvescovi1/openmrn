@@ -41,9 +41,9 @@
 #endif
 #endif
 
-#include <stdio.h>
-#include <inttypes.h>
 #include "os/os.h"
+#include <inttypes.h>
+#include <stdio.h>
 
 /// Loglevel that is always printed.
 static const int ALWAYS = -1;
@@ -58,7 +58,7 @@ static const int INFO = 3;
 /// Loglevel that is usually not printed, reporting debugging information.
 static const int VERBOSE = 4;
 
-#if defined(__linux__) || defined(__MACH__) || defined(GCC_ARMCM3) || defined(GCC_ARMCM0)
+#if defined(__linux__) || defined(GCC_ARMCM3) || defined(GCC_ARMCM0)
 #define LOCKED_LOGGING
 #endif
 
@@ -123,7 +123,7 @@ extern os_mutex_t g_log_mutex;
 /// Shorthand for LOG(LEVEL_ERROR, message...). See @ref LOG.
 #define LOG_ERROR(message...) LOG(LEVEL_ERROR, message)
 
-#if defined(__linux__) || defined(__MACH__)
+#if defined(__linux__)
 extern char logbuffer[4096];
 #elif defined(ESP_PLATFORM)
 extern char logbuffer[1024];
@@ -170,7 +170,7 @@ void print_errno_and_exit(const char *where);
 /// that needsto be run and the return value checked.
 ///
 /// example usage:
-///   ERRNOCHECK("file close", close(fd_)); 
+///   ERRNOCHECK("file close", close(fd_));
 #define ERRNOCHECK(where, x...)                                                \
     do                                                                         \
     {                                                                          \
