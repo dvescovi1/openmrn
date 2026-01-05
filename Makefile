@@ -5,14 +5,9 @@ export OPENMRNPATH
 $(shell touch $(OPENMRNPATH)/build_timestamp)
 export HAVE_BUILD_TIMESTAMP=$(OPENMRNPATH)/build_timestamp
 
-SUBDIRS = targets doc applications #test
+SUBDIRS = targets doc applications
 
 include $(OPENMRNPATH)/etc/recurse.mk
-
-# Makes sure all the targets are compiled before building the test application.
-build-test: build-targets
-
-tests-test: build-targets
 
 build-applications: build-targets
 

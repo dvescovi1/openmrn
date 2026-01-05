@@ -11,9 +11,6 @@ SUBDIRS = linux.x86 \
           js.emscripten \
           mingw.x86 \
 	  nonos.xtensa-lx106.esp8266 \
-
-
-          #test
           #nuttx.armv7m \
 
 include $(OPENMRNPATH)/etc/recurse.mk
