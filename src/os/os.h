@@ -35,14 +35,17 @@
 #ifndef _OS_OS_H_
 #define _OS_OS_H_
 
+#include "openmrn_features.h"
+
+#if !OPENMRN_FEATURE_MUTEX_FREERTOS
 #include <sys/time.h>
+#endif
+
 #include <stdlib.h>
 #include <errno.h>
 #include <string.h>
 #include <limits.h>
 #include <stdint.h>
-
-#include "openmrn_features.h"
 
 #if OPENMRN_FEATURE_MUTEX_FREERTOS
 #include "freertos_includes.h"

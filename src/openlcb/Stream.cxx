@@ -32,8 +32,6 @@
  */
 
 #include "openlcb/Stream.hxx"
-#include "openlcb/NMRAnetNode.hxx"
-#include "openlcb/NMRAnetMessageID.hxx"
 #include "utils/macros.h"
 
 namespace openlcb

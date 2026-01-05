@@ -34,7 +34,7 @@
 #ifndef _OPENLCB_STREAM_HXX_
 #define _OPENLCB_STREAM_HXX_
 
-#include "openlcb/NMRAnetIf.hxx"
+#include "openlcb/If.hxx"
 #include "utils/RBTree.hxx"
 #include "utils/RingBuffer.hxx"
 

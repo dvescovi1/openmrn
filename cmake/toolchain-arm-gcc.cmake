@@ -76,7 +76,7 @@ set(ARM_COMMON_FLAGS
     "-mfpu=fpv5-d16"
     "-fno-builtin"
     "-fno-stack-protector"
-    "--specs=nano.specs"
+    "--specs=nosys.specs"
 )
 
 # Convert list to string for CMAKE_C_FLAGS and CMAKE_CXX_FLAGS
@@ -94,5 +94,11 @@ set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g" CACHE STRING "")
 
 # Ensure -g is always added
 add_compile_options(-g -MD -MP)
+
+# Disable overloaded-virtual warnings (code uses this pattern intentionally)
+add_compile_options(-Wno-overloaded-virtual)
+
+# Disable C++ ABI warnings for embedded systems
+add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-Wno-psabi>)
 
 message(STATUS "ARM Toolchain: ${ARM_TOOLCHAIN_PATH}")

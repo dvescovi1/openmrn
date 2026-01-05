@@ -67,4 +67,14 @@
 
 #define NSEC_TO_TICK(ns) ((ns) >> NSEC_TO_TICK_SHIFT)
 
+// Add backward compatibility for modern FreeRTOS versions
+// Modern FreeRTOS (v10+) uses different type names
+#ifndef xTaskHandle
+#define portTickType                  TickType_t
+#define xTaskHandle                   TaskHandle_t
+#define xQueueHandle                  QueueHandle_t
+#define xSemaphoreHandle              SemaphoreHandle_t
+#define pcTaskGetTaskName             pcTaskGetName
+#endif
+
 #endif

@@ -24,8 +24,16 @@ if(NOT DEFINED FREERTOSPATH)
     endif()
 endif()
 
-# If we get here, FREERTOSPATH is set
-if(FREERTOSPATH AND NOT EXISTS "${FREERTOSPATH}")
+# If FREERTOSPATH is empty or not set, skip FreeRTOS configuration
+if(NOT FREERTOSPATH)
+    return()
+endif()
+
+# Normalize path to use forward slashes (CMake standard)
+file(TO_CMAKE_PATH "${FREERTOSPATH}" FREERTOSPATH)
+
+# If we get here, FREERTOSPATH is set and non-empty
+if(NOT EXISTS "${FREERTOSPATH}")
     message(FATAL_ERROR "FREERTOSPATH points to non-existent directory: ${FREERTOSPATH}")
 endif()
 
@@ -46,10 +54,8 @@ set(FREERTOS_INCLUDE_DIRS
 )
 
 # FreeRTOS compile definitions
-add_compile_definitions(
-    __FreeRTOS__
-    GCC_ARMCM3
-)
+# FreeRTOS compile definitions - use add_definitions for global scope
+add_definitions(-D__FreeRTOS__ -DGCC_ARMCM3)
 
 # ARM Cortex-M3 specific flags
 set(CMAKE_C_FLAGS "-mcpu=cortex-m3 -mthumb -mfloat-abi=soft ${CMAKE_C_FLAGS}")
@@ -66,6 +72,7 @@ add_compile_options(
 include_directories(${FREERTOS_INCLUDE_DIRS})
 include_directories(${OPENMRNPATH}/include/freertos_select)
 include_directories(${OPENMRNPATH}/src/freertos_drivers/common)
+include_directories(${OPENMRNPATH}/src/freertos_drivers/st)
 
 # Create FreeRTOS library
 file(GLOB FREERTOS_SOURCES
@@ -74,7 +81,10 @@ file(GLOB FREERTOS_SOURCES
 )
 
 add_library(freertos STATIC ${FREERTOS_SOURCES})
-target_include_directories(freertos PRIVATE ${FREERTOS_INCLUDE_DIRS})
+target_include_directories(freertos PRIVATE 
+    ${FREERTOS_INCLUDE_DIRS}
+    ${OPENMRNPATH}/src
+)
 
 message(STATUS "FreeRTOS Kernel Path: ${FREERTOS_KERNEL_PATH}")
 message(STATUS "FreeRTOS Library: freertos")

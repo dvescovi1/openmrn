@@ -6,7 +6,7 @@ This project has been converted from a Make-based build system to CMake.
 
 - CMake 3.20 or later
 - ARM GCC toolchain (arm-none-eabi-gcc)
-- FreeRTOS source code (if building for FreeRTOS target)
+- **FreeRTOS source code (REQUIRED)** - The source code has POSIX/FreeRTOS dependencies for OS abstraction
 
 ## Environment Setup
 
@@ -33,6 +33,21 @@ set FREERTOSPATH=C:\path\to\FreeRTOS
 # Linux/macOS
 export FREERTOSPATH=/path/to/FreeRTOS
 ```
+
+## FreeRTOS Requirement
+
+**This project requires FreeRTOS to compile.** The source code uses POSIX headers and abstractions provided by FreeRTOS:
+- `endian.h` - Byte order conversion macros
+- `semaphore.h` - POSIX semaphore definitions
+- FreeRTOS OS kernel for OS abstraction layer
+
+**To build successfully:**
+
+1. Download FreeRTOS from https://www.freertos.org/
+2. Set the `FREERTOSPATH` environment variable
+3. Configure and build with CMake
+
+Without FreeRTOS installed, the build will fail with "fatal error: endian.h: No such file or directory"
 
 ## Building
 

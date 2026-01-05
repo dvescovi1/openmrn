@@ -1,5 +1,21 @@
 # Applications CMakeLists.txt
 
+# Locate STM32F7 HAL headers (required by the board HwInit sources).
+find_path(STM32F7_HAL_INCLUDE_DIR stm32f7xx_hal_rcc.h
+    PATHS
+        $ENV{STM32CUBE_F7_PATH}
+        $ENV{STM32CUBE_F7}
+        $ENV{STM32CUBE_REPO}
+    PATH_SUFFIXES
+        Drivers/STM32F7xx_HAL_Driver/Inc
+        STM32CubeF7/Drivers/STM32F7xx_HAL_Driver/Inc
+)
+
+if(BUILD_APPLICATIONS AND NOT STM32F7_HAL_INCLUDE_DIR)
+    message(WARNING "STM32F7 HAL headers (stm32f7xx_hal_rcc.h) not found. Set STM32CUBE_F7_PATH to your STM32CubeF7 installation to build applications. Skipping application targets.")
+    return()
+endif()
+
 # Function to create a target for a board
 function(add_board_target app_name board_name app_source_dir)
     set(target_name "${app_name}_${board_name}")
@@ -13,14 +29,40 @@ function(add_board_target app_name board_name app_source_dir)
     endif()
     
     # Create executable
-    file(GLOB_RECURSE APP_SOURCES
+    file(GLOB APP_COMMON_SOURCES
         "${app_source_dir}/*.c"
         "${app_source_dir}/*.cpp"
         "${app_source_dir}/*.cxx"
         "${app_source_dir}/*.S"
     )
+
+    # Only include board-specific sources for the selected target.
+    file(GLOB APP_BOARD_SOURCES
+        "${app_source_dir}/targets/freertos.armv7m.${board_name}/*.c"
+        "${app_source_dir}/targets/freertos.armv7m.${board_name}/*.cpp"
+        "${app_source_dir}/targets/freertos.armv7m.${board_name}/*.cxx"
+        "${app_source_dir}/targets/freertos.armv7m.${board_name}/*.S"
+    )
+
+    set(APP_SOURCES ${APP_COMMON_SOURCES} ${APP_BOARD_SOURCES})
     
     add_executable(${target_name} ${APP_SOURCES})
+    
+    # Add application target-specific include directory (for config.hxx)
+    if(EXISTS "${app_source_dir}/targets/freertos.armv7m.${board_name}")
+        target_include_directories(${target_name} PRIVATE
+            "${app_source_dir}/targets/freertos.armv7m.${board_name}"
+        )
+    endif()
+
+    if(STM32F7_HAL_INCLUDE_DIR)
+        target_include_directories(${target_name} PRIVATE ${STM32F7_HAL_INCLUDE_DIR})
+    endif()
+
+    # Core headers used by applications (e.g., os/os.h lives under src/os).
+    target_include_directories(${target_name} PRIVATE
+        "${OPENMRNPATH}/src"
+    )
     
     # Link libraries
     target_link_libraries(${target_name} PRIVATE
