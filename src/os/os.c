@@ -872,10 +872,10 @@ signed portCHAR * volatile overflowed_task_name = 0;
  * @param task task handle for violating task
  * @param name name of violating task
  */
-void vApplicationStackOverflowHook(xTaskHandle task, signed portCHAR *name)
+void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName)
 {
-    overflowed_task = task;
-    overflowed_task_name = name;
+    overflowed_task = xTask;
+    overflowed_task_name = (signed portCHAR *)pcTaskName;
     diewith(BLINK_DIE_STACKOVERFLOW);
 }
 

@@ -1,4 +1,1 @@
-#include "openlcb/If.hxx"
-
-extern const openlcb::NodeID NODE_ID;
-const openlcb::NodeID NODE_ID = 0x050101011869ULL;
+../../../../boards/st-stm32f303re-nucleo-dev-board/NodeId.cxx

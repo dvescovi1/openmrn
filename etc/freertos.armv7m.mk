@@ -27,8 +27,17 @@ OBJDUMPOPTS=-C
 STARTGROUP := -Wl,--start-group
 ENDGROUP := -Wl,--end-group
 
-INCLUDES += -I$(FREERTOSPATH)/Source/include \
-            -I$(FREERTOSPATH)/Source/portable/GCC/ARM_CM3 \
+# Support both old FreeRTOS structure (Source/) and new FreeRTOS-Kernel (FreeRTOS-Kernel/)
+ifeq ($(wildcard $(FREERTOSPATH)/FreeRTOS-Kernel/include/FreeRTOS.h),)
+# Old structure: FREERTOSPATH points to the root with Source/ subdirectory
+FREERTOS_KERNEL_PATH := $(FREERTOSPATH)/Source
+else
+# New structure: FREERTOSPATH points to root with FreeRTOS-Kernel/ subdirectory
+FREERTOS_KERNEL_PATH := $(FREERTOSPATH)/FreeRTOS-Kernel
+endif
+
+INCLUDES += -I$(FREERTOS_KERNEL_PATH)/include \
+            -I$(FREERTOS_KERNEL_PATH)/portable/GCC/ARM_CM3 \
             -I$(OPENMRNPATH)/include/freertos \
             -idirafter $(OPENMRNPATH)/include/freertos_select \
             -I$(OPENMRNPATH)/src/freertos_drivers/common
