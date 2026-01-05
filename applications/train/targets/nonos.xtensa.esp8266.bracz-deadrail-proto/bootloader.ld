@@ -1,1 +1,0 @@
-../../../../boards/esp-bracz-deadrail-proto/bootloader.ld

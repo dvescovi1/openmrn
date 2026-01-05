@@ -1,1 +1,0 @@
-../../../../boards/st-stm32f103rb-cmsis/stm32f10x_conf.h

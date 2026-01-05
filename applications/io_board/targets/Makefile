@@ -15,7 +15,6 @@ SUBDIRS = \
 
 
 # broken
-# freertos.armv7m.st-stm32f103rb-olimexino \
 # freertos.armv7m.bracz-acc2 \
 # freertos.armv7m.bracz-acc3 \
 

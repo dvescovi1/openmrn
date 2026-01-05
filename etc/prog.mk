@@ -58,8 +58,9 @@ $(foreach lib,$(LIBDIRS),$(eval $(call SUBDIR_helper_template,$(lib))))
 CDIEXTRA := -I.
 INCLUDES += -I.
 
-#we don't have to recurse into lib, because there are no sources there. We don't need a liblib.a
+# We don't recurse into lib because there are no sources there; no liblib.a needed.
 #SUBDIRS += lib
+
 INCLUDES += -I$(OPENMRNPATH)/src/ -I$(OPENMRNPATH)/include
 ifdef APP_PATH
 INCLUDES += -I$(APP_PATH)
@@ -71,13 +72,10 @@ ifdef BOARD
 INCLUDES += -D$(BOARD)
 CDIEXTRA += -D$(BOARD)
 endif
+
 CFLAGS += $(INCLUDES)
 CXXFLAGS += $(INCLUDES)
-ifeq ($(TARGET),bare.pruv3)
-LDFLAGS += -ilib -i$(LIBDIR)
-else
 LDFLAGS += -Llib -L$(LIBDIR)
-endif
 
 EXECUTABLE ?= $(notdir $(realpath $(CURDIR)/../..))
 
@@ -267,20 +265,6 @@ cincstats:
 	$(OPENMRNPATH)/bin/build_cdi.py -i $< -o $*.cxxout
 	$(CXX) -MMD -MF $*.d $(CXXFLAGS) -x c++ $*.cxxout -o $@
 
-ifeq ($(TARGET),bare.pruv3)
-.cpp.o:
-	$(CXX) $(CXXFLAGS) $<
-
-.cxx.o:
-	$(CXX) $(CXXFLAGS) $<
-
-.S.o:
-	$(AS) $(ASFLAGS) $<
-
-.c.o:
-	$(CC) $(CFLAGS) $<
-
-else
 .cpp.o:
 	$(CXX) $(CXXFLAGS) -MMD -MF $*.d $(abspath $<) -o $@
 
@@ -292,7 +276,6 @@ else
 
 .c.o:
 	$(CC) $(CFLAGS) -MMD -MF $*.d $(abspath $<) -o $@
-endif
 
 clean: clean-local
 
