@@ -1,1 +1,1 @@
-../st-stm32f76x_77x-generic/target.ld
+INCLUDE /mnt/c/GitHub/dv/openmrn/boards/armv7m/target.ld

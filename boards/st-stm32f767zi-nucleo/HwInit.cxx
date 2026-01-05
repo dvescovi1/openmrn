@@ -41,7 +41,7 @@
 #include "os/OS.hxx"
 #include "Stm32Uart.hxx"
 #include "Stm32Can.hxx"
-#include "freertos_drivers/spiffs/stm32f7/Stm32SPIFFS.hxx"
+// #include "freertos_drivers/spiffs/stm32f7/Stm32SPIFFS.hxx"
 #include "hardware.hxx"
 
 /** override stdin */
@@ -62,18 +62,18 @@ static Stm32Can can0("/dev/can0");
 /** File system driver. */
 extern char __flash_fs_start;
 extern char __flash_fs_end;
-static Stm32SPIFFS spiffs0((size_t)&__flash_fs_start,
-                           (&__flash_fs_end - &__flash_fs_start), 256 * 1024,
-                           256 /* logical page size */, 16 /* num open */,
-                           64 /* cache pages */);
-
-extern "C" {
+// static Stm32SPIFFS spiffs0((size_t)&__flash_fs_start,
+//                            (&__flash_fs_end - &__flash_fs_start), 256 * 1024,
+//                            256 /* logical page size */, 16 /* num open */,
+//                            64 /* cache pages */);
+// 
+// extern "C" {
 
 /** Blink LED */
 uint32_t blinker_pattern = 0;
 static uint32_t rest_pattern = 0;
 
-void hw_set_to_safe(void)
+extern "C" void hw_set_to_safe(void)
 {
 }
 
@@ -215,7 +215,7 @@ static void clock_setup(void)
 
 /** Initialize the processor hardware.
  */
-void hw_preinit(void)
+extern "C" void hw_preinit(void)
 {
     /* Globally disables interrupts until the FreeRTOS scheduler is up. */
     asm("cpsid i\n");
@@ -313,6 +313,5 @@ extern int isatty(int fd) {
  */
 void hw_postinit(void)
 {
-    spiffs0.mount("/ffs");
-}
+    // spiffs0.mount("/ffs");
 }

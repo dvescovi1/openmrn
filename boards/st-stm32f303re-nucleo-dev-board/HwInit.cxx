@@ -121,7 +121,7 @@ extern "C" {
 uint32_t blinker_pattern = 0;
 static uint32_t rest_pattern = 0;
 
-void hw_set_to_safe(void)
+extern "C" void hw_set_to_safe(void)
 {
 }
 
@@ -241,7 +241,7 @@ static void clock_setup(void)
 
 /** Initialize the processor hardware.
  */
-void hw_preinit(void)
+extern "C" void hw_preinit(void)
 {
     /* Globally disables interrupts until the FreeRTOS scheduler is up. */
     asm("cpsid i\n");
