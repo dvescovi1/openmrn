@@ -90,7 +90,6 @@ cmake --build .
 
 - `OPENMRN_TARGET`: Target platform (default: `freertos.armv7m`)
   - `freertos.armv7m` - FreeRTOS on ARM v7-M
-  - `bare.armv7m` - Bare metal ARM v7-M
 
 - `BUILD_APPLICATIONS`: Build application targets (default: `ON`)
 
@@ -114,7 +113,6 @@ The ARM GCC toolchain is configured in `cmake/toolchain-arm-gcc.cmake`.
 
 Platform-specific configurations are in:
 - `cmake/config-freertos.armv7m.cmake`
-- `cmake/config-bare.armv7m.cmake`
 
 ## Project Structure
 
@@ -123,8 +121,7 @@ OpenMRN/
 ├── CMakeLists.txt           # Root CMake configuration
 ├── cmake/                   # CMake toolchain and configuration files
 │   ├── toolchain-arm-gcc.cmake
-│   ├── config-freertos.armv7m.cmake
-│   └── config-bare.armv7m.cmake
+│   └── config-freertos.armv7m.cmake
 ├── src/                     # Core libraries
 │   ├── console/
 │   ├── utils/

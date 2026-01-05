@@ -8,7 +8,7 @@ project(OpenMRN C CXX ASM)
 
 # Set default target board and configuration
 set(OPENMRN_BOARD "st-stm32f767zi-nucleo" CACHE STRING "Target board for the build")
-set(OPENMRN_TARGET "freertos.armv7m" CACHE STRING "Target platform (freertos.armv7m, bare.armv7m, etc)")
+set(OPENMRN_TARGET "freertos.armv7m" CACHE STRING "Target platform")
 set(BUILD_APPLICATIONS ON CACHE BOOL "Build applications (ON/OFF)")
 set(BUILD_TESTS OFF CACHE BOOL "Build tests (ON/OFF)")
 
