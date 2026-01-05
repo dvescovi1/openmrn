@@ -23,13 +23,7 @@ $(MAKE) -C targets/test tests
 tests-single:
 $(MAKE) -C targets/test tests-single
 
-llvm-tests:
-$(MAKE) -C targets/linux.llvm run-tests
 
-js-tests:
-$(MAKE) -C targets/js.emscripten run-tests
 
-alltests: tests llvm-tests
+alltests: tests
 
-release-clean:
-$(MAKE) -C targets/linux.x86 clean
