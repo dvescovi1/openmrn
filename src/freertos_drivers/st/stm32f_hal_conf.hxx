@@ -34,6 +34,10 @@
 #ifndef _FREERTOS_DRIVERS_ST_STM32F_HAL_CONF_HXX_
 #define _FREERTOS_DRIVERS_ST_STM32F_HAL_CONF_HXX_
 
+// Ensure HAL core types (HAL_StatusTypeDef, etc.) are visible before pulling in
+// vendor headers; this avoids C++ ordering issues in bare-metal builds.
+#include "stm32_hal_compat.h"
+
 #if defined(STM32F030x6) || defined(STM32F031x6) || defined(STM32F038xx) ||    \
     defined(STM32F030x8) || defined(STM32F030xC) || defined(STM32F042x6) ||    \
     defined(STM32F048xx) || defined(STM32F051x8) || defined(STM32F058xx) ||    \

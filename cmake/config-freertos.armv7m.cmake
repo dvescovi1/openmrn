@@ -58,8 +58,18 @@ set(FREERTOS_INCLUDE_DIRS
     ${OPENMRNPATH}/include/freertos
 )
 
-# FreeRTOS compile definitions - use add_definitions for global scope
-add_definitions(-D__FreeRTOS__ -DGCC_ARMCM7)
+# FreeRTOS compile definitions
+add_compile_definitions(__FreeRTOS__ GCC_ARMCM7)
+# Also bake them into the language flags (all build-type variants) with CACHE FORCE to override toolchain defaults
+foreach(cfg_var IN ITEMS CMAKE_C_FLAGS CMAKE_C_FLAGS_DEBUG CMAKE_C_FLAGS_RELEASE CMAKE_C_FLAGS_RELWITHDEBINFO CMAKE_C_FLAGS_MINSIZEREL)
+    set(${cfg_var} "${${cfg_var}} -D__FreeRTOS__ -DGCC_ARMCM7" CACHE STRING "" FORCE)
+endforeach()
+foreach(cfg_var IN ITEMS CMAKE_CXX_FLAGS CMAKE_CXX_FLAGS_DEBUG CMAKE_CXX_FLAGS_RELEASE CMAKE_CXX_FLAGS_RELWITHDEBINFO CMAKE_CXX_FLAGS_MINSIZEREL)
+    set(${cfg_var} "${${cfg_var}} -D__FreeRTOS__ -DGCC_ARMCM7" CACHE STRING "" FORCE)
+endforeach()
+foreach(cfg_var IN ITEMS CMAKE_ASM_FLAGS CMAKE_ASM_FLAGS_DEBUG CMAKE_ASM_FLAGS_RELEASE CMAKE_ASM_FLAGS_RELWITHDEBINFO CMAKE_ASM_FLAGS_MINSIZEREL)
+    set(${cfg_var} "${${cfg_var}} -D__FreeRTOS__ -DGCC_ARMCM7" CACHE STRING "" FORCE)
+endforeach()
 
 # ARM Cortex-M7 with hardware FPU
 set(CMAKE_C_FLAGS "-mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 ${CMAKE_C_FLAGS}")
