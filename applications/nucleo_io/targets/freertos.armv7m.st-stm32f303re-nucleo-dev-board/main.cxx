@@ -1,1 +1,5 @@
-../freertos.armv6m.st-stm32f091rc-nucleo-dev-board/main.cxx
+// Main application entry point - minimal nucleo_io
+extern "C" int appl_main(int argc, char *argv[])
+{
+    return 0;
+}
