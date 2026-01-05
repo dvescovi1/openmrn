@@ -1,1 +1,0 @@
-include ../../../../boards/st-stm32f303re-nucleo/Makefile
