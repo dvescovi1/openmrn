@@ -1,1 +1,1 @@
-../../../../boards/st-stm32f303re-nucleo-dev-board/Makefile
+include ../../../../boards/st-stm32f303re-nucleo-dev-board/Makefile

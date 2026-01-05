@@ -1,1 +1,1 @@
-../default_config.mk
+include ../../../default_config.mk
