@@ -39,20 +39,17 @@ SUBDIRS += drivers_pic32mx530 plib_pic32mx530 \
 endif
 
 ifeq ($(TARGET),freertos.armv7m)
-SUBDIRS += mbed_lpc1768 drivers_lpc1768 tivaware lpc_chip_175x_6x \
+SUBDIRS += mbed_lpc1768 drivers_lpc1768 lpc_chip_175x_6x \
            stm32cubef303x_28x_58x_98x stm32cubef303xe \
            stm32cubef767xx \
            cc3220sdk net_cc3220 cc3220 \
-           net_freertos_tcp freertos_tcp ti_grlib \
-           spiffs_cc32x0sf spiffs_tm4c129 \
+           net_freertos_tcp freertos_tcp \
+           spiffs_cc32x0sf \
            spiffs_stm32f767xx \
            spiffs_spi \
 
 #spiffs_tm4c123 \
 
-ifdef BUILDTIVAWARE
-SUBDIRS += tivadriverlib tivausblib
-endif
 
 # Avoids exception handling from operator new.
 CXXSRCS += c++_operators.cxx
@@ -72,9 +69,6 @@ endif
 
 ifeq ($(TARGET),bare.armv7m)
 
-ifdef BUILDTIVAWARE
-SUBDIRS += tivadriverlib tivausblib
-endif
 
 endif
 
