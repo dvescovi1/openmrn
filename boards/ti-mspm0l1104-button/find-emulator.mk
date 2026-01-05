@@ -1,1 +1,0 @@
-../ti-mspm0l1x-generic/find-emulator.mk

@@ -1,1 +1,0 @@
-../../../../boards/ti-cc3200-launchpad/startup.c
