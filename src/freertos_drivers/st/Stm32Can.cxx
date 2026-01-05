@@ -31,9 +31,7 @@
  * @date 3 May 2015
  */
 
-#if (!defined(ARDUINO)) || defined(ARDUINO_ARCH_STM32)
-
-#include "Stm32Can.hxx"
+ #include "Stm32Can.hxx"
 
 #include <stdint.h>
 
@@ -53,78 +51,6 @@
 #include "stm32f1xx_hal_cortex.h"
 #define SPLIT_INT
 #define CAN1_TX_IRQN USB_HP_CAN1_TX_IRQn
-#define CAN1_IRQN CAN1_TX_IRQN
-#define CAN1_SECOND_IRQN USB_LP_CAN1_RX0_IRQn
-#define CAN1_THIRD_IRQN CAN1_SCE_IRQn
-
-#ifdef CAN2
-#define CAN2_TX_IRQN CAN2_TX_IRQn
-#define CAN2_IRQN CAN2_TX_IRQN
-#define CAN2_SECOND_IRQN CAN2_RX0_IRQn
-#define CAN2_THIRD_IRQN CAN2_SCE_IRQn
-#endif
-
-#define CAN_CLOCK (cm3_cpu_clock_hz >> 1)
-
-#elif defined (STM32F303xC) || defined (STM32F303xE)
-
-#include "stm32f3xx_hal_cortex.h"
-#define SPLIT_INT
-#define CAN1_TX_IRQN USB_HP_CAN_TX_IRQn
-#define CAN1_IRQN CAN1_TX_IRQN
-#define CAN1_SECOND_IRQN USB_LP_CAN_RX0_IRQn
-#define CAN1_THIRD_IRQN CAN_SCE_IRQn
-#define CAN1 CAN
-#define CAN_CLOCK (cm3_cpu_clock_hz >> 1)
-
-#elif defined (STM32L431xx) || defined (STM32L432xx)
-
-#include "stm32l4xx_hal_cortex.h"
-#define SPLIT_INT
-#define CAN1_TX_IRQN CAN1_TX_IRQn
-#define CAN1_IRQN CAN1_TX_IRQN
-#define CAN1_SECOND_IRQN CAN1_RX0_IRQn
-#define CAN1_THIRD_IRQN CAN1_SCE_IRQn
-#define CAN_CLOCK (cm3_cpu_clock_hz)
-
-#ifdef CAN2
-#define CAN2_TX_IRQN CAN2_TX_IRQn
-#define CAN2_IRQN CAN2_TX_IRQN
-#define CAN2_SECOND_IRQN CAN2_RX0_IRQn
-#define CAN2_THIRD_IRQN CAN2_SCE_IRQn
-#endif
-
-#elif defined (STM32F767xx)
-
-#include "stm32f7xx_hal_cortex.h"
-#define SPLIT_INT
-#define CAN1_TX_IRQN CAN1_TX_IRQn
-#define CAN1_IRQN CAN1_TX_IRQN
-#define CAN1_SECOND_IRQN CAN1_RX0_IRQn
-#define CAN1_THIRD_IRQN CAN1_SCE_IRQn
-#define CAN_CLOCK (cm3_cpu_clock_hz >> 2) // 54 MHz, sysclk/4
-
-#ifdef CAN2
-#define CAN2_TX_IRQN CAN2_TX_IRQn
-#define CAN2_IRQN CAN2_TX_IRQN
-#define CAN2_SECOND_IRQN CAN2_RX0_IRQn
-#define CAN2_THIRD_IRQN CAN2_SCE_IRQn
-#endif
-
-#ifdef CAN3
-#define CAN3_TX_IRQN CAN3_TX_IRQn
-#define CAN3_IRQN CAN3_TX_IRQN
-#define CAN3_SECOND_IRQN CAN3_RX0_IRQn
-#define CAN3_THIRD_IRQN CAN3_SCE_IRQn
-#endif
-
-#else
-#error Dont know what STM32 chip you have.
-#endif
-
-Stm32Can *Stm32Can::instances[MAXCANIFS] = {NULL,NULL,NULL};
-
-/** Constructor.
  * @param name name of this device instance in the file system
  */
 Stm32Can::Stm32Can(const char *name, uint8_t index)

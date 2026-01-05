@@ -37,12 +37,7 @@
 #include <cstdint>
 
 #include "freertos_drivers/common/Can.hxx"
-#ifdef ARDUINO
-#include <Arduino.h>
-using CanBase = openmrn_arduino::Can;
-#else
 using CanBase = ::Can;
-#endif
 
 #include "stm32f_hal_conf.hxx"
 
@@ -107,11 +102,5 @@ private:
     
     DISALLOW_COPY_AND_ASSIGN(Stm32Can);
 };
-
-#ifdef ARDUINO
-
-extern void arduino_can_pinmap(PinName tx_pin, PinName rx_pin);
-
-#endif
 
 #endif /* _FREERTOS_DRIVERS_ST_STM32F0XXCAN_HXX_ */

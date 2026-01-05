@@ -218,41 +218,6 @@ TRYPATH:=$(call findfirst,support/ld/stm32/mem/sram_20k_flash_128k/mem-flash.inc
 ifneq ($(TRYPATH),)
 LIBMAPLEPATH:=$(TRYPATH)
 endif
-endif #ifndef LIBMAPLEPATH
-
-######## STM32 peripheral library source ########
-ifndef STM32PLIBPATH
-SEARCHPATH := \
-  /opt/st/stm32_plib/default \
-
-TRYPATH:=$(call findfirst,Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_can.h,$(SEARCHPATH))
-ifneq ($(TRYPATH),)
-STM32PLIBPATH:=$(TRYPATH)
-endif
-endif #ifndef STM32PLIBPATH
-
-################### SPIFFS ####################
-ifndef SPIFFSPATH
-SEARCHPATH := \
-  /opt/spiffs \
-  /opt/spiffs/default \
-
-
-TRYPATH:=$(call findfirst,src/spiffs_nucleus.h,$(SEARCHPATH))
-ifneq ($(TRYPATH),)
-SPIFFSPATH:=$(TRYPATH)
-endif
-endif #SPIFFSPATH
-
-################### FreeRTOS ####################
-ifndef FREERTOSPATH
-SEARCHPATH := \
-  /opt/FreeRTOS \
-  /opt/FreeRTOS/default \
-  /opt/FreeRTOS/default/FreeRTOS \
-  $(HOME)/FreeRTOS \
-  /d/FreeRTOS/default
-
 TRYPATH:=$(call findfirst,Source,$(SEARCHPATH))
 ifneq ($(TRYPATH),)
 FREERTOSPATH:=$(TRYPATH)
@@ -303,65 +268,6 @@ ifndef CHECKSUM
 CHECKSUM:=@echo No CHECKSUM binary available - skipping writing header checksum. It is possible that the MCU will drop into bootloader when using this binary. \#
 endif
 
-################### ARM-GCC #####################
-ifndef ARMGCCPATH
-SEARCHPATH := \
-  /opt/armgcc/default \
-  /opt/lpcxpresso/default/lpcxpresso/tools \
-  /usr/local/lpcxpresso_*/lpcxpresso/tools \
-  /opt/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI \
-
-TRYPATH:=$(call findfirst,bin/arm-none-eabi-g++,$(SEARCHPATH))
-ifneq ($(TRYPATH),)
-ARMGCCPATH:=$(TRYPATH)
-endif
-endif #ARMGCCPATH
-
-################### TI-LINUX-SDK #####################
-ifndef TILINUXSDKPATH
-SEARCHPATH := \
-  /opt/ti/ti-processor-sdk-linux/default \
-  ~/ti-processor-sdk-linux-am335x-evm-03.00.00.04 \
-  ~/ti-processor-sdk-linux-am335x-evm-02.00.01.07 \
-  /opt/ti-processor-sdk-linux-am335x-evm-02.00.01.07 \
-  /opt/ti/ti-processor-sdk-linux-am335x-evm-02.00.01.07 \
-
-
-
-TRYPATH:=$(call findfirst,setup.sh,$(SEARCHPATH))
-ifneq ($(TRYPATH),)
-TILINUXSDKPATH:=$(TRYPATH)
-endif
-endif #TILINUXSDKPATH
-
-################### ARM-LINUX GCC PATH #####################
-ifndef ARMLINUXGCCPATH
-SEARCHPATH := \
-    $(TILINUXSDKPATH)/linux-devkit/sysroots/x86_64-arago-linux/usr/bin \
-    /usr/bin \
-
-TRYPATH:=$(call findfirst,arm-linux-gnueabihf-gcc,$(SEARCHPATH))
-ifneq ($(TRYPATH),)
-ARMLINUXGCCPATH:=$(TRYPATH)
-endif
-endif #ARMLINUXGCCPATH
-
-################### AARCH64-LINUX GCC PATH #####################
-ifndef AARCH64LINUXGCCPATH
-SEARCHPATH := \
-    /usr/bin \
-
-TRYPATH:=$(call findfirst,aarch64-linux-gnu-gcc,$(SEARCHPATH))
-ifneq ($(TRYPATH),)
-AARCH64LINUXGCCPATH:=$(TRYPATH)
-endif
-endif #AARCH64LINUXGCCPATH
-
-################### TI-CC3200-SDK #####################
-ifndef TICC3200SDKPATH
-SEARCHPATH := \
-  /opt/ti/CC3200SDK/default/cc3200-sdk
-
 
 TRYPATH:=$(call findfirst,readme.txt,$(SEARCHPATH))
 ifneq ($(TRYPATH),)
@@ -382,81 +288,6 @@ TICC3220SDKPATH:=$(TRYPATH)
 endif
 endif #TICC3220SDKPATH
 
-################### TI-UNIFLASH-V4 #####################
-ifndef TIUNIFLASH4PATH
-SEARCHPATH := \
-  /opt/ti/uniflash/v4-default  \
-  /opt/ti/uniflash/uniflash_4.1  \
-
-TRYPATH:=$(call findfirst,dslite.sh,$(SEARCHPATH))
-ifneq ($(TRYPATH),)
-TIUNIFLASH4PATH:=$(TRYPATH)
-endif
-endif #TIUNIFLASH4PATH
-
-################### PRU-ICSS #####################
-ifndef PRUICSSPATH
-SEARCHPATH := \
-  $(TILINUXSDKPATH)/example-applications/pru-icss-4.0.2 \
-  $(TILINUXSDKPATH)/example-applications/pru-icss-4.0.1
-
-TRYPATH:=$(call findfirst,ReadMe.txt,$(SEARCHPATH))
-ifneq ($(TRYPATH),)
-PRUICSSPATH:=$(TRYPATH)
-endif
-endif #PRUICSSPATH
-
-################### PRU-CGT #####################
-ifndef PRUCGTPATH
-SEARCHPATH := \
-  /opt/ti/ccsv6/tools/compiler/pru \
-  /opt/ti/ccsv6/tools/compiler/ti-cgt-pru_2.1.2 \
-  /opt/ti/ccsv6/tools/compiler/ti-cgt-pru_2.1.1 \
-  /opt/ti/ccsv6/tools/compiler/ti-cgt-pru_2.1.0 \
-  $(TILINUXSDKPATH)/linux-devkit/sysroots/x86_64-arago-linux/usr/share/ti/cgt-pru
-
-TRYPATH:=$(call findfirst,bin/clpru,$(SEARCHPATH))
-ifneq ($(TRYPATH),)
-PRUCGTPATH:=$(TRYPATH)
-endif
-endif #PRUCGTPATH
-
-############### CMSIS-LPC11xx ###################
-ifndef CMSIS_LPC11_PATH
-SEARCHPATH := \
-  $(HOME)/lpc-workspace/CMSISv2p00_LPC11xx \
-
-TRYPATH:=$(call findfirst,inc/LPC11xx.h,$(SEARCHPATH))
-ifneq ($(TRYPATH),)
-CMSIS_LPC11_PATH:=$(TRYPATH)
-endif
-endif #CMSIS_LPC11_PATH
-
-
-############### GTEST ###################
-ifndef GTESTPATH
-SEARCHPATH := \
-  /opt/gtest/default \
-  /opt/gtest/default/googletest \
-  /opt/gtest/gtest \
-  /opt/gtest/googletest \
-  $(abspath $(OPENMRNPATH)/../googletest/googletest) \
-
-
-TRYPATH:=$(call findfirst,include/gtest/gtest.h,$(SEARCHPATH))
-ifneq ($(TRYPATH),)
-GTESTPATH:=$(TRYPATH)
-endif
-endif #GTESTPATH
-
-ifndef GTESTSRCPATH
-SEARCHPATH := \
-  $(GTESTPATH) \
-
-TRYPATH:=$(call findfirst,src/gtest-all.cc,$(SEARCHPATH))
-ifneq ($(TRYPATH),)
-GTESTSRCPATH:=$(TRYPATH)
-endif
 endif #GTESTSRCPATH
 
 ############### GMOCK ###################
