@@ -13,9 +13,6 @@ build-applications: build-targets
 
 tests-applications: build-targets
 
-.PHONY: cov
-cov:
-$(MAKE) -C targets/cov cov
 
 tests:
 $(MAKE) -C targets/test tests
