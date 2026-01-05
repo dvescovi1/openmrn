@@ -84,7 +84,6 @@ ifeq ($(OS),Windows_NT)
 include $(OPENMRNPATH)/etc/path_windows.mk
 else
     ifeq ($(shell uname -s),Darwin)
-        CDIEXTRA += -I$(OPENMRNPATH)/include/mach
     endif
 endif
 

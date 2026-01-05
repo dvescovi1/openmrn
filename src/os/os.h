@@ -56,9 +56,6 @@
 #include <semaphore.h>
 #endif
 
-#if defined (__MACH__)
-#include <mach/mach_time.h>
-#endif
 
 #if defined (__WIN32__)
 #include <sys/time.h>
