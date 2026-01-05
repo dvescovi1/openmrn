@@ -37,6 +37,7 @@
 #include <cstdint>
 
 #include "freertos_drivers/common/Can.hxx"
+#include "os/OS.hxx"
 #ifdef ARDUINO
 #include <Arduino.h>
 using CanBase = openmrn_arduino::Can;

@@ -40,6 +40,7 @@
 #include "can_ioctl.h"
 
 #include "stm32f_hal_conf.hxx"
+#include "os/OS.hxx"
 
 #if defined (STM32F072xB) || defined (STM32F091xC)
 

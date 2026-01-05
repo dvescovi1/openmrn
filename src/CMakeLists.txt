@@ -6,6 +6,7 @@ include_directories(${OPENMRNPATH}/src)
 
 # Define core libraries
 set(CORELIBS
+    freertos_drivers
     console
     utils
     executor

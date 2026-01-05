@@ -422,7 +422,7 @@ template <class HW> void Stm32DccTimerModule<HW>::module_enable()
     HAL_NVIC_SetPriority(HW::CAPTURE_IRQn, 1, 0);
     HAL_NVIC_SetPriority(HW::TIMER_IRQn, 1, 0);
     HAL_NVIC_SetPriority(HW::OS_IRQn, 3, 0);
-#elif defined(GCC_ARMCM3)
+#elif defined(GCC_ARMCM3) || defined(GCC_ARMCM7)
     SetInterruptPriority(HW::CAPTURE_IRQn, 0x20);
     SetInterruptPriority(HW::TIMER_IRQn, 0x20);
     SetInterruptPriority(HW::OS_IRQn, configKERNEL_INTERRUPT_PRIORITY);

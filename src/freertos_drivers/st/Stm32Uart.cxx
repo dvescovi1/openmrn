@@ -59,14 +59,14 @@ Stm32Uart::Stm32Uart(const char *name, USART_TypeDef *base, IRQn_Type interrupt)
     HAL_UART_DeInit(&uartHandle); 
 
     HAL_NVIC_DisableIRQ(interrupt);
-#if defined(GCC_ARMCM0)    
+#if defined(GCC_ARMCM0)
     HAL_NVIC_SetPriority(interrupt, 3, 0);
-#elif defined(GCC_ARMCM3)    
+#elif defined(GCC_ARMCM3) || defined(GCC_ARMCM7)
     // Below kernel-compatible interrupt priority.
     SetInterruptPriority(interrupt, configMAX_SYSCALL_INTERRUPT_PRIORITY + 0x20);
 #else
 #error not defined how to set interrupt priority
-#endif    
+#endif
 }
 
 /** Enable use of the device.

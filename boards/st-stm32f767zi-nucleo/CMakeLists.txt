@@ -8,6 +8,7 @@ function(board_configure target_name)
     # STM32F7 specific flags
     target_compile_definitions(${target_name} PRIVATE
         STM32F767xx
+        USE_HAL_DRIVER
     )
 
     # Board include directories

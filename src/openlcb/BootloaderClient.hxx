@@ -34,6 +34,7 @@
  */
 
 #include <time.h>
+#include <inttypes.h>
 
 #include "openlcb/DatagramDefs.hxx"
 #include "openlcb/FirmwareUpgradeDefs.hxx"
@@ -180,7 +181,7 @@ private:
     Action reboot_dg_done()
     {
         uint32_t dg_result = dgClient_->result();
-        LOG(INFO, "Reboot command result: %04x", dg_result);
+        LOG(INFO, "Reboot command result: %08" PRIx32, (uint32_t)dg_result);
         return call_immediately(STATE(send_pip_request));
     }
 
@@ -565,8 +566,9 @@ private:
         {
             speed_ = speed_ * 0.8 + new_speed * 0.2;
         }
-        struct timespec ts;
-        clock_gettime(CLOCK_REALTIME, &ts);
+        long long now_nsec = os_get_time_monotonic();
+        long long ts_sec = (now_nsec / 1000000000LL) % 60;
+        long long ts_usec = (now_nsec % 1000000000LL) / 1000;
         if (request()->progress_callback)
         {
             float ofs = bufferOffset_;
@@ -574,9 +576,9 @@ private:
             request()->progress_callback(ofs);
         }
         LOG(INFO,
-            "%02ld.%06ld stream offset: %" PRIdPTR "; wrote %.0lld usec slept "
+            "%02lld.%06lld stream offset: %" PRIdPTR "; wrote %.0lld usec slept "
             "%.0lld usec, speed=%.0f bytes/sec",
-            ts.tv_sec % 60, ts.tv_nsec / 1000, bufferOffset_,
+            ts_sec, ts_usec, bufferOffset_,
             (sleepStartTimeNsec_ - lastMeasurementTimeNsec_) / 1000,
             (next_time - sleepStartTimeNsec_) / 1000, speed_);
         lastMeasurementOffset_ = bufferOffset_;

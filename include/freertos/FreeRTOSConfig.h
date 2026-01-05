@@ -296,6 +296,36 @@ extern unsigned long blinker_pattern;
 #define configASSERT( x ) if (!(x)) diewith(BLINK_DIE_ASSERT)
 #endif // assembly
 
+#elif defined(GCC_ARMCM7)
+
+#define configCPU_CLOCK_HZ             ( ( unsigned long ) 216000000 )
+#define configMINIMAL_STACK_SIZE       ( ( unsigned short ) 256 )
+#define configTOTAL_HEAP_SIZE          ( ( size_t ) ( 64 * 1024 ) )
+#define configTIMER_TASK_STACK_DEPTH   384
+
+#define configKERNEL_INTERRUPT_PRIORITY         255
+#define configMAX_SYSCALL_INTERRUPT_PRIORITY    0xa0
+
+#if 1
+#ifdef __cplusplus
+extern "C" {
+#endif
+extern int g_death_lineno;
+#ifdef __cplusplus
+}
+#endif  // cplusplus
+#define configASSERT( x ) do { if (!(x)) { g_death_lineno = __LINE__; diewith(BLINK_DIE_ASSERT); }} while(0)
+#endif
+
+#define vPortSVCHandler SVC_Handler
+#define xPortPendSVHandler PendSV_Handler
+#define xPortSysTickHandler SysTick_Handler
+
+#ifndef __LANGUAGE_ASSEMBLY__
+extern unsigned long blinker_pattern;
+#define configASSERT_M7(x) if (!(x)) diewith(BLINK_DIE_ASSERT)
+#endif
+
 #else
 
 #error please provide the FreeRTOSConfig.h for your target

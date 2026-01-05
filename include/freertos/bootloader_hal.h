@@ -1,1 +1,1 @@
-../../src/openlcb/bootloader_hal.h
+#include "openlcb/bootloader_hal.h"

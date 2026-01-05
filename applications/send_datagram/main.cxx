@@ -36,6 +36,9 @@
 #include <getopt.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <inttypes.h>
+
+extern "C" int usleep(useconds_t usec);
 
 #include <memory>
 
@@ -254,7 +257,7 @@ int appl_main(int argc, char *argv[])
 
         client->write_datagram(b);
         n.wait_for_notification();
-        fprintf(stderr, "Datagram send result: %04x\n", client->result());
+        fprintf(stderr, "Datagram send result: %08" PRIx32 "\n", (uint32_t)client->result());
         if (!(client->result() & DatagramClient::OK_REPLY_PENDING)) {
             LOG(INFO, "Target node indicates no response pending.");
         }

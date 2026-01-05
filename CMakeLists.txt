@@ -6,6 +6,11 @@ set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/cmake/toolchain-arm-gcc.cm
 
 project(OpenMRN C CXX ASM)
 
+# Surface STM32CubeF7 path from environment for HAL builds
+if(NOT DEFINED STM32CUBE_F7_PATH AND DEFINED ENV{STM32CUBE_F7_PATH})
+    set(STM32CUBE_F7_PATH "$ENV{STM32CUBE_F7_PATH}" CACHE PATH "Path to STM32CubeF7")
+endif()
+
 # Set default target board and configuration
 set(OPENMRN_BOARD "st-stm32f767zi-nucleo" CACHE STRING "Target board for the build")
 set(OPENMRN_TARGET "freertos.armv7m" CACHE STRING "Target platform")
@@ -43,6 +48,9 @@ add_compile_options(
     -Werror
     -Wno-unknown-pragmas
 )
+
+# C++ only warnings
+add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-Wno-overloaded-virtual>)
 
 # Language-specific flags
 if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")

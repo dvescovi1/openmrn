@@ -47,24 +47,27 @@ else()
 endif()
 
 # FreeRTOS includes
+set(FREERTOS_PORT_DIR "${FREERTOS_KERNEL_PATH}/portable/GCC/ARM_CM7/r0p1")
+if(NOT EXISTS "${FREERTOS_PORT_DIR}")
+    message(FATAL_ERROR "FreeRTOS ARM_CM7 port not found at ${FREERTOS_PORT_DIR}. Confirm FREERTOSPATH points to a FreeRTOS distribution with GCC/ARM_CM7/r0p1.")
+endif()
+
 set(FREERTOS_INCLUDE_DIRS
     ${FREERTOS_KERNEL_PATH}/include
-    ${FREERTOS_KERNEL_PATH}/portable/GCC/ARM_CM3
+    ${FREERTOS_PORT_DIR}
     ${OPENMRNPATH}/include/freertos
 )
 
-# FreeRTOS compile definitions
 # FreeRTOS compile definitions - use add_definitions for global scope
-add_definitions(-D__FreeRTOS__ -DGCC_ARMCM3)
+add_definitions(-D__FreeRTOS__ -DGCC_ARMCM7)
 
-# ARM Cortex-M3 specific flags
-set(CMAKE_C_FLAGS "-mcpu=cortex-m3 -mthumb -mfloat-abi=soft ${CMAKE_C_FLAGS}")
-set(CMAKE_CXX_FLAGS "-mcpu=cortex-m3 -mthumb -mfloat-abi=soft ${CMAKE_CXX_FLAGS}")
-set(CMAKE_ASM_FLAGS "-mcpu=cortex-m3 -mthumb -mfloat-abi=soft ${CMAKE_ASM_FLAGS}")
+# ARM Cortex-M7 with hardware FPU
+set(CMAKE_C_FLAGS "-mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 ${CMAKE_C_FLAGS}")
+set(CMAKE_CXX_FLAGS "-mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 ${CMAKE_CXX_FLAGS}")
+set(CMAKE_ASM_FLAGS "-mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 ${CMAKE_ASM_FLAGS}")
 
 # FreeRTOS-specific compile options
 add_compile_options(
-    -mfix-cortex-m3-ldrd
     -fno-builtin
 )
 
@@ -77,7 +80,8 @@ include_directories(${OPENMRNPATH}/src/freertos_drivers/st)
 # Create FreeRTOS library
 file(GLOB FREERTOS_SOURCES
     ${FREERTOS_KERNEL_PATH}/*.c
-    ${FREERTOS_KERNEL_PATH}/portable/GCC/ARM_CM3/*.c
+    ${FREERTOS_PORT_DIR}/*.c
+    ${FREERTOS_KERNEL_PATH}/portable/MemMang/heap_4.c
 )
 
 add_library(freertos STATIC ${FREERTOS_SOURCES})
@@ -87,4 +91,4 @@ target_include_directories(freertos PRIVATE
 )
 
 message(STATUS "FreeRTOS Kernel Path: ${FREERTOS_KERNEL_PATH}")
-message(STATUS "FreeRTOS Library: freertos")
+message(STATUS "FreeRTOS Library: freertos (ARM_CM7 hard-float)")

@@ -3,6 +3,7 @@
 # Locate STM32F7 HAL headers (required by the board HwInit sources).
 find_path(STM32F7_HAL_INCLUDE_DIR stm32f7xx_hal_rcc.h
     PATHS
+        ${STM32CUBE_F7_PATH}
         $ENV{STM32CUBE_F7_PATH}
         $ENV{STM32CUBE_F7}
         $ENV{STM32CUBE_REPO}
@@ -44,6 +45,19 @@ function(add_board_target app_name board_name app_source_dir)
         "${app_source_dir}/targets/freertos.armv7m.${board_name}/*.S"
     )
 
+    # Avoid wrapper stubs; use real board startup/HwInit sources instead.
+    list(REMOVE_ITEM APP_BOARD_SOURCES
+        "${app_source_dir}/targets/freertos.armv7m.${board_name}/startup.c"
+        "${app_source_dir}/targets/freertos.armv7m.${board_name}/HwInit.cxx"
+    )
+
+    if(EXISTS "${OPENMRNPATH}/boards/${board_name}/startup.c")
+        list(APPEND APP_BOARD_SOURCES "${OPENMRNPATH}/boards/${board_name}/startup.c")
+    endif()
+    if(EXISTS "${OPENMRNPATH}/boards/${board_name}/HwInit.cxx")
+        list(APPEND APP_BOARD_SOURCES "${OPENMRNPATH}/boards/${board_name}/HwInit.cxx")
+    endif()
+
     set(APP_SOURCES ${APP_COMMON_SOURCES} ${APP_BOARD_SOURCES})
     
     add_executable(${target_name} ${APP_SOURCES})
@@ -57,6 +71,10 @@ function(add_board_target app_name board_name app_source_dir)
 
     if(STM32F7_HAL_INCLUDE_DIR)
         target_include_directories(${target_name} PRIVATE ${STM32F7_HAL_INCLUDE_DIR})
+        target_include_directories(${target_name} PRIVATE
+            "${STM32CUBE_F7_PATH}/Drivers/CMSIS/Device/ST/STM32F7xx/Include"
+            "${STM32CUBE_F7_PATH}/Drivers/CMSIS/Include"
+        )
     endif()
 
     # Core headers used by applications (e.g., os/os.h lives under src/os).

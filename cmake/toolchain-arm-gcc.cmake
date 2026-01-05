@@ -76,7 +76,6 @@ set(ARM_COMMON_FLAGS
     "-mfpu=fpv5-d16"
     "-fno-builtin"
     "-fno-stack-protector"
-    "--specs=nosys.specs"
 )
 
 # Convert list to string for CMAKE_C_FLAGS and CMAKE_CXX_FLAGS
