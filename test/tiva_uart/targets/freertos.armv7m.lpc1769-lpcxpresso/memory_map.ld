@@ -1,1 +1,0 @@
-../../../../boards/nxp-lpc1769-lpcxpresso/memory_map.ld

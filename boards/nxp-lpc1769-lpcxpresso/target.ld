@@ -1,1 +1,0 @@
-../nxp-lpc175x_6x-generic/target-split-ram.ld
