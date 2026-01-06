@@ -53,7 +53,7 @@ private:
 #define protected public
 
 #include "freertos_drivers/common/EEPROMEmulation.hxx"
-#include "freertos_drivers/common/EEPROMEmulation.cxx"
+#include "freertos_drivers/common/EEPROMEmulation.cpp"
 
 static const char FILENAME[] = "/tmp/eeprom";
 

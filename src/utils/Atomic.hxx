@@ -71,7 +71,6 @@ public:
     }
 };
 
-#elif defined(ESP_PLATFORM)
 
 #include "freertos_includes.h"
 

@@ -3,7 +3,7 @@
 file(GLOB SOURCES
     "*.c"
     "*.cpp"
-    "*.cxx"
+    "*.cpp"
 )
 
 add_library(console STATIC ${SOURCES})

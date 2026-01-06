@@ -79,10 +79,7 @@ OpenMRN/
 │   ├── executor/
 │   ├── os/
 │   ├── dcc/
-│   ├── openlcb/
-│   ├── withrottle/
-│   ├── ble/
-│   └── traction_modem/
+│   └── openlcb/
 ├── applications/                      # Application targets (optional)
 │   ├── async_blink/
 │   ├── blink_raw/
@@ -121,9 +118,6 @@ build/
 │   ├── libopenIcb.a
 │   ├── libdcc.a
 │   ├── libconsole.a
-│   ├── libble.a
-│   ├── libwithrottle.a
-│   ├── libtraction_modem.a
 │   └── libfreertos.a
 └── CMakeCache.txt                     # CMake configuration cache
 ```

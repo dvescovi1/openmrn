@@ -3,12 +3,12 @@
 file(GLOB SOURCES
     "*.c"
     "*.cpp"
-    "*.cxx"
+    "*.cpp"
 )
 
 # Exclude application-specific files that need config.hxx
-list(REMOVE_ITEM SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/CompileCdiMain.cxx")
-list(REMOVE_ITEM SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/Stream.cxx")
+list(REMOVE_ITEM SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/CompileCdiMain.cpp")
+list(REMOVE_ITEM SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/Stream.cpp")
 
 add_library(openlcb STATIC ${SOURCES})
 

@@ -49,49 +49,49 @@ target_compile_options(stm32f7_hal PRIVATE $<$<COMPILE_LANGUAGE:C>:-Wno-error=re
 # FreeRTOS driver layer
 file(GLOB FREERTOS_DRIVER_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/common/*.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/common/*.cxx
+    ${CMAKE_CURRENT_SOURCE_DIR}/common/*.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/st/*.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/st/*.cxx
+    ${CMAKE_CURRENT_SOURCE_DIR}/st/*.cpp
 )
 
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX "libatomic\\.c$")
 # TinyUSB glue and FDCAN driver are not wired for STM32F767 builds yet.
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32UsbCdc\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32MCan\\.cxx$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32UsbCdc\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32MCan\\.cpp$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32UsbCdc\\.hxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32MCan\\.hxx$")
 # Exclude POSIX-based drivers that don't work in bare-metal
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Device\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/DeviceFile\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/FileSystem\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Pipe\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Serial\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Socket\\.cxx$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Device\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/DeviceFile\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/FileSystem\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Pipe\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Serial\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Socket\\.cpp$")
 # Note: With DEVTAB enabled, the following base device classes are included:
-# - Device.cxx (base device class)
-# - Node.cxx (file system node)
-# - Serial.cxx (serial device base)
-# - Can.cxx (CAN device base)
-# - Fileio.cxx (POSIX syscalls for newlib)
-# - Select.cxx (select() implementation for device I/O)
+# - Device.cpp (base device class)
+# - Node.cpp (file system node)
+# - Serial.cpp (serial device base)
+# - Can.cpp (CAN device base)
+# - Fileio.cpp (POSIX syscalls for newlib)
+# - Select.cpp (select() implementation for device I/O)
 
 # Exclude other POSIX-dependent files not needed for FreeRTOS
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/MCAN\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/SPI\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/SPIFlash\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Null\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/I2C\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/FileioWeak\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/EEPROM\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/TCAN4550Can\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/MCP2515Can\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/WifiDefs\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/EEPROMEmulation\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/EEPROMEmulation_weak\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/CpuLoad\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/PCA9685PWM\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/SN74HC595GPO\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32EEPROMEmulation\\.cxx$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/MCAN\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/SPI\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/SPIFlash\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Null\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/I2C\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/FileioWeak\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/EEPROM\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/TCAN4550Can\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/MCP2515Can\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/WifiDefs\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/EEPROMEmulation\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/EEPROMEmulation_weak\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/CpuLoad\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/PCA9685PWM\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/SN74HC595GPO\\.cpp$")
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32EEPROMEmulation\\.cpp$")
 
 # Note: With DEVTAB enabled, Stm32Can and Stm32Uart are needed for STM32F767 targets
 # These files WILL be included in the build

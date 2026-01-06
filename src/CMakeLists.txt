@@ -13,9 +13,6 @@ set(CORELIBS
     os
     dcc
     openlcb
-    withrottle
-    ble
-    traction_modem
 )
 
 # Add each library as a subdirectory

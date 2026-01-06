@@ -143,10 +143,7 @@ OpenMRN/
 │   ├── executor/
 │   ├── os/
 │   ├── dcc/
-│   ├── openlcb/
-│   ├── withrottle/
-│   ├── ble/
-│   └── traction_modem/
+│   └── openlcb/
 ├── applications/            # Application targets (optional)
 │   ├── async_blink/
 │   ├── blink_raw/
