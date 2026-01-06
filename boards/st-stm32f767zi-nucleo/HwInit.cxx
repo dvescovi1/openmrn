@@ -315,3 +315,12 @@ void hw_postinit(void)
 {
     // spiffs0.mount("/ffs");
 }
+
+/** HAL assertion handler stub.
+ * @param file filename where assertion failed
+ * @param line line number where assertion failed
+ */
+extern "C" void assert_failed(uint8_t* file, uint32_t line)
+{
+    while(1);  // Halt on assertion failure
+}

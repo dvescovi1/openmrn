@@ -3,6 +3,7 @@ build/
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
+.cache/
 
 # Compiled source #
 ###################

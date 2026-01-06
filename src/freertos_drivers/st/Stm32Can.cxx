@@ -98,6 +98,8 @@
 #elif defined (STM32F767xx)
 
 #include "stm32f7xx_hal_cortex.h"
+// External CPU clock definition provided by board HwInit
+extern const unsigned long cm3_cpu_clock_hz;
 #define SPLIT_INT
 #define CAN1_TX_IRQN CAN1_TX_IRQn
 #define CAN1_IRQN CAN1_TX_IRQN

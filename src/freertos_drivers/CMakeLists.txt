@@ -5,6 +5,10 @@ if(NOT STM32CUBE_F7_PATH)
     message(FATAL_ERROR "STM32CUBE_F7_PATH is required to build freertos_drivers for STM32F7 boards.")
 endif()
 
+if(NOT DEFINED ENV{FREERTOSPATH})
+    message(FATAL_ERROR "FREERTOSPATH environment variable is required to build freertos_drivers.")
+endif()
+
 set(HAL_DRIVER_DIR "${STM32CUBE_F7_PATH}/Drivers/STM32F7xx_HAL_Driver")
 set(HAL_DRIVER_SRC_DIR "${HAL_DRIVER_DIR}/Src")
 set(HAL_CMSIS_DEVICE_DIR "${STM32CUBE_F7_PATH}/Drivers/CMSIS/Device/ST/STM32F7xx")
@@ -63,47 +67,44 @@ list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/FileSystem\\.cxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Pipe\\.cxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Serial\\.cxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Socket\\.cxx$")
-# The generic Can.cxx also uses POSIX
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/common/Can\\.cxx$")
-# MCAN driver includes POSIX device abstraction APIs
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/common/MCAN\\.cxx$")
-# Exclude other Devtab-dependent files (all I/O device abstraction layer files)
+# Note: With DEVTAB enabled, the following base device classes are included:
+# - Device.cxx (base device class)
+# - Node.cxx (file system node)
+# - Serial.cxx (serial device base)
+# - Can.cxx (CAN device base)
+# - Fileio.cxx (POSIX syscalls for newlib)
+# - Select.cxx (select() implementation for device I/O)
+
+# Exclude other POSIX-dependent files not needed for FreeRTOS
+list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/MCAN\\.cxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/SPI\\.cxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/SPIFlash\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Select\\.cxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Null\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Node\\.cxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/I2C\\.cxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/FileioWeak\\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Fileio\\.cxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/EEPROM\\.cxx$")
-# Exclude CAN/device drivers with POSIX dependencies (fcntl, unistd, stropts)
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/TCAN4550Can\\.cxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/MCP2515Can\\.cxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/WifiDefs\\.cxx$")
-# Exclude EEPROM emulation drivers with device abstraction dependencies
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/EEPROMEmulation\\.cxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/EEPROMEmulation_weak\\.cxx$")
-# Exclude other device interface files that aren't needed for minimal build
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/CpuLoad\\.cxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/PCA9685PWM\\.cxx$")
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/SN74HC595GPO\\.cxx$")
-# Exclude ST firmware-specific drivers from minimal build
 list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32EEPROMEmulation\\.cxx$")
-# Stm32Can.cxx includes generic Can.hxx which depends on Devtab for device abstraction
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32Can\\.cxx$")
-# Exclude STM32 peripheral drivers that pull in Devtab/POSIX abstractions
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32I2C\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32SPI\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32RailcomSender\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32Uart\.cxx$")
-list(FILTER FREERTOS_DRIVER_SOURCES EXCLUDE REGEX ".*/Stm32Flash\.cxx$")
+
+# Note: With DEVTAB enabled, Stm32Can and Stm32Uart are needed for STM32F767 targets
+# These files WILL be included in the build
 
 add_library(freertos_drivers STATIC ${FREERTOS_DRIVER_SOURCES})
 target_include_directories(freertos_drivers PUBLIC
     ${OPENMRNPATH}/src/freertos_drivers/st
     ${OPENMRNPATH}/src/freertos_drivers/common
     ${OPENMRNPATH}/src
+    ${OPENMRNPATH}/include/freertos
+    ${OPENMRNPATH}/include/freertos_select
+    $ENV{FREERTOSPATH}/FreeRTOS-Kernel/include
+    $ENV{FREERTOSPATH}/FreeRTOS-Kernel/portable/GCC/ARM_CM7/r0p1
 )
 
 # STM32 HAL headers have circular include issues in bare-metal context

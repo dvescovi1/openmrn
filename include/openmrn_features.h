@@ -48,7 +48,7 @@
 // Note: this is not using OPENMRN_FEATURE_DEVICE_SELECT due to other usages
 // of that macro which may conflict with other versions of this feature.
 /// Adds support for FD based CAN interfaces.
-#define OPENMRN_FEATURE_FD_CAN_DEVICE 1
+#define OPENMRN_FEATURE_FD_CAN_DEVICE 0
 #endif
 
 #ifdef OPENMRN_FEATURE_DEVTAB
@@ -59,10 +59,10 @@
 #endif
 
 /// Enables the code using ::fstat to confirm if the file handle is a socket.
-#define OPENMRN_HAVE_SOCKET_FSTAT 1
+#define OPENMRN_HAVE_SOCKET_FSTAT 0
 
 /// Uses ::pselect in the Executor for sleep and pkill for waking up.
-#define OPENMRN_HAVE_PSELECT 1
+#define OPENMRN_HAVE_PSELECT 0
 
 #if defined(OPENMRN_HAVE_PSELECT)
 #define OPENMRN_FEATURE_EXECUTOR_SELECT 1
@@ -86,7 +86,7 @@
 #define OPENMRN_FEATURE_THREAD_FREERTOS 1
 
 /// Compiles support for BSD sockets API.
-#define OPENMRN_FEATURE_BSD_SOCKETS 1
+#define OPENMRN_FEATURE_BSD_SOCKETS 0
 
 /// Compiles support for setting the SO_RCVTIMEO value when creating a new
 /// socket.
