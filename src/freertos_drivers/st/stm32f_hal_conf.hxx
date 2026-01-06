@@ -36,7 +36,7 @@
 
 // Ensure HAL core types (HAL_StatusTypeDef, etc.) are visible before pulling in
 // vendor headers; this avoids C++ ordering issues in bare-metal builds.
-#include "stm32_hal_compat.h"
+// However, STM32F7 already has proper HAL definitions, so skip compat header for it.
 
 #if defined(STM32F030x6) || defined(STM32F031x6) || defined(STM32F038xx) ||    \
     defined(STM32F030x8) || defined(STM32F030xC) || defined(STM32F042x6) ||    \
@@ -44,17 +44,23 @@
     defined(STM32F070x6) || defined(STM32F070xB) || defined(STM32F071xB) ||    \
     defined(STM32F072xB) || defined(STM32F078xx) || defined(STM32F091xC) ||    \
     defined(STM32F098xx)
+#include "stm32_hal_compat.h"
 #include "stm32f0xx_hal_conf.h"
 #elif defined(STM32F103xB)
+#include "stm32_hal_compat.h"
 #include "stm32f1xx_hal_conf.h"
 #elif defined(STM32F303xC) || defined(STM32F303xE)
+#include "stm32_hal_compat.h"
 #include "stm32f3xx_hal_conf.h"
 #elif defined(STM32F767xx)
-/* For STM32F767, stm32f7xx_hal_conf.h should include stm32f7xx_hal.h */
+/* For STM32F767, stm32f7xx_hal_conf.h includes stm32_hal_compat.h first,
+   which defines HAL types before the circular include chain. */
 #include "stm32f7xx_hal_conf.h"
 #elif defined(STM32L432xx) || defined(STM32L431xx)
+#include "stm32_hal_compat.h"
 #include "stm32l4xx_hal_conf.h"
 #elif defined(STM32G0B1xx)
+#include "stm32_hal_compat.h"
 #include "stm32g0xx_hal_conf.h"
 #else
 #error "STM32F_HAL_CONF unsupported STM32 device"

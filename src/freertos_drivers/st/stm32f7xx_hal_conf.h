@@ -19,9 +19,9 @@ extern "C" {
 #include <stdint.h>
 #include <stddef.h>
 
-/* Pull in HAL base definitions (HAL_StatusTypeDef, etc.) before any HAL
- * headers that declare functions using these types. */
-#include "stm32f7xx_hal_def.h"
+/* Our wrapper stm32f7xx_hal_def.h in freertos_drivers/st/ will handle
+   defining the HAL types and breaking the circular dependency. */
+#include "stm32_hal_compat.h"
 
 /* ########################## Module Selection ############################## */
 #define HAL_MODULE_ENABLED
@@ -79,7 +79,13 @@ extern "C" {
   #define assert_param(expr) ((void)0U)
 #endif
 
-/* Include all HAL module headers to ensure types are available */
+/* Include HAL core definitions - which will provide the device structures
+   and the HAL function declarations that depend on HAL_StatusTypeDef.
+   The stm32_hal_compat.h header (included by stm32f_hal_conf.hxx for library code)
+   provides early forward declarations to break the circular dependency. */
+#include "stm32f7xx_hal_def.h"
+
+/* Pull in module headers after configuration is set */
 #ifdef HAL_CORTEX_MODULE_ENABLED
  #include "stm32f7xx_hal_cortex.h"
 #endif
@@ -127,6 +133,12 @@ extern "C" {
 #ifdef HAL_CAN_MODULE_ENABLED
  #include "stm32f7xx_hal_can.h"
 #endif
+
+/* Helper function for setting interrupt priorities */
+static inline void SetInterruptPriority(uint32_t irq, uint8_t priority)
+{
+    NVIC_SetPriority((IRQn_Type)irq, priority >> (8U - __NVIC_PRIO_BITS));
+}
 
 #ifdef __cplusplus
 }

@@ -1,5 +1,14 @@
 # Applications CMakeLists.txt
 
+cmake_minimum_required(VERSION 3.15)
+
+# Cross-compiling for bare-metal ARM; avoid host linker flags during try-compile.
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+
+project(openmrn_applications LANGUAGES C CXX ASM)
+
 # Locate STM32F7 HAL headers (required by the board HwInit sources).
 find_path(STM32F7_HAL_INCLUDE_DIR stm32f7xx_hal_rcc.h
     PATHS
@@ -68,6 +77,21 @@ function(add_board_target app_name board_name app_source_dir)
             "${app_source_dir}/targets/freertos.armv7m.${board_name}"
         )
     endif()
+    
+    # CRITICAL: Add our freertos_drivers/st FIRST so our HAL headers take precedence
+    # This ensures our stm32f7xx_hal_conf.h is found and stm32_hal_compat.h defines
+    # HAL_StatusTypeDef before the circular include chain tries to use it
+    target_include_directories(${target_name} PRIVATE
+        "${OPENMRNPATH}/src/freertos_drivers/st"
+    )
+    
+    # Due to the circular include in STM32F7 HAL (hal_def.h -> stm32f7xx.h -> stm32f7xx_hal.h),
+    # stm32_hal_compat.h must define HAL_StatusTypeDef before hal_def.h is included.
+    # This causes the same enum to be defined twice - once in our compat header, once in hal_def.h.
+    # Both definitions are identical so functionally they're the same type.
+    # Since C doesn't allow duplicate anonymous enum typedefs, we suppress the errors.
+    # This only affects applications; core libraries don't have this problem.
+    target_compile_options(${target_name} PRIVATE -Wno-error)
 
     if(STM32F7_HAL_INCLUDE_DIR)
         target_include_directories(${target_name} PRIVATE ${STM32F7_HAL_INCLUDE_DIR})
